@@ -1,0 +1,268 @@
+#
+
+# Naming Section
+railwayname=* & railway=* & highway!=* {set name='${railwayname}${name}' | '${railwayname}'}
+
+#route=* & ref=* & name=* {set name='${name} (${ref})'}
+
+
+sac:scale=*  {add sac_scale = '${sac:scale}'}
+sac_scale=T1 {set sac_scale=hiking}
+sac_scale=T2 {set sac_scale=mountain_hiking}
+sac_scale=T3 {set sac_scale=demandin_mountain_hiking}
+sac_scale=T4 {set sac_scale=alpine_hiking}
+sac_scale=T5 {set sac_scale=demanding_alpine_hiking}
+sac_scale=T6 {set sac_scale=difficult_alpine_hiking}
+
+sac_scale=* & sac_scale!=hiking & sac_scale!=mountain_hiking & sac_scale!=demanding_mountain_hiking & sac_scale!=alpine_hiking & sac_scale!=demanding_alpine_hiking & sac_scale!=difficult_alpine_hiking {delete sac_scale}
+
+
+# Add hiking difficulty to name
+
+( highway=path | highway=footway | highway=track ) & sac_scale!=* 				{set name='${name}'}
+
+( highway=path | highway=footway | highway=track ) & sac_scale=hiking 				{set name='${name} T1' | 'T1'}
+
+( highway=path | highway=footway | highway=track ) & sac_scale=mountain_hiking 			{set name='${name} T2' | 'T2'}
+
+( highway=path | highway=footway | highway=track ) & sac_scale=demanding_mountain_hiking 	{set name='${name} T3' | 'T3'}
+
+( highway=path | highway=footway | highway=track ) & sac_scale=alpine_hiking 			{set name='${name} T4' | 'T4'}
+
+( highway=path | highway=footway | highway=track ) & sac_scale=demanding_alpine_hiking 		{set name='${name} T5' | 'T5'}
+
+( highway=path | highway=footway | highway=track ) & sac_scale=difficult_alpine_hiking  	{set name='${name} T6' | 'T6'}
+
+
+# set up bicycleroute=yes
+
+(ncn_from_relation=yes | rcn_from_relation=yes | icn_from_relation=yes | lcn_from_relation=yes | tcn_from_relation=yes | mtb_from_relation=yes | ncn=yes | rcn=yes | lcn=yes | tcn=yes | ncn_ref=* | rcn_ref=* | lcn_ref=* | tcn_ref=* ) 	{ add bicycleroute=yes;  add bicycle = yes;  } 
+
+# set up hikingroute=yes
+
+( route=hiking | route=foot ) 	{ add hikingroute=yes;  } 
+
+
+# Add kind of way to name
+highway=unclassified 	& fixme!=* 	& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name}'|'ucl'}
+highway=minor 				& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name}'|'mnr'}
+highway=road 				& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} rd'|'rd'}
+highway=service 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} ser'|'ser'}
+highway=byway 				& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} byw'|'byw'}
+highway=track 		& fixme!=* 	& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} trk'|'trk'}
+highway=unsurfaced 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} usf'|'usf'}
+highway=path 				& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} pth'|'pth'}
+highway=bridleway 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} bd'|'bd'}
+highway=cycleway 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} cw'|'cw'}
+highway=footway 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} ft'|'ft'}
+highway=pedestrian 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name}'|'pdstrn'}
+highway=parking_aisle 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name}'|'parking_aisle'}
+highway=construction 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name}'|'cstrn'}
+
+
+# Need ref inside Name from here onwards 
+
+( highway=motorway | highway=trunk | highway=primary | highway=secondary | highway=tertiary )	& name=* & bicycleroute!=yes & hikingroute!=yes 	{set name='${name}'}
+
+( highway=motorway | highway=trunk | highway=primary | highway=secondary | highway=tertiary )	& ref=*  			{ set name='${ref|highway-symbol:oval:9:7}' }
+
+########################################################################################
+
+# Routes
+
+# hiking
+
+#iwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval:13:11} ${iname}' | '${color-ref|highway-symbol:oval:13:11} ${name}'} 	[0x0b resolution 18 continue]
+#nwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval:13:11} ${nname}' | '${color-ref|highway-symbol:oval:13:11} ${name}'}   	[0x0b resolution 18 continue]
+
+#rwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval:13:11} ${rname}' | '${color-ref|highway-symbol:oval:13:11} ${name}'}  	[0x0b resolution 22 continue]
+#lwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval:13:11} ${lname}' | '${color-ref|highway-symbol:oval:13:11} ${name}'}  	[0x0b resolution 22 continue]
+
+#nonet_from_relation=yes 	{name '${color-ref|highway-symbol:oval:13:11} ${nnname}' | '${color-ref|highway-symbol:oval:13:11} ${name}'}  	[0x0b resolution 22 continue]
+
+
+iwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval:13:11}'} 	[0x0b resolution 18 continue]
+nwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval:13:11}'}    	[0x0b resolution 18 continue]
+
+rwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval:13:11}'}   	[0x0b resolution 22 continue]
+lwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval:13:11}'}   	[0x0b resolution 22 continue]
+
+nonet_from_relation=yes 	{name '${color-ref|highway-symbol:oval:13:11}'}   	[0x0b resolution 22 continue]
+
+######################################
+
+# bicycle
+
+
+icn_from_relation=yes 	{name '${iref|highway-symbol:hbox:13:11}'}						[0x0c resolution 18 continue]
+ncn_from_relation=yes 	{name '${nref|highway-symbol:hbox:13:11}'} 						[0x0c resolution 18 continue]
+
+rcn_from_relation=yes  	{name '${rref|highway-symbol:hbox:13:11}'} 						[0x0c resolution 22 continue]
+lcn_from_relation=yes  	{name '${lref|highway-symbol:hbox:13:11}'}						[0x0c resolution 22 continue]
+
+tcn_from_relation=yes 	{name '${tref|highway-symbol:hbox:13:11}'}						[0x0c resolution 22 continue]
+
+mtb_from_relation=yes 	{name '${mref|highway-symbol:hbox:13:11}'}						[0x0c resolution 22 continue]
+
+#####################################
+
+# route=ski
+
+piste:type=nordic & piste:grooming=classic 		[0x10111 resolution 21 continue]
+piste:type=nordic & piste:grooming=skating 		[0x10111 resolution 21 continue]
+#piste:type=nordic & piste:grooming=classic;skating 	[0x10111 resolution 21 continue]
+
+piste:type=nordic & piste:grooming=scooter		[0x10112 resolution 21 continue]
+piste:type=nordic & piste:grooming=backcountry 		[0x10112 resolution 21 continue]
+
+# route=snowmobile
+
+snowmobile=yes | snowmobile=designated			[0x10113 resolution 21 continue]
+snowmobile=permissive | snowmobile=private		[0x10114 resolution 21 continue]
+
+# route=horse
+
+highway=bridleway 					[0x10115  resolution 21 continue]
+highway=* & horse=designated 				[0x10115  resolution 21 continue]
+highway=* & horse=yes 					[0x10115  resolution 21 continue]
+highway=* & horse=permissive				[0x10115  resolution 21 continue]
+
+#########################################################################################
+
+# Roundabouts
+junction=roundabout & highway=trunk 		[0x02 resolution 18]
+junction=roundabout & highway=primary 		[0x03 resolution 19]
+junction=roundabout & highway=secondary 	[0x04 resolution 20]
+junction=roundabout & highway=tertiary 		[0x05 resolution 21]
+junction=roundabout & highway=unclassified 	[0x06 resolution 21]
+junction=roundabout 				[0x06 resolution 22]
+
+#################################
+
+highway=construction 						[0x07 resolution 23 continue]
+
+
+highway=motorway {add oneway = yes; add bicycle = no; add foot = no }
+highway=motorway_link {add oneway = yes; add bicycle = no; add foot = no }
+highway=path {add access = no; add bicycle = yes; add foot = yes}
+highway=cycleway {add access = no; add bicycle = yes; add foot = yes}
+highway=footway {add access = no; add foot = yes}
+highway=pedestrian & area!=yes {add access = no; add foot = yes}
+highway=steps {add access = no; add foot = yes}
+highway=bridleway {add access = no; add bicycle = yes; add foot = yes}
+
+
+highway=motorway      	[0x01 road_class=4 road_speed=6 resolution 16 continue]
+
+highway=trunk         	[0x02 road_class=3 road_speed=5 resolution 17 continue]
+
+highway=primary       	[0x03 road_class=2 road_speed=4 resolution 18 continue]
+
+highway=secondary 	[0x04 road_class=2 road_speed=4 resolution 19 continue]
+
+highway=tertiary 	[0x05 road_class=2 road_speed=3 resolution 21 continue]
+
+highway=residential   	[0x06 road_class=0 road_speed=2 resolution 23 continue]
+highway=unclassified  	[0x06 road_class=0 road_speed=2 resolution 22 continue]
+highway=living_street 	[0x07 road_class=0 road_speed=1 resolution 23 continue]
+highway=service       	[0x07 road_class=0 road_speed=1 resolution 23 continue]
+highway=unsurfaced	[0x07 road_class=0 road_speed=1 resolution 23 continue]
+
+highway=motorway_link [0x06 road_class=4 road_speed=4 resolution 20 continue]
+highway=trunk_link    [0x06 road_class=3 road_speed=3 resolution 20 continue]
+highway=primary_link  [0x06 road_class=3 road_speed=3 resolution 21 continue]
+
+highway=cycleway 		[0x09 road_class=0 road_speed=1 resolution 21 continue]
+highway=footway 		[0x08 road_class=0 road_speed=0 resolution 21 continue]
+highway=pedestrian & area!=yes 	[0x08 road_class=0 road_speed=0 resolution 21 continue]
+highway=steps 			[0x1a road_class=0 road_speed=0 resolution 21 continue]
+highway=bridleway 		[0x08 road_class=0 road_speed=0 resolution 21 continue]
+
+highway=path 			[0x0a road_class=0 road_speed=0 resolution 21 continue]
+highway=track 			[0x16 road_class=0 road_speed=1 resolution 21 continue]
+
+# Mop up any unrecognised highway types
+highway=* & highway!=proposed & area!=yes & highway!=motorway & highway!=trunk & highway!=primary & highway!=secondary & highway!=tertiary & highway!=unclassified & highway!=residential & highway!=motorway_link & highway!=trunk_link & highway!=primary_link & highway!=living_street & highway!=service & highway!=unsurfaced & highway!=steps & highway!=cycleway & highway!=footway & highway!=pedestrian & highway!=bridleway & highway!=path & highway!=track	[0x07 resolution 24 continue]
+
+#######################################################################################
+
+power=line [0x29 resolution 21]
+power=minor_line [0x29 resolution 23]
+man_made=cable|(man_made=* & man_made ~ '.*pipe.*') {name '${name} (${operator})' | '${name}' | '${operator}' } [0x28 resolution 23]
+
+
+#######################################################################################
+
+railway=abandoned [0x15 road_class=0 road_speed=1 resolution 22]
+railway=platform {add access = no; add foot = yes} [0x07 road_class=0 road_speed=0 resolution 23]
+railway=*  [0x14 resolution 22 continue]
+
+
+#######################################################################################
+
+# The following boundary styles are after the highway rules because ways
+# are frequently tagged with both and we want the highway to take priority.
+boundary=administrative { name '${mkgmap:boundary_name}' }
+boundary=administrative & admin_level<3 [0x1e resolution 16]
+boundary=administrative & admin_level<5 [0x1d resolution 19]
+boundary=administrative & admin_level<7 [0x1c resolution 23]
+#boundary=administrative & admin_level<9 [0x1c resolution 21]
+boundary=administrative [0x1c resolution 23]
+boundary=national [0x1e resolution 15]
+boundary=political [0x1c resolution 18]
+
+#####################################################################################
+
+( natural=cliff | barrier=cliff ) 			{set name='${name} cliff' | 'cliff'}		[0x37 resolution 22 continue]
+
+( barrier=wall | barrier=retaining_wall | barrier=city_wall ) 						[0x31 resolution 22 continue]
+( barrier=fence | barrier=wood_fence | barrier=wire_fence | barrier=metal_fence ) & name=*		[0x32 resolution 23 continue]
+
+(barrier=hedge | natural=hedge) & name=*								[0x30 resolution 24 continue]
+
+aeroway=runway 						{set name='runway ${name}' | 'runway'}		[0x10011 resolution 20]
+aeroway=taxiway 											[0x10010 resolution 22]
+
+highway=pier | man_made=pier										[0x19 resolution 23 continue]
+
+bridge=*												[0x26 resolution 22 continue]
+tunnel=* 												[0x27 resolution 22 continue]
+
+route=ferry | waterway=ferry_way | line=ferry								[0x1b resolution 18 continue]
+
+
+waterway=weir						{add name='${name}' | 'weir'}			[0x33 resolution 23 continue]
+waterway=canal 						{add name='${name}' | 'canal'}			[0x38 resolution 19 continue]
+
+
+#natural=coastline [0x15 resolution 12]
+
+
+waterway=drain [0x1f resolution 22]
+waterway=river [0x1f resolution 19]
+waterway=rapids | waterway=waterfall [0x1f resolution 22]
+waterway=stream [0x18 resolution 22]
+waterway=ditch [0x18 resolution 23]
+
+waterway=dam						{add name='${name}' | 'dam'}			[0x34 resolution 22 continue]
+
+######################################################################################
+
+piste:type=downhill 					{set name='${name} piste' | 'piste'}						[0x10110 resolution 21 continue]
+
+(aerialway=tbar | aerialway=t-bar | piste:lift=tbar | piste:lift=t-bar | aerialway=schlepplift | piste:lift=schlepplift | drag_lift=tbar | drag_lift=t-bar)	{set name='${name} tbar' | 'tbar'}	[0x10012 resolution 22 continue]
+aerialway=platter 					{set name='${name} platter' | 'platter'}					[0x10012 resolution 22 continue]
+aerialway=rope_tow 					{set name='${name} ropetow' | 'ropetow'}					[0x10012 resolution 22 continue]
+aerialway=jbar | aerialway=j-bar			{set name='${name} jbar' | 'jbar'}						[0x10012 resolution 22 continue]
+(aerialway=drag_lift | piste:lift=drag_lift)		{set name='${name} drag_lift' | 'drag_lift'}					[0x10012 resolution 22 continue]
+
+( aerialway=cable_car | aerialway=gondola )		{set name='${name} cable_car' | 'cable_car'}					[0x10013 resolution 22 continue]
+
+( aerialway=chair_lift  | aerialway=mixed_lift ) 	{set name='${name} chair_lift' | 'chair_lift'}					[0x10013 resolution 22 continue]
+
+
+# Contours take their name from the elevation setting.
+contour=elevation & contour_ext=elevation_minor			{ name '${ele|conv:m=>ft}'; }			[0x20 resolution 21]
+contour=elevation & contour_ext=elevation_medium		{ name '${ele|conv:m=>ft}'; }			[0x21 resolution 20]
+contour=elevation & contour_ext=elevation_major			{ name '${ele|conv:m=>ft}'; }			[0x22 resolution 19]
+contour=elevation | contour_ext=elevation			{ name '${ele|conv:m=>ft}'; }			[0x21 resolution 22]

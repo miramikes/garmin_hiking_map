@@ -1,0 +1,24 @@
+#
+# This file contains information about the style.
+# It is completely optional.
+# 
+
+
+# A short one line description of the style
+#
+
+# Version of the style itself
+#
+version= 1.0
+
+summary: Mira's hiking style
+
+
+
+description {
+	This is a heavyweight style that is designed
+	for use when mapping and especially in
+	lightly covered areas.
+
+	Especially designed for hiking.
+}
