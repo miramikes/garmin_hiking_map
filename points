@@ -121,7 +121,7 @@ historic=memorial 				[0x2c02 resolution 24]
 tourism=attraction & historic=* 		[0x2c02 resolution 21]
 tourism=attraction 				[0x2c04 resolution 21]
 
-# 0x2c - Attractions / community
+#  Attractions / community
 historic=* 					[0x2c0b resolution 23]
 
 #######################################################
@@ -151,7 +151,7 @@ historic=ruins | building=collapsed 					[0x4806 resolution 22]
 
 ######################################################
 
-# 0x4a - Picnic
+#  Picnic
 tourism=picnic_site | leisure=picnic_table 						[0x4a00 resolution 21]
 amenity=bbq 										[0x4a01 resolution 21]
 
@@ -217,7 +217,7 @@ mountain_pass=* 						[0x6615 resolution 23]
 
 ################################################################
 
-# 0x4c - Information
+#  Information
 
 tourism=information & information!=* {name '${name} - ${description} (${operator})'| '${name} - (${description})' | '${name}' | '${description}' | '${operator}' | '${ref}'}	 [0x4c01 resolution 21]
 
