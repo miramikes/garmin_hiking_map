@@ -72,20 +72,20 @@ highway=construction 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${
 
 # hiking
 
-iwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval:9:7}'} 		[0x0b resolution 18 continue]
-iwn_from_relation=yes 		{name '${iref} - ${iname}'} 				[0x10000 resolution 19 continue]
+iwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'} 						[0x0b resolution 18 continue]
+iwn_from_relation=yes 		{name '${iref} ${iname}' | '${iref}' | '${iref} - ${iname}'} 				[0x10000 resolution 19 continue]
 
-nwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval:9:7}'}    	[0x0b resolution 18 continue]
-nwn_from_relation=yes 		{name '${nref} - ${nname}'}    				[0x10000 resolution 19 continue]
+nwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'}    						[0x0b resolution 18 continue]
+nwn_from_relation=yes 		{name '${nref} ${nname}' | '${nref}' | '${nname}'}    					[0x10000 resolution 19 continue]
 
-rwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval:9:7}'}   	[0x0b resolution 22 continue]
-rwn_from_relation=yes  		{name '${rref} - ${rname}'}   				[0x10000 resolution 23 continue]
+rwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 22 continue]
+rwn_from_relation=yes  		{name '${rref} ${rname}' | '${rref}' | '${rname}'}   					[0x10000 resolution 23 continue]
 
-lwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval:9:7}'}   	[0x0b resolution 22 continue]
-lwn_from_relation=yes  		{name '${lref} - ${lname}'}   				[0x10000 resolution 23 continue]
+lwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 22 continue]
+lwn_from_relation=yes  		{name '${lref} ${lname}' | '${lref}' | '${lname}'}   					[0x10000 resolution 23 continue]
 
-nonet_from_relation=yes 	{name '${color-ref|highway-symbol:oval:9:7}'}   	[0x0b resolution 22 continue]
-nonet_from_relation=yes 	{name '${nnref} - ${nnname}'}   			[0x10000 resolution 23 continue]
+nonet_from_relation=yes 	{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 22 continue]
+nonet_from_relation=yes 	{name '${nnref} ${nnname}' | '${nnref}' | '${nnname}'}   				[0x10000 resolution 23 continue]
 
 
 ######################################
@@ -93,23 +93,23 @@ nonet_from_relation=yes 	{name '${nnref} - ${nnname}'}   			[0x10000 resolution 
 # bicycle
 
 
-icn_from_relation=yes 	{name '${iref|highway-symbol:hbox:13:11}'}						[0x0c resolution 18 continue]
+icn_from_relation=yes 	{name '${iref|highway-symbol:hbox}'}							[0x0c resolution 18 continue]
 icn_from_relation=yes 	{name '${iname}'}									[0x10001 resolution 19 continue]
 
-ncn_from_relation=yes 	{name '${nref|highway-symbol:hbox:13:11}'} 						[0x0c resolution 18 continue]
+ncn_from_relation=yes 	{name '${nref|highway-symbol:hbox}'} 							[0x0c resolution 18 continue]
 ncn_from_relation=yes 	{name '${nname}'} 									[0x10001 resolution 19 continue]
 
 
-rcn_from_relation=yes  	{name '${rref|highway-symbol:hbox:13:11}'} 						[0x0c resolution 22 continue]
+rcn_from_relation=yes  	{name '${rref|highway-symbol:hbox}'} 							[0x0c resolution 22 continue]
 rcn_from_relation=yes  	{name '${rname}'} 									[0x10001 resolution 23 continue]
 
-lcn_from_relation=yes  	{name '${lref|highway-symbol:hbox:13:11}'}						[0x0c resolution 22 continue]
+lcn_from_relation=yes  	{name '${lref|highway-symbol:hbox}'}							[0x0c resolution 22 continue]
 lcn_from_relation=yes  	{name '${lname}'}									[0x10001 resolution 23 continue]
 
-tcn_from_relation=yes 	{name '${tref|highway-symbol:hbox:13:11}'}						[0x0c resolution 22 continue]
+tcn_from_relation=yes 	{name '${tref|highway-symbol:hbox}'}							[0x0c resolution 22 continue]
 tcn_from_relation=yes 	{name '${tname}'}									[0x10001 resolution 23 continue]
 
-mtb_from_relation=yes 	{name '${mref|highway-symbol:hbox:13:11}'}						[0x0c resolution 22 continue]
+mtb_from_relation=yes 	{name '${mref|highway-symbol:hbox}'}							[0x0c resolution 22 continue]
 mtb_from_relation=yes 	{name '${mname}'}									[0x10001 resolution 23 continue]
 
 #####################################
@@ -211,7 +211,7 @@ railway=*  [0x14 resolution 22 continue]
 # The following boundary styles are after the highway rules because ways
 # are frequently tagged with both and we want the highway to take priority.
 boundary=administrative { name '${mkgmap:boundary_name}' }
-boundary=administrative & admin_level<3 [0x1e resolution 16]
+boundary=administrative & admin_level<3 [0x1e resolution 15]
 boundary=administrative & admin_level<5 [0x1d resolution 19]
 boundary=administrative & admin_level<7 [0x1c resolution 23]
 #boundary=administrative & admin_level<9 [0x1c resolution 21]
