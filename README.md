@@ -33,5 +33,6 @@ https://github.com/vibrog
 aighes
 http://www.aighes.de/OSM/index.php
 
-Building a map
+Building a map:
+
 java -ea -Xmx6144m -jar mkgmap-r2316/mkgmap.jar mira.TYP --precomp-sea=/precompiled/sea/files/dir/ --style-file=mira-style/ -c mira-style/arguments LAND/6324*.osm.pbf CONTOUR/contour*.osm.pbf
