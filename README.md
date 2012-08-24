@@ -5,9 +5,11 @@ OSM hiking Garmin map
 
 This mkgmap style files were created to build map with
 as many as possible details useful for hiking and outdoor activities.
+
 This map is not routeable. Maybe in future.
 
-Many thanks to people on Garmin OSM forum for answering all my stupid questions.
+Many thanks to people on Garmin OSM forum for answering all my beginner's questions.
+
 http://forum.openstreetmap.org/viewforum.php?id=26
 
 Thanks for inspiration to:
