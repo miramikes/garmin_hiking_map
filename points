@@ -113,16 +113,18 @@ leisure=marina 					[0x2f09 resolution 24]
 
 ##########################################################
 
-historic=museum 				[0x2c02 resolution 24]
-historic=archaeological_site | historic=ruins 	[0x2c02 resolution 24]
-historic=memorial 				[0x2c02 resolution 24]
+historic=museum 							[0x2c02 resolution 24]
+historic=archaeological_site | historic=ruins 				[0x2c02 resolution 24]
+historic=memorial 							[0x2c02 resolution 24]
 
 
-tourism=attraction & historic=* 		[0x2c02 resolution 21]
-tourism=attraction 				[0x2c04 resolution 21]
+tourism=attraction & historic=* & historic!=wayside_cross		[0x2c02 resolution 21]
+tourism=attraction 							[0x2c04 resolution 21]
+
+cross=yes | man_made=cross | historic=wayside_cross 			[0x481f resolution 23]
 
 #  Attractions / community
-historic=* 					[0x2c0b resolution 23]
+historic=* 	& historic!=wayside_cross	& historic!=ruins	[0x2c0b resolution 23]
 
 #######################################################
 
