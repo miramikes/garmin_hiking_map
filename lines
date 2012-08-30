@@ -78,14 +78,14 @@ iwn_from_relation=yes 		{name '${iref} ${iname}' | '${iref}' | '${iref} - ${inam
 nwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'}    						[0x0b resolution 18 continue]
 nwn_from_relation=yes 		{name '${nref} ${nname}' | '${nref}' | '${nname}'}    					[0x10000 resolution 19 continue]
 
-rwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 22 continue]
-rwn_from_relation=yes  		{name '${rref} ${rname}' | '${rref}' | '${rname}'}   					[0x10000 resolution 23 continue]
+rwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 21 continue]
+rwn_from_relation=yes  		{name '${rref} ${rname}' | '${rref}' | '${rname}'}   					[0x10000 resolution 22 continue]
 
-lwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 22 continue]
-lwn_from_relation=yes  		{name '${lref} ${lname}' | '${lref}' | '${lname}'}   					[0x10000 resolution 23 continue]
+lwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 21 continue]
+lwn_from_relation=yes  		{name '${lref} ${lname}' | '${lref}' | '${lname}'}   					[0x10000 resolution 22 continue]
 
-nonet_from_relation=yes 	{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 22 continue]
-nonet_from_relation=yes 	{name '${nnref} ${nnname}' | '${nnref}' | '${nnname}'}   				[0x10000 resolution 23 continue]
+nonet_from_relation=yes 	{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 21 continue]
+nonet_from_relation=yes 	{name '${nnref} ${nnname}' | '${nnref}' | '${nnname}'}   				[0x10000 resolution 22 continue]
 
 
 ######################################
@@ -100,17 +100,17 @@ ncn_from_relation=yes 	{name '${nref|highway-symbol:hbox}'} 							[0x0c resolut
 ncn_from_relation=yes 	{name '${nname}'} 									[0x10001 resolution 19 continue]
 
 
-rcn_from_relation=yes  	{name '${rref|highway-symbol:hbox}'} 							[0x0c resolution 22 continue]
-rcn_from_relation=yes  	{name '${rname}'} 									[0x10001 resolution 23 continue]
+rcn_from_relation=yes  	{name '${rref|highway-symbol:hbox}'} 							[0x0c resolution 21 continue]
+rcn_from_relation=yes  	{name '${rname}'} 									[0x10001 resolution 22 continue]
 
-lcn_from_relation=yes  	{name '${lref|highway-symbol:hbox}'}							[0x0c resolution 22 continue]
-lcn_from_relation=yes  	{name '${lname}'}									[0x10001 resolution 23 continue]
+lcn_from_relation=yes  	{name '${lref|highway-symbol:hbox}'}							[0x0c resolution 21 continue]
+lcn_from_relation=yes  	{name '${lname}'}									[0x10001 resolution 22 continue]
 
-tcn_from_relation=yes 	{name '${tref|highway-symbol:hbox}'}							[0x0c resolution 22 continue]
-tcn_from_relation=yes 	{name '${tname}'}									[0x10001 resolution 23 continue]
+tcn_from_relation=yes 	{name '${tref|highway-symbol:hbox}'}							[0x0c resolution 21 continue]
+tcn_from_relation=yes 	{name '${tname}'}									[0x10001 resolution 22 continue]
 
-mtb_from_relation=yes 	{name '${mref|highway-symbol:hbox}'}							[0x0c resolution 22 continue]
-mtb_from_relation=yes 	{name '${mname}'}									[0x10001 resolution 23 continue]
+mtb_from_relation=yes 	{name '${mref|highway-symbol:hbox}'}							[0x0c resolution 21 continue]
+mtb_from_relation=yes 	{name '${mname}'}									[0x10001 resolution 22 continue]
 
 #####################################
 
