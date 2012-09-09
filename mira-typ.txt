@@ -1,4 +1,7 @@
-
+; test18.typ
+; Longueur:  octets
+; Fichier TYP compilé     09/09/2012     23:21:43
+; Décompilé le 9/9/2012 à 11:23:27 PM
 
 [_id]
 ProductCode=1
@@ -95,7 +98,7 @@ Type=0x04
 String1=0x00,Restricted area
 ExtendedLabels=N
 Xpm="32 32 2 1"
-"! c #FF0000"
+"! c #FF958B"
 "  c none"
 "              !!              !!"
 "             !!              !! "
