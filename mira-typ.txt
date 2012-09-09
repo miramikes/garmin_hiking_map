@@ -1827,7 +1827,7 @@ ExtendedLabels=N
 Type=0x1c
 UseOrientation=N
 Xpm="32 15 2  1"
-"! c #FF306A"
+"! c #BD30FF"
 "  c none"
 "!!!!    !!!!    !!!!    !!!!    "
 "!!!!    !!!!    !!!!    !!!!    "
@@ -1845,7 +1845,7 @@ Xpm="32 15 2  1"
 "                                "
 "                                "
 ;12345678901234567890123456789012
-String1=0x00,boundary
+String1=0x00,boundary subregional
 ExtendedLabels=N
 [end]
 
@@ -1854,7 +1854,7 @@ ExtendedLabels=N
 Type=0x1d
 UseOrientation=N
 Xpm="32 15 2  1"
-"! c #FF306A"
+"! c #BD30FF"
 "  c none"
 "!!!!!!!!        !!!!!!!!        "
 "!!!!!!!!        !!!!!!!!        "
@@ -1872,7 +1872,7 @@ Xpm="32 15 2  1"
 "                                "
 "                                "
 ;12345678901234567890123456789012
-String1=0x00,boundary
+String1=0x00,boundary regional
 ExtendedLabels=N
 [end]
 
@@ -1881,7 +1881,7 @@ ExtendedLabels=N
 Type=0x1e
 UseOrientation=N
 Xpm="32 15 2  1"
-"! c #FF306A"
+"! c #BD30FF"
 "  c none"
 "!!!!!!!!!!!!!!!!                "
 "!!!!!!!!!!!!!!!!                "
@@ -1899,7 +1899,7 @@ Xpm="32 15 2  1"
 "                                "
 "                                "
 ;12345678901234567890123456789012
-String1=0x00,boundary
+String1=0x00,boundary national
 ExtendedLabels=N
 [end]
 
@@ -1991,7 +1991,7 @@ ExtendedLabels=N
 Type=0x27
 UseOrientation=N
 Xpm="32 13 2  1"
-"! c #BD30FF"
+"! c #7B00FF"
 "  c none"
 "   !!!!!   !!!!!   !!!!!   !!!!!"
 "   !!!!!   !!!!!   !!!!!   !!!!!"
