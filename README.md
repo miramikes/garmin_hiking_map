@@ -5,14 +5,14 @@ OSM hiking Garmin map
 
 This mkgmap style files were created to build map with
 as many as possible details useful for hiking and outdoor activities.
-
 This map is not routeable. Maybe in future.
 
-Many thanks to people on Garmin OSM forum for answering all my beginner's questions.
+This map is tuned to work well with my Garmin 78s
 
+Many thanks to people on Garmin OSM forum for answering all my stupid questions.
 http://forum.openstreetmap.org/viewforum.php?id=26
 
-Thanks for inspiration to:
+Thanks for inspiration and help to:
 
 ligfietser
 https://sites.google.com/site/openfietsmap/ 
@@ -35,3 +35,5 @@ https://github.com/vibrog
 aighes
 http://www.aighes.de/OSM/index.php
 
+
+Thank you for any comments or suggestions. 
