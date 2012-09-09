@@ -176,9 +176,9 @@ highway=living_street 	[0x07 road_class=0 road_speed=1 resolution 23 continue]
 highway=service       	[0x07 road_class=0 road_speed=1 resolution 23 continue]
 highway=unsurfaced	[0x07 road_class=0 road_speed=1 resolution 23 continue]
 
-highway=motorway_link [0x06 road_class=4 road_speed=4 resolution 20 continue]
-highway=trunk_link    [0x06 road_class=3 road_speed=3 resolution 20 continue]
-highway=primary_link  [0x06 road_class=3 road_speed=3 resolution 21 continue]
+highway=motorway_link 	[0x06 road_class=4 road_speed=4 resolution 20 continue]
+highway=trunk_link    	[0x06 road_class=3 road_speed=3 resolution 20 continue]
+highway=primary_link  	[0x06 road_class=3 road_speed=3 resolution 21 continue]
 
 highway=cycleway 		[0x09 road_class=0 road_speed=1 resolution 21 continue]
 highway=footway 		[0x08 road_class=0 road_speed=0 resolution 21 continue]
@@ -210,49 +210,50 @@ railway=*  [0x14 resolution 22 continue]
 
 # The following boundary styles are after the highway rules because ways
 # are frequently tagged with both and we want the highway to take priority.
+
 boundary=administrative { name '${mkgmap:boundary_name}' }
-boundary=administrative & admin_level<3 [0x1e resolution 15]
-boundary=administrative & admin_level<5 [0x1d resolution 19]
-boundary=administrative & admin_level<7 [0x1c resolution 23]
-#boundary=administrative & admin_level<9 [0x1c resolution 21]
-boundary=administrative [0x1c resolution 23]
-boundary=national [0x1e resolution 15]
-boundary=political [0x1c resolution 18]
+
+boundary=administrative & admin_level=2 			[0x1e resolution 15]
+boundary=administrative & admin_level>2 & admin_level<7  	[0x1d resolution 18]
+boundary=administrative & admin_level>6 & admin_level<8 	[0x1c resolution 23]
+
+boundary=political 						[0x1c resolution 18]
 
 #####################################################################################
 
-( natural=cliff | barrier=cliff ) 			{set name='${name} cliff' | 'cliff'}		[0x37 resolution 22 continue]
+natural=cliff | barrier=cliff 	 						{set name='${name} cliff' | 'cliff'}	[0x37 resolution 22 continue]
 
-( barrier=wall | barrier=retaining_wall | barrier=city_wall ) 						[0x31 resolution 22 continue]
-( barrier=fence | barrier=wood_fence | barrier=wire_fence | barrier=metal_fence ) & name=*		[0x32 resolution 23 continue]
+barrier=wall | barrier=retaining_wall | barrier=city_wall 			{set name='${name} wall' | 'wall'}	[0x31 resolution 22 continue]
+barrier=fence | barrier=wood_fence | barrier=wire_fence | barrier=metal_fence 	{set name='${name} fence' | 'fence'}	[0x32 resolution 23 continue]
 
-(barrier=hedge | natural=hedge) & name=*								[0x30 resolution 24 continue]
+barrier=hedge | natural=hedge 												[0x30 resolution 24 continue]
 
-aeroway=runway 						{set name='runway ${name}' | 'runway'}		[0x10011 resolution 20]
-aeroway=taxiway 											[0x10010 resolution 22]
+aeroway=runway 									{set name='runway ${name}' | 'runway'}	[0x10011 resolution 20]
+aeroway=taxiway 													[0x10010 resolution 22]
 
-highway=pier | man_made=pier										[0x19 resolution 23 continue]
+highway=pier | man_made=pier												[0x19 resolution 23 continue]
 
-bridge=*												[0x26 resolution 22 continue]
-tunnel=* 												[0x27 resolution 22 continue]
+bridge=*														[0x26 resolution 22 continue]
+tunnel=* 														[0x27 resolution 22 continue]
 
-route=ferry | waterway=ferry_way | line=ferry								[0x1b resolution 18 continue]
-
-
-waterway=weir						{add name='${name}' | 'weir'}			[0x33 resolution 23 continue]
-waterway=canal 						{add name='${name}' | 'canal'}			[0x38 resolution 19 continue]
+route=ferry | waterway=ferry_way | line=ferry										[0x1b resolution 18 continue]
 
 
-#natural=coastline [0x15 resolution 12]
+waterway=weir									{set name='weir ${name}' | 'weir'}	[0x33 resolution 23 continue]
+waterway=canal 									{set name='canal ${name}' | 'canal'}	[0x38 resolution 19 continue]
+
+waterway=dam									{set name='dam ${name}' | 'dam'}	[0x34 resolution 22 continue]
+
+#natural=coastline 							[0x15 resolution 12]
+
+waterway=river 				{set name='${name}'}		[0x1f resolution 19]
+waterway=rapids | waterway=waterfall 	{set name='${name}'}		[0x1f resolution 22]
+
+waterway=stream 			{set name='${name}'}		[0x18 resolution 22]
+waterway=drain 								[0x18 resolution 23]
+waterway=ditch 								[0x18 resolution 23]
 
 
-waterway=drain [0x1f resolution 22]
-waterway=river [0x1f resolution 19]
-waterway=rapids | waterway=waterfall [0x1f resolution 22]
-waterway=stream [0x18 resolution 22]
-waterway=ditch [0x18 resolution 23]
-
-waterway=dam						{add name='${name}' | 'dam'}			[0x34 resolution 22 continue]
 
 ######################################################################################
 
