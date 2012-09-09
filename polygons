@@ -2,9 +2,9 @@
 
 # Airport
 
-aeroway=airport 	[0x07 resolution 20]
-aeroway=aerodrome 	[0x07 resolution 21]
-aeroway=helipad 	[0x0e resolution 22]
+aeroway=airport 										[0x07 resolution 20]
+aeroway=aerodrome 										[0x07 resolution 21]
+aeroway=helipad 										[0x0e resolution 22]
 
 
 #######################################################################################
@@ -30,11 +30,11 @@ leisure=playground 										[0x17 resolution 22]
 leisure=golf_course 										[0x18 resolution 22]
 
 leisure=ice_rink 										[0x19 resolution 22]
-leisure=pitch { name '${name} (${sport})' | '${name}' } 					[0x19 resolution 22]
+leisure=pitch 					{ name '${name} (${sport})' | '${name}' } 	[0x19 resolution 22]
 leisure=recreation_ground 									[0x19 resolution 22]
-leisure=sports_center | leisure=sports_centre { name '${name} (${sport})' | '${name}' } 	[0x19 resolution 22]
-leisure=stadium { name '${name} (${sport})' | '${name}' } 					[0x19 resolution 22]
-leisure=track & area=yes { name '${name} (${sport})' | '${name}' } 				[0x19 resolution 22]
+leisure=sports_center | leisure=sports_centre 	{ name '${name} (${sport})' | '${name}' } 	[0x19 resolution 22]
+leisure=stadium 				{ name '${name} (${sport})' | '${name}' } 	[0x19 resolution 22]
+leisure=track & area=yes 			{ name '${name} (${sport})' | '${name}' } 	[0x19 resolution 22]
 
 leisure=water_park 										[0x09 resolution 22]
 leisure=marina 											[0x09 resolution 22]
@@ -45,52 +45,55 @@ amenity=supermarket | shop=supermarket | landuse=retail						[0x08 resolution 22
 amenity=cafe | amenity=fast_food | amenity=restaurant | amenity=food_court 			[0x08 resolution 22]
 shop=* 		& shop!=supermarket								[0x08 resolution 22]
 
-# squares and plazas
-highway=pedestrian & area=yes 			[0x17 resolution 22]
+# Squares
+
+highway=pedestrian 	& area=yes 								[0x17 resolution 22]
 
 # other highways that have area=yes set must be parking lots
-highway=* & area=yes 				[0x05 resolution 22]
 
-landuse=allotments 						[0x27 resolution 21]
-landuse=cemetery | landuse=cemetary | amenity=grave_yard 	[0x1a resolution 21]
-landuse=commercial 						[0x21 resolution 21]
-landuse=construction 						[0x0c resolution 21]
-landuse=quarry 							[0x20 resolution 21]
-landuse=industrial 						[0x0c resolution 22]
-landuse=residential 						[0x10 resolution 22]
-landuse=retail 							[0x08 resolution 22]
+highway=* 		& area=yes 								[0x05 resolution 22]
 
-landuse=recreation_ground 					[0x19 resolution 21]
-landuse=greenfield 						[0x17 resolution 21]
-landuse=village_green 						[0x17 resolution 21]
+landuse=allotments 										[0x27 resolution 21]
+landuse=cemetery | landuse=cemetary | amenity=grave_yard 					[0x1a resolution 21]
+landuse=commercial 										[0x21 resolution 21]
+landuse=construction 										[0x0c resolution 21]
+landuse=quarry 											[0x20 resolution 21]
+landuse=industrial 										[0x0c resolution 22]
+landuse=residential 										[0x10 resolution 22]
+landuse=retail 											[0x08 resolution 22]
+
+landuse=recreation_ground 									[0x19 resolution 21]
+landuse=greenfield 										[0x17 resolution 21]
+landuse=village_green 										[0x17 resolution 21]
 
 # building tag should be last
-(building=* | amenity=*) & area!=no 		[0x13 resolution 24]
-tourism=* & area!=no & waterway!=* 		[0x13 resolution 24]
-man_made=* & area=yes 				[0x13 resolution 24]
+(building=* | amenity=*) 	& area!=no 							[0x13 resolution 24]
+tourism=* 			& area!=no & waterway!=* 					[0x13 resolution 24]
+man_made=* 			& area=yes 							[0x13 resolution 24]
+
 # man_made can be used on areas or lines
 man_made=* & area!=no & (man_made!=door & man_made!=embankment & man_made!=breakwater & man_made!=cable_line & man_made!=cutline & man_made!=cutting & man_made!=levee & man_made!=trench) 		[0x13 resolution 24]
 
 # Historic
 
-historic=museum | historic=memorial [0x1e resolution 21]
-historic=archaeological_site | historic=ruins 	[0x1e resolution 21]
+historic=museum | historic=memorial 								[0x1e resolution 21]
+historic=archaeological_site | historic=ruins 							[0x1e resolution 21]
 
 # Agriculture
 
-landuse=farm 									[0x4e resolution 21]
-landuse=farmyard 								[0x4e resolution 22]
-landuse=vineyard 								[0x63 resolution 21]
-natural=orchard | landuse=orchard | landuse=orchards | natural=orchards		[0x10f14 resolution 22]
+landuse=farm 											[0x4e resolution 21]
+landuse=farmyard 										[0x4e resolution 22]
+landuse=vineyard 										[0x63 resolution 21]
+natural=orchard | landuse=orchard | landuse=orchards | natural=orchards				[0x10f14 resolution 22]
 
 # Danger
 
-landuse=military 							[0x04 resolution 21]
-military=airfield 							[0x04 resolution 21]
-military=barracks 							[0x04 resolution 23]
-amenity=prison 								[0x04 resolution 22]
+landuse=military 										[0x04 resolution 21]
+military=airfield 										[0x04 resolution 21]
+military=barracks 										[0x04 resolution 23]
+amenity=prison 											[0x04 resolution 22]
 
-( military=danger_area | military=range ) & landuse!=military 		[0x04 resolution 21]
+(military=danger_area | military=range ) & landuse!=military 					[0x04 resolution 21]
 
 #######################################################################################
 
@@ -102,31 +105,31 @@ leisure=nature_reserve 										[0x16 resolution 20]
 
 # Sand
 
-natural=beach | natural=sand						[0x1100d resolution 24-21]
-surface=sand & area=yes							[0x1100d resolution 24-22]
-surface=sand & highway!=* 						[0x1100d resolution 24-22]
-water=tidal								[0x1101b resolution 24-21]
-natural=shelf | tidal=yes | tidal=true					[0x1101b resolution 24-21]
+natural=beach | natural=sand									[0x1100d resolution 24-21]
+surface=sand 					& area=yes					[0x1100d resolution 24-22]
+surface=sand 					& highway!=* 					[0x1100d resolution 24-22]
+water=tidal											[0x1101b resolution 24-21]
+natural=shelf | tidal=yes | tidal=true								[0x1101b resolution 24-21]
 
 # Water
 
-natural=bay [0x3d resolution 18]
-natural=water [0x3a resolution 18]
-waterway=riverbank [0x3e resolution 20]
+natural=bay 											[0x3d resolution 18]
+natural=water 											[0x3a resolution 18]
+waterway=riverbank 										[0x3e resolution 20]
 
-landuse=basin | landuse=pond				[0x3e resolution 20]
-landuse=reservoir 					[0x3e resolution 19]
+landuse=basin | landuse=pond									[0x3e resolution 20]
+landuse=reservoir 										[0x3e resolution 19]
 
 # Vegetation
 
-wood=mixed						[0x1101f resolution 24-21]
-wood=deciduos | wood=deciduous				[0x1101e resolution 24-21]
-wood=coniferous 					[0x1101d resolution 24-21]
+wood=mixed											[0x1101f resolution 24-21]
+wood=deciduos | wood=deciduous									[0x1101e resolution 24-21]
+wood=coniferous 										[0x1101d resolution 24-21]
 
-( landuse=forest | natural=wood | landuse=wood | natural=forest )	& wood!=*	[0x50 resolution 24-21]
+( landuse=forest | natural=wood | landuse=wood | natural=forest )	& wood!=*		[0x50 resolution 24-21]
 
-natural=bare_rock 		{ name '${name} rock' | 'bare_rock' }							[0x1100e resolution 22]
-natural=cliff & area=yes	{ name '${name} cliff' | 'cliff' } 							[0x1100e resolution 22]
+natural=bare_rock 		{ name '${name} rock' | 'bare_rock' }				[0x1100e resolution 22]
+natural=cliff & area=yes	{ name '${name} cliff' | 'cliff' } 				[0x1100e resolution 22]
 
 natural=scrub | natural=shrub | natural=scrubland | natural=scrubs | natural=shrubs | natural=shrubland				[0x4f resolution 24-21]
 natural=scree										[0x11016 resolution 24-21]
@@ -136,11 +139,11 @@ natural=heath 										[0x11014 resolution 24-21]
 natural=mud | natural=marsh | natural=wetland 						[0x51 resolution 24-21]
 natural=meadow | landuse=meadow								[0x33 resolution 21]
 
-natural=glacier 							[0x4d resolution 24-18]
+natural=glacier 									[0x4d resolution 24-18]
 
-natural=sea 								[0x10f1d resolution 24-14]
-natural=land 								[0x10101 resolution 24-14 continue]
+natural=sea 										[0x10f1d resolution 24-14]
+natural=land 										[0x10101 resolution 24-14 continue]
 
-place=island & name=* 		[0x10100 resolution 20]
-place=islet & name=* 		[0x10100 resolution 22]
+place=island & name=* 									[0x10100 resolution 20]
+place=islet & name=* 									[0x10100 resolution 22]
 
