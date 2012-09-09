@@ -93,24 +93,24 @@ nonet_from_relation=yes 	{name '${nnref} ${nnname}' | '${nnref}' | '${nnname}'} 
 # bicycle
 
 
-icn_from_relation=yes 	{name '${iref|highway-symbol:hbox}'}							[0x0c resolution 18 continue]
-icn_from_relation=yes 	{name '${iname}'}									[0x10001 resolution 19 continue]
+icn_from_relation=yes 		{name '${iref|highway-symbol:hbox}'}							[0x0c resolution 18 continue]
+icn_from_relation=yes 		{name '${iname}'}									[0x10001 resolution 19 continue]
 
-ncn_from_relation=yes 	{name '${nref|highway-symbol:hbox}'} 							[0x0c resolution 18 continue]
-ncn_from_relation=yes 	{name '${nname}'} 									[0x10001 resolution 19 continue]
+ncn_from_relation=yes 		{name '${nref|highway-symbol:hbox}'} 							[0x0c resolution 18 continue]
+ncn_from_relation=yes 		{name '${nname}'} 									[0x10001 resolution 19 continue]
 
 
-rcn_from_relation=yes  	{name '${rref|highway-symbol:hbox}'} 							[0x0c resolution 21 continue]
-rcn_from_relation=yes  	{name '${rname}'} 									[0x10001 resolution 22 continue]
+rcn_from_relation=yes  		{name '${rref|highway-symbol:hbox}'} 							[0x0c resolution 21 continue]
+rcn_from_relation=yes  		{name '${rname}'} 									[0x10001 resolution 22 continue]
 
-lcn_from_relation=yes  	{name '${lref|highway-symbol:hbox}'}							[0x0c resolution 21 continue]
-lcn_from_relation=yes  	{name '${lname}'}									[0x10001 resolution 22 continue]
+lcn_from_relation=yes  		{name '${lref|highway-symbol:hbox}'}							[0x0c resolution 21 continue]
+lcn_from_relation=yes  		{name '${lname}'}									[0x10001 resolution 22 continue]
 
-tcn_from_relation=yes 	{name '${tref|highway-symbol:hbox}'}							[0x0c resolution 21 continue]
-tcn_from_relation=yes 	{name '${tname}'}									[0x10001 resolution 22 continue]
+tcn_from_relation=yes 		{name '${tref|highway-symbol:hbox}'}							[0x0c resolution 21 continue]
+tcn_from_relation=yes 		{name '${tname}'}									[0x10001 resolution 22 continue]
 
-mtb_from_relation=yes 	{name '${mref|highway-symbol:hbox}'}							[0x0c resolution 21 continue]
-mtb_from_relation=yes 	{name '${mname}'}									[0x10001 resolution 22 continue]
+mtb_from_relation=yes 		{name '${mref|highway-symbol:hbox}'}							[0x0c resolution 21 continue]
+mtb_from_relation=yes 		{name '${mname}'}									[0x10001 resolution 22 continue]
 
 #####################################
 
@@ -149,7 +149,6 @@ junction=roundabout 				[0x06 resolution 22]
 
 highway=construction 						[0x07 resolution 23 continue]
 
-
 highway=motorway {add oneway = yes; add bicycle = no; add foot = no }
 highway=motorway_link {add oneway = yes; add bicycle = no; add foot = no }
 highway=path {add access = no; add bicycle = yes; add foot = yes}
@@ -160,25 +159,25 @@ highway=steps {add access = no; add foot = yes}
 highway=bridleway {add access = no; add bicycle = yes; add foot = yes}
 
 
-highway=motorway      	[0x01 road_class=4 road_speed=6 resolution 16 continue]
+highway=motorway      		[0x01 road_class=4 road_speed=6 resolution 16 continue]
 
-highway=trunk         	[0x02 road_class=3 road_speed=5 resolution 17 continue]
+highway=trunk         		[0x02 road_class=3 road_speed=5 resolution 17 continue]
 
-highway=primary       	[0x03 road_class=2 road_speed=4 resolution 18 continue]
+highway=primary       		[0x03 road_class=2 road_speed=4 resolution 18 continue]
 
-highway=secondary 	[0x04 road_class=2 road_speed=4 resolution 19 continue]
+highway=secondary 		[0x04 road_class=2 road_speed=4 resolution 19 continue]
 
-highway=tertiary 	[0x05 road_class=2 road_speed=3 resolution 21 continue]
+highway=tertiary 		[0x05 road_class=2 road_speed=3 resolution 21 continue]
 
-highway=residential   	[0x06 road_class=0 road_speed=2 resolution 23 continue]
-highway=unclassified  	[0x06 road_class=0 road_speed=2 resolution 22 continue]
-highway=living_street 	[0x07 road_class=0 road_speed=1 resolution 23 continue]
-highway=service       	[0x07 road_class=0 road_speed=1 resolution 23 continue]
-highway=unsurfaced	[0x07 road_class=0 road_speed=1 resolution 23 continue]
+highway=residential   		[0x06 road_class=0 road_speed=2 resolution 23 continue]
+highway=unclassified  		[0x06 road_class=0 road_speed=2 resolution 22 continue]
+highway=living_street 		[0x07 road_class=0 road_speed=1 resolution 23 continue]
+highway=service       		[0x07 road_class=0 road_speed=1 resolution 23 continue]
+highway=unsurfaced		[0x07 road_class=0 road_speed=1 resolution 23 continue]
 
-highway=motorway_link 	[0x06 road_class=4 road_speed=4 resolution 20 continue]
-highway=trunk_link    	[0x06 road_class=3 road_speed=3 resolution 20 continue]
-highway=primary_link  	[0x06 road_class=3 road_speed=3 resolution 21 continue]
+highway=motorway_link 		[0x06 road_class=4 road_speed=4 resolution 20 continue]
+highway=trunk_link    		[0x06 road_class=3 road_speed=3 resolution 20 continue]
+highway=primary_link  		[0x06 road_class=3 road_speed=3 resolution 21 continue]
 
 highway=cycleway 		[0x09 road_class=0 road_speed=1 resolution 21 continue]
 highway=footway 		[0x08 road_class=0 road_speed=0 resolution 21 continue]
@@ -208,14 +207,13 @@ railway=*  [0x14 resolution 22 continue]
 
 #######################################################################################
 
-# The following boundary styles are after the highway rules because ways
-# are frequently tagged with both and we want the highway to take priority.
+# Boundary
 
 boundary=administrative { name '${mkgmap:boundary_name}' }
 
 boundary=administrative & admin_level=2 			[0x1e resolution 15]
 boundary=administrative & admin_level>2 & admin_level<7  	[0x1d resolution 18]
-boundary=administrative & admin_level>6 & admin_level<8 	[0x1c resolution 23]
+boundary=administrative & admin_level>6 & admin_level<8 	[0x1c resolution 21]
 
 boundary=political 						[0x1c resolution 18]
 
@@ -244,14 +242,14 @@ waterway=canal 									{set name='canal ${name}' | 'canal'}	[0x38 resolution 19
 
 waterway=dam									{set name='dam ${name}' | 'dam'}	[0x34 resolution 22 continue]
 
-#natural=coastline 							[0x15 resolution 12]
+#natural=coastline 													[0x15 resolution 12]
 
-waterway=river 				{set name='${name}'}		[0x1f resolution 19]
-waterway=rapids | waterway=waterfall 	{set name='${name}'}		[0x1f resolution 22]
+waterway=river 									{set name='${name}'}			[0x1f resolution 19]
+waterway=rapids | waterway=waterfall 						{set name='${name}'}			[0x1f resolution 22]
 
-waterway=stream 			{set name='${name}'}		[0x18 resolution 22]
-waterway=drain 								[0x18 resolution 23]
-waterway=ditch 								[0x18 resolution 23]
+waterway=stream 								{set name='${name}'}			[0x18 resolution 22]
+waterway=drain 														[0x18 resolution 23]
+waterway=ditch 														[0x18 resolution 23]
 
 
 
@@ -263,14 +261,15 @@ piste:type=downhill 					{set name='${name} piste' | 'piste'}						[0x10110 reso
 aerialway=platter 					{set name='${name} platter' | 'platter'}					[0x10012 resolution 22 continue]
 aerialway=rope_tow 					{set name='${name} ropetow' | 'ropetow'}					[0x10012 resolution 22 continue]
 aerialway=jbar | aerialway=j-bar			{set name='${name} jbar' | 'jbar'}						[0x10012 resolution 22 continue]
-(aerialway=drag_lift | piste:lift=drag_lift)		{set name='${name} drag_lift' | 'drag_lift'}					[0x10012 resolution 22 continue]
+aerialway=drag_lift | piste:lift=drag_lift		{set name='${name} drag_lift' | 'drag_lift'}					[0x10012 resolution 22 continue]
 
-( aerialway=cable_car | aerialway=gondola )		{set name='${name} cable_car' | 'cable_car'}					[0x10013 resolution 22 continue]
+aerialway=cable_car | aerialway=gondola			{set name='${name} cable_car' | 'cable_car'}					[0x10013 resolution 22 continue]
 
-( aerialway=chair_lift  | aerialway=mixed_lift ) 	{set name='${name} chair_lift' | 'chair_lift'}					[0x10013 resolution 22 continue]
+aerialway=chair_lift  | aerialway=mixed_lift 		{set name='${name} chair_lift' | 'chair_lift'}					[0x10013 resolution 22 continue]
 
 
 # Contours take their name from the elevation setting.
+
 contour=elevation & contour_ext=elevation_minor			{ name '${ele|conv:m=>ft}'; }			[0x20 resolution 21]
 contour=elevation & contour_ext=elevation_medium		{ name '${ele|conv:m=>ft}'; }			[0x21 resolution 20]
 contour=elevation & contour_ext=elevation_major			{ name '${ele|conv:m=>ft}'; }			[0x22 resolution 19]
