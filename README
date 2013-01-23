@@ -1,3 +1,46 @@
+----------------------------------------------------------
+
 Building a map
 
-$ java -ea -Xmx6144m -jar mkgmap-r2316/mkgmap.jar mira.TYP --precomp-sea=/precompiled/sea/files/dir/ --style-file=mira-style/ -c mira-style/arguments LAND/6324*.osm.pbf CONTOUR/contour*.osm.pbf
+----------------------------------------------------------
+
+1) Download osm data ... geofabrik.de is good place to it.
+
+http://download.geofabrik.de/openstreetmap/
+
+if you need a whole planet go here for e.g.:
+
+http://ftp5.gwdg.de/pub/misc/openstreetmap/planet.openstreetmap.org/pbf/
+
+---------------------
+
+2) If you need cut just part of your downloaded data use osmosis program.
+
+example fo greenland:
+
+$ osmosis --read-pbf file="planet-121003.osm.pbf" --bounding-box top=84.00 left=-74.00 bottom=58.00 right=-10.00 --write-pbf omitmetadata=true greenland.osm.pbf
+
+---------------------
+
+3) Than you will need split result on smaller parts (I am doing this to subdir LAND)
+
+$ java -ea -Xmx6144m -jar splitter-r282/splitter.jar --max-nodes=900000 --no-trim --precomp-sea=/path/to/your/precompiled_sea/directory --description=Greenland --mapid=63240001 --output=pbf --output-dir=LAND greenland.osm.pbf
+
+---------------------
+
+4) Precompiled bounds and sea you can get here:
+
+http://www.navmaps.eu/wanmil/
+
+---------------------
+
+5) Than you can make contour for your map ... phyghtmap is excelent tool for it.
+Create CONTOUR dir ... cd to it and run phyghtmap.
+
+$ phyghtmap -a -74.00:58.00:-10.00:84.00 -s 20 -c 400,200 -o contour --source=view3,srtm3 -j 2 --pbf --no-zero-contour
+
+---------------------
+
+6) cd back to your working dir and you can build a map happily.
+
+$ java -ea -Xmx6144m -jar mkgmap-r2459/mkgmap.jar --precomp-sea=/media/MEGA/MAPING/sea --bounds=/media/MEGA/MAPING/bounds_20121230 --style-file=default-mira -c default-mira/arguments LAND/6324*.osm.pbf CONTOUR/contour*.osm.pbf test20.TYP
