@@ -8,16 +8,13 @@ country-name = Czech
 country-abbr = CZ
 copyright-message = Mira OSM
 
-remove-short-arcs = 3
+#remove-short-arcs = 3
 make-all-cycleways
 max-jobs = 2
 add-pois-to-areas
 add-pois-to-lines
 gmapsupp
 latin1
-#generate-sea = land-tag=natural=background
-#location-autofill = bounds
-#bounds = bounds/bounds_20120401
 #route
 #index
 verbose

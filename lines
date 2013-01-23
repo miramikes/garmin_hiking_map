@@ -118,10 +118,14 @@ mtb_from_relation=yes 		{name '${mname}'}									[0x10001 resolution 22 continu
 
 piste:type=nordic & piste:grooming=classic 		[0x10111 resolution 21 continue]
 piste:type=nordic & piste:grooming=skating 		[0x10111 resolution 21 continue]
-#piste:type=nordic & piste:grooming=classic;skating 	[0x10111 resolution 21 continue]
+piste:type=nordic & piste:grooming='classic+skating' 	[0x10111 resolution 21 continue]
+piste:type=nordic & piste:grooming='classic;skating' 	[0x10111 resolution 21 continue]
 
 piste:type=nordic & piste:grooming=scooter		[0x10112 resolution 21 continue]
 piste:type=nordic & piste:grooming=backcountry 		[0x10112 resolution 21 continue]
+piste:type=nordic & piste:grooming!=*			[0x10112 resolution 21 continue]
+
+piste:type=nordic & piste:grooming=* & piste:grooming!=classic & piste:grooming!=skating & piste:grooming!='classic+skating' & piste:grooming!='classic;skating'		[0x10112 resolution 21 continue]
 
 # route=snowmobile
 
