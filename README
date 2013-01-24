@@ -41,6 +41,12 @@ $ phyghtmap -a -74.00:58.00:-10.00:84.00 -s 20 -c 400,200 -o contour --source=vi
 
 ---------------------
 
-6) cd back to your working dir and you can build a map happily.
+6) You will need probably convert mira-typ.txt to test20.TYP file. Typviewer program is good for this task.
+
+https://sites.google.com/site/sherco40/
+
+---------------------
+
+7) cd back to your working dir and you can build a map happily.
 
 $ java -ea -Xmx6144m -jar mkgmap-r2459/mkgmap.jar --precomp-sea=/path/to/your/precompiled_sea/directory --bounds=/path/to/your/precompiled_bounds/directory --style-file=default-mira -c default-mira/arguments LAND/6324*.osm.pbf CONTOUR/contour*.osm.pbf test20.TYP
