@@ -43,4 +43,4 @@ $ phyghtmap -a -74.00:58.00:-10.00:84.00 -s 20 -c 400,200 -o contour --source=vi
 
 6) cd back to your working dir and you can build a map happily.
 
-$ java -ea -Xmx6144m -jar mkgmap-r2459/mkgmap.jar --precomp-sea=/media/MEGA/MAPING/sea --bounds=/media/MEGA/MAPING/bounds_20121230 --style-file=default-mira -c default-mira/arguments LAND/6324*.osm.pbf CONTOUR/contour*.osm.pbf test20.TYP
+$ java -ea -Xmx6144m -jar mkgmap-r2459/mkgmap.jar --precomp-sea=/path/to/your/precompiled_sea/directory --bounds=/path/to/your/precompiled_bounds/directory --style-file=default-mira -c default-mira/arguments LAND/6324*.osm.pbf CONTOUR/contour*.osm.pbf test20.TYP
