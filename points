@@ -1,5 +1,10 @@
 #
 
+ele=* & ele ~ '^[+-]?(?:\d+\,?\d*|\d*\.?\d+)[\r\n]*$' {add altitude=number}
+ele=* & altitude!=number  {add altitude=no_number}
+
+#
+
 aeroway=airport [0x5900 resolution 22]
 aeroway=helipad [0x5904 resolution 22]
 
@@ -213,15 +218,20 @@ ford=yes | highway=ford									[0x6401 resolution 21]
 
 #  Geographical (land-based)
 
-natural=peak {name '${name|def:}${ele|height:m=>ft|def:}' } 	[0x6616 resolution 21]
+natural=peak & altitude=number    	{name '${name|def:} (${ele|def:}m)'} 		[0x6616 resolution 21]
+natural=peak & altitude=no_number 	{name '${name|def:} (${ele|def:})'} 		[0x6616 resolution 21]
+natural=peak & ele!=* 			{name '${name|def:}' } 				[0x6616 resolution 21]
+
+mountain_pass=yes & altitude=number     {name '${name|def:} (${ele|def:}m)'} 		[0x6401 resolution 22]
+mountain_pass=yes & altitude=no_number  {name '${name|def:} (${ele|def:})'} 		[0x6401 resolution 22]
+mountain_pass=yes & ele!=* 		{name '${name|def:}' } 				[0x6401 resolution 22]
+
 natural=rock 							[0x6614 resolution 21]
 natural=volcano 						[0x2c0c resolution 21]
 natural=stone 							[0x6606 resolution 21]
 natural=tree 							[0x6618 resolution 23]
 
 natural=cave_entrance 						[0x6601 resolution 21]
-
-mountain_pass=* 						[0x6615 resolution 23]
 
 
 ################################################################
