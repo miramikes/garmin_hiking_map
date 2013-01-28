@@ -97,8 +97,8 @@ sport=swimming [0x2d09 resolution 24]
 
 place=city 			[0x0400 resolution 22-16]
 place=town 			[0x0800 resolution 23-18]
-place=village 			[0x0900 resolution 22]
-place=hamlet 			[0x0b00 resolution 23]
+place=village 			[0x0900 resolution 21]
+place=hamlet 			[0x0b00 resolution 22]
 
 place=suburb 			[0x0a00 resolution 22]
 
