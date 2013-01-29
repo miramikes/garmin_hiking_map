@@ -1,7 +1,7 @@
-; test20.typ
-; Longueur: 14935 octets
-; Fichier TYP compilé     23/01/2013     18:22:26
-; Décompilé le 1/23/2013 à 6:22:31 PM
+; test21.TYP
+; Longueur: 14775 octets
+; Fichier TYP compilé     29/01/2013     01:40:37
+; Décompilé le 1/29/2013 à 2:41:31 AM
 
 [_id]
 ProductCode=1
@@ -100,38 +100,38 @@ ExtendedLabels=N
 Xpm="32 32 2 1"
 "! c #FF958B"
 "  c none"
-"              !!              !!"
-"             !!              !! "
-"            !!              !!  "
-"           !!              !!   "
-"          !!              !!    "
-"         !!              !!     "
-"        !!              !!      "
-"       !!              !!       "
-"      !!              !!        "
-"     !!              !!         "
-"    !!              !!          "
-"   !!              !!           "
-"  !!              !!            "
-" !!              !!             "
-"!!              !!              "
-"!              !!              !"
-"              !!              !!"
-"             !!              !! "
-"            !!              !!  "
-"           !!              !!   "
-"          !!              !!    "
-"         !!              !!     "
-"        !!              !!      "
-"       !!              !!       "
-"      !!              !!        "
-"     !!              !!         "
-"    !!              !!          "
-"   !!              !!           "
-"  !!              !!            "
-" !!              !!             "
-"!!              !!              "
-"!              !!              !"
+"               !               !"
+"              !               ! "
+"             !               !  "
+"            !               !   "
+"           !               !    "
+"          !               !     "
+"         !               !      "
+"        !               !       "
+"       !               !        "
+"      !               !         "
+"     !               !          "
+"    !               !           "
+"   !               !            "
+"  !               !             "
+" !               !              "
+"!               !               "
+"               !               !"
+"              !               ! "
+"             !               !  "
+"            !               !   "
+"           !               !    "
+"          !               !     "
+"         !               !      "
+"        !               !       "
+"       !               !        "
+"      !               !         "
+"     !               !          "
+"    !               !           "
+"   !               !            "
+"  !               !             "
+" !               !              "
+"!               !               "
 ;12345678901234567890123456789012
 [end]
 
@@ -141,7 +141,7 @@ Type=0x05
 String1=0x00,Parking
 ExtendedLabels=N
 Xpm="0 0 1 0"
-"1 c #A4A4A4"
+"1 c #B4B4B4"
 [end]
 
 
@@ -245,7 +245,7 @@ Type=0x0b
 String1=0x00,Healthcare area
 ExtendedLabels=N
 Xpm="0 0 1 0"
-"1 c #BD656A"
+"1 c #BD958B"
 [end]
 
 
@@ -254,7 +254,7 @@ Type=0x0c
 String1=0x00,Industrial area
 ExtendedLabels=N
 Xpm="32 32 2 1"
-"! c #B4B4B4"
+"! c #C5C5C5"
 "# c #838383"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -349,7 +349,7 @@ Type=0x13
 String1=0x00,Pedestrial area
 ExtendedLabels=N
 Xpm="0 0 1 0"
-"1 c #B4B4B4"
+"1 c #C5C5C5"
 [end]
 
 
@@ -358,7 +358,7 @@ Type=0x16
 String1=0x00,Natural reserve
 ExtendedLabels=N
 Xpm="32 32 2 1"
-"! c #39FFD5"
+"! c #FFFF00"
 "  c none"
 "              !                !"
 "             !                ! "
@@ -401,7 +401,7 @@ Type=0x17
 String1=0x00,Park
 ExtendedLabels=N
 Xpm="0 0 1 0"
-"1 c #7BFF20"
+"1 c #7BFF41"
 [end]
 
 
@@ -410,7 +410,7 @@ Type=0x18
 String1=0x00,Golf course
 ExtendedLabels=N
 Xpm="32 32 2 1"
-"! c #00CA00"
+"! c #7BCA6A"
 "# c #FFFFFF"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -453,7 +453,7 @@ Type=0x19
 String1=0x00,Sport place
 ExtendedLabels=N
 Xpm="0 0 1 0"
-"1 c #00CA6A"
+"1 c #7BCA6A"
 [end]
 
 
@@ -462,7 +462,7 @@ Type=0x1a
 String1=0x00,Cemetery
 ExtendedLabels=N
 Xpm="32 32 2 1"
-"! c #00CA00"
+"! c #7BCA6A"
 "# c #FFFFFF"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -505,7 +505,7 @@ Type=0x1e
 String1=0x00,Historical area
 ExtendedLabels=N
 Xpm="0 0 1 0"
-"1 c #EA8C26"
+"1 c #FFCA8B"
 [end]
 
 
@@ -514,7 +514,7 @@ Type=0x20
 String1=0x00,Quarry
 ExtendedLabels=N
 Xpm="32 32 2 1"
-"! c #B4B4B4"
+"! c #C5C5C5"
 "# c #838383"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -601,15 +601,6 @@ String1=0x00,Allotment
 ExtendedLabels=N
 Xpm="0 0 1 0"
 "1 c #BD956A"
-[end]
-
-
-[_polygon]
-Type=0x28
-String1=0x00,Park
-ExtendedLabels=N
-Xpm="0 0 1 0"
-"1 c #00CA00"
 [end]
 
 
@@ -808,7 +799,7 @@ Type=0x4e
 String1=0x00,Farmyard
 ExtendedLabels=N
 Xpm="0 0 1 0"
-"1 c #BD9500"
+"1 c #BD9541"
 [end]
 
 
@@ -1170,7 +1161,7 @@ Type=0x1100d
 String1=0x00,Beach
 ExtendedLabels=N
 Xpm="0 0 1 0"
-"1 c #FFFF6A"
+"1 c #FFFF8B"
 [end]
 
 
@@ -1571,7 +1562,7 @@ LineWidth=4
 BorderWidth=1
 Xpm="0 0 2 0"
 "1 c #FF6541"
-"2 c #737373"
+"2 c #B4B4B4"
 String1=0x00,highway
 ExtendedLabels=N
 [end]
@@ -1584,7 +1575,7 @@ LineWidth=2
 BorderWidth=2
 Xpm="0 0 2 0"
 "1 c #FFFF41"
-"2 c #BD3000"
+"2 c #FF6541"
 String1=0x00,trunk
 ExtendedLabels=N
 [end]
@@ -1597,7 +1588,7 @@ LineWidth=3
 BorderWidth=1
 Xpm="0 0 2 0"
 "1 c #FF656A"
-"2 c #737373"
+"2 c #B4B4B4"
 String1=0x00,primary
 ExtendedLabels=N
 [end]
@@ -1609,8 +1600,8 @@ UseOrientation=N
 LineWidth=3
 BorderWidth=1
 Xpm="0 0 2 0"
-"1 c #00FF41"
-"2 c #737373"
+"1 c #39CA8B"
+"2 c #B4B4B4"
 String1=0x00,secondary
 ExtendedLabels=N
 [end]
@@ -1623,7 +1614,7 @@ LineWidth=3
 BorderWidth=1
 Xpm="0 0 2 0"
 "1 c #FFCA20"
-"2 c #737373"
+"2 c #B4B4B4"
 String1=0x00,tertiary
 ExtendedLabels=N
 [end]
@@ -1636,7 +1627,7 @@ LineWidth=2
 BorderWidth=1
 Xpm="0 0 2 0"
 "1 c #FFFF8B"
-"2 c #737373"
+"2 c #B4B4B4"
 String1=0x00,unclassified
 ExtendedLabels=N
 [end]
@@ -1649,7 +1640,7 @@ LineWidth=1
 BorderWidth=1
 Xpm="0 0 2 0"
 "1 c #FF95B4"
-"2 c #737373"
+"2 c #B4B4B4"
 String1=0x00,service road
 ExtendedLabels=N
 [end]
@@ -1660,7 +1651,7 @@ Type=0x08
 UseOrientation=N
 LineWidth=2
 Xpm="0 0 1 0"
-"1 c #525252"
+"1 c #949494"
 String1=0x00,Footway
 ExtendedLabels=N
 [end]
@@ -1671,7 +1662,7 @@ Type=0x09
 UseOrientation=N
 LineWidth=2
 Xpm="0 0 1 0"
-"1 c #FF30FF"
+"1 c #FF65D5"
 String1=0x00,Cycleway
 ExtendedLabels=N
 [end]
@@ -1682,7 +1673,7 @@ Type=0x0a
 UseOrientation=N
 LineWidth=2
 Xpm="0 0 1 0"
-"1 c #0065D5"
+"1 c #BD6541"
 String1=0x00,Path
 ExtendedLabels=N
 [end]
@@ -1765,7 +1756,7 @@ Type=0x16
 UseOrientation=N
 LineWidth=2
 Xpm="0 0 1 0"
-"1 c #FF3020"
+"1 c #525252"
 String1=0x00,Track
 ExtendedLabels=N
 [end]
@@ -1829,11 +1820,9 @@ ExtendedLabels=N
 [_line]
 Type=0x1c
 UseOrientation=N
-Xpm="32 15 2  1"
-"! c #BD30FF"
+Xpm="32 10 2  1"
+"! c #FF30FF"
 "  c none"
-"!!!!    !!!!    !!!!    !!!!    "
-"!!!!    !!!!    !!!!    !!!!    "
 "                                "
 "                                "
 "                                "
@@ -1842,13 +1831,10 @@ Xpm="32 15 2  1"
 "                                "
 "                                "
 "                                "
-"                                "
-"                                "
-"                                "
-"                                "
-"                                "
+"!  !!!  !       !  !!!  !       "
+"!  !!!  !       !  !!!  !       "
 ;12345678901234567890123456789012
-String1=0x00,boundary subregional
+String1=0x00,border subregional
 ExtendedLabels=N
 [end]
 
@@ -1856,11 +1842,9 @@ ExtendedLabels=N
 [_line]
 Type=0x1d
 UseOrientation=N
-Xpm="32 15 2  1"
-"! c #BD30FF"
+Xpm="32 10 2  1"
+"! c #FF30FF"
 "  c none"
-"!!!!!!!!        !!!!!!!!        "
-"!!!!!!!!        !!!!!!!!        "
 "                                "
 "                                "
 "                                "
@@ -1869,13 +1853,10 @@ Xpm="32 15 2  1"
 "                                "
 "                                "
 "                                "
-"                                "
-"                                "
-"                                "
-"                                "
-"                                "
+"!!  !!!  !!     !!  !!!  !!     "
+"!!  !!!  !!     !!  !!!  !!     "
 ;12345678901234567890123456789012
-String1=0x00,boundary regional
+String1=0x00,border regional
 ExtendedLabels=N
 [end]
 
@@ -1883,12 +1864,9 @@ ExtendedLabels=N
 [_line]
 Type=0x1e
 UseOrientation=N
-Xpm="32 15 2  1"
-"! c #BD30FF"
+Xpm="32 10 2  1"
+"! c #FF30FF"
 "  c none"
-"!!!!!!!!!!!!!!!!                "
-"!!!!!!!!!!!!!!!!                "
-"!!!!!!!!!!!!!!!!                "
 "                                "
 "                                "
 "                                "
@@ -1897,12 +1875,10 @@ Xpm="32 15 2  1"
 "                                "
 "                                "
 "                                "
-"                                "
-"                                "
-"                                "
-"                                "
+"!!! !!! !!! !!! !!! !!! !!! !!! "
+"!!! !!! !!! !!! !!! !!! !!! !!! "
 ;12345678901234567890123456789012
-String1=0x00,boundary national
+String1=0x00,border national
 ExtendedLabels=N
 [end]
 
@@ -2046,7 +2022,7 @@ Type=0x30
 UseOrientation=N
 LineWidth=2
 Xpm="0 0 1 0"
-"1 c #009500"
+"1 c #006500"
 String1=0x00,Hedge
 ExtendedLabels=N
 [end]
@@ -2057,7 +2033,7 @@ Type=0x31
 UseOrientation=N
 LineWidth=2
 Xpm="0 0 1 0"
-"1 c #7B0041"
+"1 c #BD3041"
 String1=0x00,Wall
 ExtendedLabels=N
 [end]
@@ -2067,7 +2043,7 @@ ExtendedLabels=N
 Type=0x32
 UseOrientation=N
 Xpm="32 2 2  1"
-"! c #7B0041"
+"! c #BD3041"
 "  c none"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "!   !   !   !   !   !   !   !   "
@@ -2081,7 +2057,7 @@ ExtendedLabels=N
 Type=0x33
 UseOrientation=N
 Xpm="32 4 2  1"
-"! c #7B0041"
+"! c #BD3041"
 "  c none"
 "!!!!            !!!!            "
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -2101,8 +2077,8 @@ Xpm="32 4 2  1"
 "# c #00CAFF"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"################################"
-"################################"
+"!#######!#######!#######!#######"
+"!#######!#######!#######!#######"
 ;12345678901234567890123456789012
 String1=0x00,Dam
 ExtendedLabels=N
@@ -2112,15 +2088,13 @@ ExtendedLabels=N
 [_line]
 Type=0x37
 UseOrientation=N
-Xpm="32 6 2  1"
-"! c #7B0041"
+Xpm="32 4 2  1"
+"! c #BD3041"
 "  c none"
-"    !       !       !       !   "
-"   !!!     !!!     !!!     !!!  "
-"  !! !!   !! !!   !! !!   !! !! "
-" !!   !! !!   !! !!   !! !!   !!"
-"!!     !!!     !!!     !!!     !"
-"!       !       !       !       "
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!!           !!!!!           "
+" !!!             !!!            "
+"  !               !             "
 ;12345678901234567890123456789012
 String1=0x00,cliff
 ExtendedLabels=N
@@ -2175,7 +2149,7 @@ Type=0x10010
 UseOrientation=N
 LineWidth=7
 Xpm="0 0 1 0"
-"1 c #A4A4A4"
+"1 c #B4B4B4"
 String1=0x00,runway taxiway
 ExtendedLabels=N
 [end]
@@ -2186,7 +2160,7 @@ Type=0x10011
 UseOrientation=N
 LineWidth=12
 Xpm="0 0 1 0"
-"1 c #A4A4A4"
+"1 c #B4B4B4"
 String1=0x00,runway
 ExtendedLabels=N
 [end]
@@ -2357,7 +2331,7 @@ ExtendedLabels=N
 Type=0x10115
 UseOrientation=N
 Xpm="32 16 2  1"
-"! c #FF65FF"
+"! c #7B6500"
 "  c none"
 "                                "
 "                                "
@@ -2371,10 +2345,10 @@ Xpm="32 16 2  1"
 "                                "
 "                                "
 "                                "
-"         !!!             !!!    "
-"        !!!             !!!     "
-"       !!!             !!!      "
-"      !!!             !!!       "
+"   !               !            "
+"  ! !             ! !           "
+" !   !           !   !          "
+"!     !         !     !         "
 ;12345678901234567890123456789012
 String1=0x00,Bridleway
 ExtendedLabels=N
@@ -3150,26 +3124,26 @@ Type=0x02f
 SubType=0x06
 String1=0x00,Bank
 ExtendedLabels=N
-DayXpm="14 15 3 1"   Colormode=16
+DayXpm="15 15 3 1"   Colormode=16
 "!	c #0095FF"
 "#	c #101010"
 "%	c #FFFFFF"
-"!!!!!!!!!!!!!!"
-"!%%%%%%%%%%%%!"
-"!%%%%%####%%%!"
-"!%%%##%%%%#%%!"
-"!%%#%%%%%%%#%!"
-"!%%#%%%%%%%%%!"
-"!%########%%%!"
-"!%%#%%%%%%%%%!"
-"!%#######%%%%!"
-"!%%#%%%%%%%%%!"
-"!%%#%%%%%%%#%!"
-"!%%%##%%%%#%%!"
-"!%%%%%####%%%!"
-"!%%%%%%%%%%%%!"
-"!!!!!!!!!!!!!!"
-;12345678901234
+"!!!!!!!!!!!!!!!"
+"!%%%%%%%%%%%%%!"
+"!%%%%%####%%%%!"
+"!%%%%#%%%%#%%%!"
+"!%%%#%%%%%%#%%!"
+"!%%%#%%%%%%%%%!"
+"!%%#######%%%%!"
+"!%%%#%%%%%%%%%!"
+"!%%######%%%%%!"
+"!%%%#%%%%%%%%%!"
+"!%%%#%%%%%%#%%!"
+"!%%%%#%%%%#%%%!"
+"!%%%%%####%%%%!"
+"!%%%%%%%%%%%%%!"
+"!!!!!!!!!!!!!!!"
+;123456789012345
 [end]
 
 
@@ -3840,7 +3814,7 @@ DayXpm="15 15 3 1"   Colormode=16
 [_point]
 Type=0x04d
 SubType=0x01
-String1=0x00,Bus stop
+String1=0x00,Tram stop
 ExtendedLabels=N
 DayXpm="15 15 2 1"   Colormode=16
 "!	c #0095FF"
@@ -4383,19 +4357,14 @@ Type=0x066
 SubType=0x05
 String1=0x00,Bench
 ExtendedLabels=N
-DayXpm="7 9 2 1"   Colormode=16
+DayXpm="12 4 2 1"   Colormode=16
 "!	c #000000"
 "  	c none"
-"      !"
-"      !"
-"      !"
-"     ! "
-"     ! "
-"!!!!!! "
-" !  !  "
-" !  !  "
-" !!!!  "
-;1234567
+"!!!!!!!!!!!!"
+"  !      !  "
+"  !      !  "
+"  !      !  "
+;123456789012
 [end]
 
 
@@ -4517,15 +4486,16 @@ Type=0x066
 SubType=0x18
 String1=0x00,Tree
 ExtendedLabels=N
-DayXpm="6 6 3 1"   Colormode=16
+DayXpm="5 7 3 1"   Colormode=16
 "!	c #009541"
-"#	c #FFFFFF"
+"#	c #101010"
 "  	c none"
-"  !!  "
-" !!!! "
-"!!##!!"
-"!!##!!"
-" !!!! "
-"  !!  "
-;123456
+"  !  "
+" !!! "
+"!!!!!"
+"!!#!!"
+" !#! "
+"  #  "
+"  ## "
+;12345
 [end]
