@@ -1,5 +1,13 @@
 #
 
+
+# ways under construction
+highway=proposed {delete 'highway'; delete 'tunnel'; delete 'bridge'}
+railway=proposed {delete 'railway'; delete 'tunnel'; delete 'bridge'}
+
+
+#######################################################################################
+
 # Naming Section
 railwayname=* & railway=* & highway!=* {set name='${railwayname}${name}' | '${railwayname}'}
 
@@ -72,11 +80,11 @@ highway=construction 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${
 
 # hiking
 
-iwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'} 						[0x0b resolution 18 continue]
-iwn_from_relation=yes 		{name '${iref} ${iname}' | '${iref}' | '${iref} - ${iname}'} 				[0x10000 resolution 20 continue]
+iwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'} 						[0x0b resolution 20 continue]
+iwn_from_relation=yes 		{name '${iref} ${iname}' | '${iref}' | '${iref} - ${iname}'} 				[0x10000 resolution 21 continue]
 
-nwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'}    						[0x0b resolution 18 continue]
-nwn_from_relation=yes 		{name '${nref} ${nname}' | '${nref}' | '${nname}'}    					[0x10000 resolution 20 continue]
+nwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'}    						[0x0b resolution 20 continue]
+nwn_from_relation=yes 		{name '${nref} ${nname}' | '${nref}' | '${nname}'}    					[0x10000 resolution 21 continue]
 
 rwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 21 continue]
 rwn_from_relation=yes  		{name '${rref} ${rname}' | '${rref}' | '${rname}'}   					[0x10000 resolution 22 continue]
@@ -93,11 +101,11 @@ nonet_from_relation=yes 	{name '${nnref} ${nnname}' | '${nnref}' | '${nnname}'} 
 # bicycle
 
 
-icn_from_relation=yes 		{name '${iref|highway-symbol:hbox}'}							[0x0c resolution 18 continue]
-icn_from_relation=yes 		{name '${iname}'}									[0x10001 resolution 20 continue]
+icn_from_relation=yes 		{name '${iref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
+icn_from_relation=yes 		{name '${iname}'}									[0x10001 resolution 21 continue]
 
-ncn_from_relation=yes 		{name '${nref|highway-symbol:hbox}'} 							[0x0c resolution 18 continue]
-ncn_from_relation=yes 		{name '${nname}'} 									[0x10001 resolution 20 continue]
+ncn_from_relation=yes 		{name '${nref|highway-symbol:hbox}'} 							[0x0c resolution 20 continue]
+ncn_from_relation=yes 		{name '${nname}'} 									[0x10001 resolution 21 continue]
 
 
 rcn_from_relation=yes  		{name '${rref|highway-symbol:hbox}'} 							[0x0c resolution 21 continue]
@@ -142,12 +150,12 @@ highway=* & horse=permissive				[0x10115  resolution 21 continue]
 #########################################################################################
 
 # Roundabouts
-junction=roundabout & highway=trunk 		[0x02 resolution 18]
-junction=roundabout & highway=primary 		[0x03 resolution 20]
-junction=roundabout & highway=secondary 	[0x04 resolution 20]
-junction=roundabout & highway=tertiary 		[0x05 resolution 21]
-junction=roundabout & highway=unclassified 	[0x06 resolution 21]
-junction=roundabout 				[0x06 resolution 22]
+junction=roundabout & highway=trunk 			[0x02 resolution 18]
+junction=roundabout & highway=primary 			[0x03 resolution 20]
+junction=roundabout & highway=secondary 		[0x04 resolution 20]
+junction=roundabout & highway=tertiary 			[0x05 resolution 21]
+junction=roundabout & highway=unclassified 		[0x06 resolution 21]
+junction=roundabout 					[0x06 resolution 22]
 
 #################################
 
@@ -205,10 +213,12 @@ man_made=cable|(man_made=* & man_made ~ '.*pipe.*') {name '${name} (${operator})
 
 #######################################################################################
 
-railway=abandoned [0x15 road_class=0 road_speed=1 resolution 22]
-railway=platform {add access = no; add foot = yes} [0x07 road_class=0 road_speed=0 resolution 23]
-railway=*  [0x14 resolution 22 continue]
+railway=abandoned 									[0x15 road_class=0 road_speed=1 resolution 22]
+railway=platform {add access = no; add foot = yes} 					[0x07 road_class=0 road_speed=0 resolution 23]
+railway=tram  										[0x14 resolution 22 continue]
+railway=rail 										[0x14 resolution 21 continue]
 
+railway=* & railway!=abandoned & railway!=platform & railway!=tram & railway!=rail 	[0x14 resolution 23 continue]
 
 #######################################################################################
 
