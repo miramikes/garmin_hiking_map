@@ -215,7 +215,7 @@ man_made=cable|(man_made=* & man_made ~ '.*pipe.*') {name '${name} (${operator})
 
 railway=abandoned 									[0x15 road_class=0 road_speed=1 resolution 22]
 railway=platform {add access = no; add foot = yes} 					[0x07 road_class=0 road_speed=0 resolution 23]
-railway=tram  										[0x14 resolution 22 continue]
+railway=tram  										[0x13 resolution 22 continue]
 railway=rail 										[0x14 resolution 21 continue]
 
 railway=* & railway!=abandoned & railway!=platform & railway!=tram & railway!=rail 	[0x14 resolution 23 continue]
