@@ -5,19 +5,50 @@ ele=* & altitude!=number  {add altitude=no_number}
 
 #
 
-aeroway=airport [0x5900 resolution 22]
-aeroway=helipad [0x5904 resolution 22]
+# don't render not relevant mkgmap:line2poi tags
+amenity=* 	& mkgmap:line2poi=true 					{delete amenity}
+barrier=* 	& mkgmap:line2poi=true 					{delete barrier}
+historic=* 	& mkgmap:line2poi=true 					{delete historic}
+landuse=* 	& mkgmap:line2poi=true 					{delete landuse}
+leisure=* 	& mkgmap:line2poi=true 					{delete leisure}
+man_made=* 	& mkgmap:line2poi=true 					{delete man_made}
+natural=* 	& mkgmap:line2poi=true 					{delete natural}
+place=* 	& mkgmap:line2poi=true 					{delete place}
+shop=* 		& mkgmap:line2poi=true 					{delete shop}
+sport=* 	& mkgmap:line2poi=true 					{delete sport}
+tourism=* 	& mkgmap:line2poi=true 					{delete tourism}
 
-aeroway=aerodrome [0x5900 resolution 22]
-aeroway=terminal [0x5900 resolution 24]
+#
+
+# don't render not relevant mkgmap:area2poi tags
+
+amenity=* 	& mkgmap:area2poi=true 					{delete amenity}
+barrier=* 	& mkgmap:area2poi=true 					{delete barrier}
+historic=* 	& mkgmap:area2poi=true 					{delete historic}
+landuse=* 	& mkgmap:area2poi=true 					{delete landuse}
+leisure=* 	& mkgmap:area2poi=true 					{delete leisure}
+man_made=* 	& mkgmap:area2poi=true 					{delete man_made}
+natural=* 	& mkgmap:area2poi=true 					{delete natural}
+place=* 	& place!=island & place!=islet & mkgmap:line2poi=true 	{delete place}
+shop=* 		& mkgmap:area2poi=true 					{delete shop}
+sport=* 	& mkgmap:area2poi=true 					{delete sport}
+tourism=* 	& mkgmap:area2poi=true 					{delete tourism}
+
+#
+
+aeroway=airport 		[0x5900 resolution 22]
+aeroway=helipad 		[0x5904 resolution 22]
+
+aeroway=aerodrome 		[0x5900 resolution 22]
+aeroway=terminal 		[0x5900 resolution 24]
 
 ###########################################################
 
-amenity=atm { name '${operator}: ${name}' | '${name}' | '${operator}' } [0x2f06 resolution 24]
-amenity=bank { name '${name} (${operator})' | '${name}' | '${operator}' } [0x2f06 resolution 24]
+amenity=atm 	{ name '${operator}: ${name}' | '${name}' | '${operator}' } 	[0x2f06 resolution 24]
+amenity=bank 	{ name '${name} (${operator})' | '${name}' | '${operator}' } 	[0x2f06 resolution 24]
 
 
-############################################################
+###########################################################
 
 amenity=restaurant [0x45 resolution 24]
 amenity=food_court [0x45 resolution 24]
@@ -43,7 +74,7 @@ service:bicycle:repair=yes 			[0x2f00 resolution 23]
 
 shop=outdoor 					[0x2e06 resolution 23]
 
-############################################################
+###########################################################
 
 amenity=police [0x3001 resolution 24]
 
@@ -67,7 +98,7 @@ amenity=pharmacy [0x2e05 resolution 24]
 amenity=post_office [0x2f05 resolution 24]
 amenity=post_box [0x2f05 resolution 24]
 
-###############################################################
+###########################################################
 
 
 amenity=fuel { name '${operator}: ${name}' | '${name}' | '${operator}' } [0x2f01 resolution 24]
@@ -87,11 +118,11 @@ amenity=toilets [0x4e00 resolution 24 default_name 'Toilets' ]
 #tourism=zoo | amenity=zoo [0x2c07 resolution 24]
 
 
-#################################################################
+###########################################################
 
-leisure=sports_center | leisure=sports_centre { name '${name} (${sport})' | '${name}' } [0x2d0a resolution 24]
-sport=multi [0x2d0a resolution 24]
-sport=swimming [0x2d09 resolution 24]
+leisure=sports_center | leisure=sports_centre 	{ name '${name} (${sport})' | '${name}' } 	[0x2d0a resolution 24]
+sport=multi 											[0x2d0a resolution 24]
+sport=swimming 											[0x2d09 resolution 24]
 
 ##########################################################
 
@@ -103,6 +134,7 @@ place=hamlet 			[0x0b00 resolution 22]
 place=suburb 			[0x0a00 resolution 22]
 
 place=island 			[0x650c resolution 20]
+place=islet 			[0x650c resolution 21]
 
 ##########################################################
 
