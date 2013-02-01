@@ -145,6 +145,6 @@ natural=sea 											[0x10f1d resolution 14]
 natural=land 											[0x10101 resolution 14 continue]
 natural=background 										[0x4b resolution 14]
 
-place=island & name=* 										[0x10100 resolution 20]
-place=islet & name=* 										[0x10100 resolution 22]
+place=island 											[0x10100 resolution 20]
+place=islet	 										[0x10100 resolution 22]
 
