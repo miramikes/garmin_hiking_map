@@ -9,6 +9,7 @@ country-abbr = CZ
 copyright-message = Mira OSM
 
 #remove-short-arcs = 3
+generate-sea=land-tag=natural=background
 make-all-cycleways
 max-jobs = 2
 add-pois-to-areas
