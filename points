@@ -278,3 +278,13 @@ information=guidepost 					[0x4c02 resolution 21]
 information=board | information=terminal 		[0x4c03 resolution 21]
 information=map 					[0x4c04 resolution 21]
 
+################################################################
+
+#  Beacons and Buoyes
+
+
+man_made=beacon | airmark=beacon | landmark=beacon 	[0x0206 resolution 23]
+
+seamark:type=* 						[0x0200 resolution 23]
+
+
