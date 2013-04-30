@@ -12,13 +12,13 @@ copyright-message = Mira OSM
 generate-sea=land-tag=natural=background
 #make-all-cycleways
 max-jobs = 2
-reduce-point-density=3
-reduce-point-density-polygon=8
-merge-lines
-min-size-polygon=10
-ignore-maxspeeds
+#reduce-point-density=3
+#reduce-point-density-polygon=8
+#merge-lines
+#min-size-polygon=10
+#ignore-maxspeeds
 #ignore-builtin-relations
-ignore-osm-bounds
+#ignore-osm-bounds
 #preserve-element-order
 add-pois-to-areas
 #add-pois-to-lines
