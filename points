@@ -50,8 +50,8 @@ amenity=bank 	{ name '${name} (${operator})' | '${name}' | '${operator}' } 	[0x2
 
 ###########################################################
 
-amenity=restaurant [0x45 resolution 24 continue]
-amenity=food_court [0x45 resolution 24 continue]
+amenity=restaurant [0x4500 resolution 24 continue]
+amenity=food_court [0x4500 resolution 24 continue]
 
 amenity=fast_food [0x2a07 resolution 24 continue]
 
