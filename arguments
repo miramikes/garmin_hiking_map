@@ -14,11 +14,11 @@ generate-sea=land-tag=natural=background
 max-jobs = 2
 #reduce-point-density=3
 #reduce-point-density-polygon=8
-#merge-lines
+merge-lines
 #min-size-polygon=10
-#ignore-maxspeeds
+ignore-maxspeeds
 #ignore-builtin-relations
-#ignore-osm-bounds
+ignore-osm-bounds
 #preserve-element-order
 add-pois-to-areas
 #add-pois-to-lines

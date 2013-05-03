@@ -106,8 +106,7 @@ leisure=nature_reserve 										[0x16 resolution 20]
 # Sand
 
 natural=beach | natural=sand									[0x1100d resolution 21]
-surface=sand 					& area=yes					[0x1100d resolution 22]
-surface=sand 					& highway!=* 					[0x1100d resolution 22]
+surface=sand 					& area=yes & highway!=*				[0x1100d resolution 22]
 water=tidal											[0x1101b resolution 21]
 natural=shelf | tidal=yes | tidal=true								[0x1101b resolution 21]
 

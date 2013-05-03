@@ -206,19 +206,22 @@ highway=* & highway!=proposed & area!=yes & highway!=motorway & highway!=trunk &
 
 #######################################################################################
 
-power=line [0x29 resolution 21]
-power=minor_line [0x29 resolution 23]
-man_made=cable|(man_made=* & man_made ~ '.*pipe.*') {name '${name} (${operator})' | '${name}' | '${operator}' } [0x28 resolution 23]
+power=line 														[0x29 resolution 21]
+power=minor_line 													[0x29 resolution 23]
+man_made=cable|(man_made=* & man_made ~ '.*pipe.*') {name '${name} (${operator})' | '${name}' | '${operator}' } 	[0x28 resolution 23]
 
 
 #######################################################################################
 
-railway=abandoned 									[0x15 resolution 22]
-railway=platform {add access = no; add foot = yes} 					[0x07 resolution 23]
-railway=tram  										[0x13 resolution 23 continue]
-railway=rail 										[0x14 resolution 19 continue]
+railway=abandoned 											[0x15 resolution 22 continue]
+railway=platform {add access = no; add foot = yes} 							[0x07 resolution 23]
+railway=tram  												[0x13 resolution 23 continue]
+railway=rail 	& service=yard | service=siding | service=spur						[0x14 resolution 23 continue]
+railway=rail 	& service!=yard & service!=siding & service!=spur					[0x14 resolution 19 continue]
 
-railway=* & railway!=abandoned & railway!=platform & railway!=tram & railway!=rail 	[0x14 resolution 20 continue]
+railway=subway  											[0x12 resolution 22 continue]
+
+railway=* & railway!=abandoned & railway!=platform & railway!=tram & railway!=rail & railway!=subway	[0x11 resolution 21 continue]
 
 #######################################################################################
 
@@ -234,28 +237,28 @@ boundary=political 						[0x1c resolution 18]
 
 #####################################################################################
 
-natural=cliff | barrier=cliff 	 						{set name='${name} cliff' | 'cliff'}	[0x37 resolution 22 continue]
+natural=cliff | barrier=cliff 	 						{set name='${name} cliff' | 'cliff'}	[0x37 resolution 22]
 
-barrier=wall | barrier=retaining_wall | barrier=city_wall 			{set name='${name} wall' | 'wall'}	[0x31 resolution 22 continue]
-barrier=fence | barrier=wood_fence | barrier=wire_fence | barrier=metal_fence 	{set name='${name} fence' | 'fence'}	[0x32 resolution 23 continue]
+barrier=wall | barrier=retaining_wall | barrier=city_wall 			{set name='${name} wall' | 'wall'}	[0x31 resolution 22]
+barrier=fence | barrier=wood_fence | barrier=wire_fence | barrier=metal_fence 	{set name='${name} fence' | 'fence'}	[0x32 resolution 23]
 
-barrier=hedge | natural=hedge 												[0x30 resolution 24 continue]
+barrier=hedge | natural=hedge 												[0x30 resolution 24]
 
 aeroway=runway 									{set name='runway ${name}' | 'runway'}	[0x10011 resolution 20]
 aeroway=taxiway 													[0x10010 resolution 22]
 
-highway=pier | man_made=pier												[0x19 resolution 23 continue]
+highway=pier | man_made=pier												[0x19 resolution 23]
 
-bridge=*														[0x26 resolution 22 continue]
-tunnel=* 														[0x27 resolution 22 continue]
+bridge=*	& bridge!=no | historic=aqueduct | man_made=bridge							[0x26 resolution 22 continue]
+tunnel=* 	& tunnel!=no												[0x27 resolution 22 continue]
 
-route=ferry | waterway=ferry_way | line=ferry										[0x1b resolution 18 continue]
+route=ferry | waterway=ferry_way | line=ferry										[0x1b resolution 18]
 
 
-waterway=weir									{set name='weir ${name}' | 'weir'}	[0x33 resolution 23 continue]
-waterway=canal 									{set name='canal ${name}' | 'canal'}	[0x38 resolution 18 continue]
+waterway=weir									{set name='weir ${name}' | 'weir'}	[0x33 resolution 23]
+waterway=canal 									{set name='canal ${name}' | 'canal'}	[0x38 resolution 18]
 
-waterway=dam									{set name='dam ${name}' | 'dam'}	[0x34 resolution 22 continue]
+waterway=dam									{set name='dam ${name}' | 'dam'}	[0x34 resolution 22]
 
 #natural=coastline 													[0x15 resolution 14]
 
@@ -270,17 +273,17 @@ waterway=ditch 														[0x18 resolution 23]
 
 ######################################################################################
 
-piste:type=downhill 					{set name='${name} piste' | 'piste'}						[0x10110 resolution 21 continue]
+piste:type=downhill 					{set name='${name} piste' | 'piste'}						[0x10110 resolution 21]
 
-(aerialway=tbar | aerialway=t-bar | piste:lift=tbar | piste:lift=t-bar | aerialway=schlepplift | piste:lift=schlepplift | drag_lift=tbar | drag_lift=t-bar)	{set name='${name} tbar' | 'tbar'}	[0x10012 resolution 22 continue]
-aerialway=platter 					{set name='${name} platter' | 'platter'}					[0x10012 resolution 22 continue]
-aerialway=rope_tow 					{set name='${name} ropetow' | 'ropetow'}					[0x10012 resolution 22 continue]
-aerialway=jbar | aerialway=j-bar			{set name='${name} jbar' | 'jbar'}						[0x10012 resolution 22 continue]
-aerialway=drag_lift | piste:lift=drag_lift		{set name='${name} drag_lift' | 'drag_lift'}					[0x10012 resolution 22 continue]
+(aerialway=tbar | aerialway=t-bar | piste:lift=tbar | piste:lift=t-bar | aerialway=schlepplift | piste:lift=schlepplift | drag_lift=tbar | drag_lift=t-bar)	{set name='${name} tbar' | 'tbar'}	[0x10012 resolution 22]
+aerialway=platter 					{set name='${name} platter' | 'platter'}					[0x10012 resolution 22]
+aerialway=rope_tow 					{set name='${name} ropetow' | 'ropetow'}					[0x10012 resolution 22]
+aerialway=jbar | aerialway=j-bar			{set name='${name} jbar' | 'jbar'}						[0x10012 resolution 22]
+aerialway=drag_lift | piste:lift=drag_lift		{set name='${name} drag_lift' | 'drag_lift'}					[0x10012 resolution 22]
 
-aerialway=cable_car | aerialway=gondola			{set name='${name} cable_car' | 'cable_car'}					[0x10013 resolution 22 continue]
+aerialway=cable_car | aerialway=gondola			{set name='${name} cable_car' | 'cable_car'}					[0x10013 resolution 22]
 
-aerialway=chair_lift  | aerialway=mixed_lift 		{set name='${name} chair_lift' | 'chair_lift'}					[0x10013 resolution 22 continue]
+aerialway=chair_lift  | aerialway=mixed_lift 		{set name='${name} chair_lift' | 'chair_lift'}					[0x10013 resolution 22]
 
 
 # Contours take their name from the elevation setting.

@@ -40,7 +40,7 @@ aeroway=airport 		[0x5900 resolution 22]
 aeroway=helipad 		[0x5904 resolution 22]
 
 aeroway=aerodrome 		[0x5900 resolution 22]
-aeroway=terminal 		[0x5900 resolution 24]
+aeroway=terminal 		[0x5900 resolution 24 continue]
 
 ###########################################################
 
@@ -50,14 +50,14 @@ amenity=bank 	{ name '${name} (${operator})' | '${name}' | '${operator}' } 	[0x2
 
 ###########################################################
 
-amenity=restaurant [0x45 resolution 24]
-amenity=food_court [0x45 resolution 24]
+amenity=restaurant [0x45 resolution 24 continue]
+amenity=food_court [0x45 resolution 24 continue]
 
-amenity=fast_food [0x2a07 resolution 24]
+amenity=fast_food [0x2a07 resolution 24 continue]
 
-amenity=cafe [0x2a0e resolution 24]
+amenity=cafe [0x2a0e resolution 24 continue]
 
-amenity=pub | amenity=bar | amenity=biergarten | amenity=nightclub [0x2d02 resolution 24]
+amenity=pub | amenity=bar | amenity=biergarten | amenity=nightclub [0x2d02 resolution 24 continue]
 
 
 ###########################################################
@@ -66,7 +66,7 @@ amenity=pub | amenity=bar | amenity=biergarten | amenity=nightclub [0x2d02 resol
 
 
 shop=supermarket | amenity=supermarket 		[0x2e01 resolution 24]
-shop=*  & shop!=bicycle & shop!=outdoor		[0x2e03 resolution 24 continue]
+shop=*  & shop!=bicycle & shop!=outdoor		[0x2e03 resolution 24]
 
 amenity=bicycle_rental 				[0x2e0a resolution 23]
 shop=bicycle 					[0x2e0a resolution 23]
@@ -76,22 +76,22 @@ shop=outdoor 					[0x2e06 resolution 23]
 
 ###########################################################
 
-amenity=police [0x3001 resolution 24]
+amenity=police 							[0x3001 resolution 24]
 
-amenity=embassy & country=* { name '${country} ${name|def:}' } [0x3003 resolution 24]
-amenity=embassy & country!=* [0x3003 resolution 24 default_name 'Embassy']
+amenity=embassy & country=* { name '${country} ${name|def:}' } 	[0x3003 resolution 24]
+amenity=embassy & country!=* 					[0x3003 resolution 24 default_name 'Embassy']
 
-healthcare=hospital | amenity=hospital [0x3002 resolution 22]
-healthcare=* | amenity=dentist | amenity=doctors [0x3002 resolution 24]
+healthcare=hospital | amenity=hospital 				[0x3002 resolution 22]
+healthcare=* | amenity=dentist | amenity=doctors 		[0x3002 resolution 24]
 
-amenity=fire_station [0x3004 resolution 24]
+amenity=fire_station 						[0x3004 resolution 24]
 
-amenity=emergency_phone [0x5100 resolution 24 default_name 'Emergency Phone']
-amenity=telephone [0x5100 resolution 24 default_name 'Telephone']
+amenity=emergency_phone 					[0x5100 resolution 24 default_name 'Emergency Phone']
+amenity=telephone 						[0x5100 resolution 24 default_name 'Telephone']
 
 mkgmap:is_in!=* & is_in=* { set mkgmap:is_in='${is_in}' }
-internet_access=yes { name 'Internet ${name}' | 'Internet' } [0x5101 resolution 24 continue]
-internet_access=* & internet_access!=no & internet_access!=yes { name 'Internet(${internet_access}) ${name|def:}' } [0x5101 resolution 24 continue]
+internet_access=yes 						{ name 'Internet ${name}' | 'Internet' } [0x5101 resolution 24 continue]
+internet_access=* & internet_access!=no & internet_access!=yes 	{ name 'Internet ${name}' | 'Internet' } [0x5101 resolution 24 continue]
 
 amenity=pharmacy 	[0x2e05 resolution 24]
 
@@ -101,18 +101,18 @@ amenity=post_box 	[0x2f05 resolution 24]
 ###########################################################
 
 
-amenity=fuel { name '${operator}: ${name}' | '${name}' | '${operator}' } [0x2f01 resolution 24]
+amenity=fuel { name '${operator}: ${name}' | '${name}' | '${operator}' } 	[0x2f01 resolution 24]
 
-amenity=parking [0x2f0b resolution 24 default_name 'Parking']
+amenity=parking 								[0x2f0b resolution 24 default_name 'Parking']
 
-amenity=place_of_worship [0x6404 resolution 24]
+amenity=place_of_worship 							[0x6404 resolution 24]
 
 
-amenity=library 	[0x2c03 resolution 24]
-amenity=theatre 	[0x2d01 resolution 24]
-amenity=townhall 	[0x3003 resolution 24]
+amenity=library 								[0x2c03 resolution 24]
+amenity=theatre 								[0x2d01 resolution 24]
+amenity=townhall 								[0x3003 resolution 24]
 
-amenity=toilets [0x4e00 resolution 24 default_name 'Toilets' ]
+amenity=toilets 								[0x4e00 resolution 24 default_name 'Toilets' ]
 
 # amenity=zoo is superceded by tourism=zoo
 #tourism=zoo | amenity=zoo [0x2c07 resolution 24]
@@ -189,11 +189,11 @@ tourism=wilderness_hut 							[0x4801 resolution 21 default_name 'wilderness hut
 amenity=shelter | shelter_type=basic_hut 				[0x4803 resolution 21 default_name 'shelter']
 tourism=lean_to | shelter_type=lean_to					[0x4804 resolution 21 default_name 'lean-to']
 
-natural=* & shelter=yes | shelter_type=rock_shelter			[0x4807 resolution 21]
+natural=* & shelter=yes | shelter_type=rock_shelter			[0x4807 resolution 21 default_name 'natural shelter']
 
 # Private 
 building=cabin | tourism=cabin 						[0x4805 resolution 21]
-historic=ruins | building=collapsed 					[0x4806 resolution 22]
+historic=ruins | building=collapsed 					[0x4806 resolution 22 default_name 'ruins']
 
 ######################################################
 
@@ -206,13 +206,13 @@ amenity=bench										[0x6605 resolution 24]
 #######################################################################
 
 #  Barriers
-barrier=gate | barrier=lift_gate | barrier=swing_gate | barrier=bump_gate | barrier=bollard | barrier=block | barrier=chain [0x3006 resolution 24]
-barrier=toll_booth [0x3006 resolution 23]
+barrier=gate | barrier=lift_gate | barrier=swing_gate | barrier=bump_gate | barrier=bollard | barrier=block | barrier=chain 	[0x3006 resolution 24]
+barrier=toll_booth 														[0x3006 resolution 23]
 
-barrier=bollard | barrier=bus_trap    {add access = no; add bicycle = yes; add foot = yes} [0x3006 resolution 24]
-barrier=block | barrier=cycle_barrier | barrier=stile | barrier=kissing_gate    {add access = no; add foot = yes} [0x3006 resolution 24]
+barrier=bollard | barrier=bus_trap    {add access = no; add bicycle = yes; add foot = yes} 					[0x3006 resolution 24]
+barrier=block | barrier=cycle_barrier | barrier=stile | barrier=kissing_gate    {add access = no; add foot = yes} 		[0x3006 resolution 24]
 
-amenity=border_control | barrier=border_control [0x3006 resolution 20]
+amenity=border_control | barrier=border_control 										[0x3006 resolution 20]
 
 
 ########################################################################
@@ -237,16 +237,16 @@ man_made=mast | power=tower								[0x660f resolution 21]
 man_made=tower | landmark=chimney 							[0x6411 resolution 20]
 
 #  Geographical (man-made)
-man_made=mineshaft | man_made=adit | historic=mine [0x640c resolution 24]
-man_made=survey_point [0x1a0e resolution 20]
-man_made=lighthouse [0x1b0e resolution 20]
-man_made=cairn | historic=memorial | historic=monument | boundary=marker | historic=boundary_stone [0x6607 resolution 21]
+man_made=mineshaft | man_made=adit | historic=mine 							[0x640c resolution 24]
+man_made=survey_point 											[0x1a0e resolution 20]
+man_made=lighthouse 											[0x1b0e resolution 20]
+man_made=cairn | historic=memorial | historic=monument | boundary=marker | historic=boundary_stone 	[0x6607 resolution 21]
 
 
 #  Geographical (water-based)
 waterway=waterfall | natural=waterfall 							[0x6508 resolution 21]
 waterway=rapids 									[0x650e resolution 21]
-ford=yes | highway=ford									[0x6401 resolution 21]
+ford=yes | highway=ford									[0x6401 resolution 21 continue]
 
 #  Geographical (land-based)
 
