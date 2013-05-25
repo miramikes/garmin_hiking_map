@@ -1,7 +1,7 @@
 ; test29.TYP
 ; Longueur: 15255 octets
-; Fichier TYP compilé     25/05/2013     16:23:39
-; Décompilé le 5/25/2013 à 4:23:48 PM
+; Fichier TYP compilé     25/05/2013     16:52:15
+; Décompilé le 5/25/2013 à 4:54:09 PM
 
 [_id]
 ProductCode=1
@@ -891,7 +891,7 @@ String1=0x00,Scrub
 ExtendedLabels=N
 Xpm="32 32 2 1"
 "! c #7BCA00"
-"# c #BDFF6A"
+"# c #BDFF8B"
 "################################"
 "################################"
 "###########################!!!##"
