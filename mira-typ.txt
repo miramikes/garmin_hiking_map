@@ -1,7 +1,7 @@
 ; test30.TYP
 ; Longueur: 15252 octets
-; Fichier TYP compilé     28/05/2013     09:38:46
-; Décompilé le 5/28/2013 à 10:39:26 PM
+; Fichier TYP compilé     29/05/2013     01:02:17
+; Décompilé le 5/29/2013 à 1:04:49 AM
 
 [_id]
 ProductCode=1
@@ -2119,105 +2119,6 @@ ExtendedLabels=N
 
 
 [_line]
-Type=0x30
-UseOrientation=N
-LineWidth=2
-Xpm="0 0 1 0"
-"1 c #006500"
-String1=0x00,Hedge
-ExtendedLabels=N
-[end]
-
-
-[_line]
-Type=0x31
-UseOrientation=N
-LineWidth=2
-Xpm="0 0 1 0"
-"1 c #BD3041"
-String1=0x00,Wall
-ExtendedLabels=N
-[end]
-
-
-[_line]
-Type=0x32
-UseOrientation=N
-Xpm="32 2 2  1"
-"! c #BD3041"
-"  c none"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"!   !   !   !   !   !   !   !   "
-;12345678901234567890123456789012
-String1=0x00,Fence
-ExtendedLabels=N
-[end]
-
-
-[_line]
-Type=0x33
-UseOrientation=N
-Xpm="32 4 2  1"
-"! c #BD3041"
-"  c none"
-"!!!!            !!!!            "
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"!!!!            !!!!            "
-;12345678901234567890123456789012
-String1=0x00,Weir
-ExtendedLabels=N
-[end]
-
-
-[_line]
-Type=0x34
-UseOrientation=N
-Xpm="32 4 2  1"
-"! c #000000"
-"# c #00CAFF"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"!#######!#######!#######!#######"
-"!#######!#######!#######!#######"
-;12345678901234567890123456789012
-String1=0x00,Dam
-ExtendedLabels=N
-[end]
-
-
-[_line]
-Type=0x37
-UseOrientation=N
-Xpm="32 4 2  1"
-"! c #BD3041"
-"  c none"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"!!!!!           !!!!!           "
-" !!!             !!!            "
-"  !               !             "
-;12345678901234567890123456789012
-String1=0x00,Cliff
-ExtendedLabels=N
-[end]
-
-
-[_line]
-Type=0x38
-UseOrientation=N
-Xpm="32 3 2  1"
-"! c #7BCAFF"
-"# c #0000B4"
-"!!#!!!!!!!#!!!!!!!#!!!!!!!#!!!!!"
-"!#!!!!!!!#!!!!!!!#!!!!!!!#!!!!!!"
-"#!!!!!!!#!!!!!!!#!!!!!!!#!!!!!!!"
-;12345678901234567890123456789012
-String1=0x00,Canal
-ExtendedLabels=N
-[end]
-
-
-[_line]
 Type=0x10000
 UseOrientation=N
 Xpm="32 2 2  1"
@@ -2452,6 +2353,110 @@ Xpm="32 16 2  1"
 "!     !         !     !         "
 ;12345678901234567890123456789012
 String1=0x00,Bridleway
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10200
+UseOrientation=N
+LineWidth=2
+Xpm="0 0 1 0"
+"1 c #006500"
+String1=0x00,Hedge
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10201
+UseOrientation=N
+LineWidth=2
+Xpm="0 0 1 0"
+"1 c #BD3041"
+String1=0x00,Wall
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10202
+UseOrientation=N
+Xpm="32 2 2  1"
+"! c #BD3041"
+"  c none"
+" !!! !!! !!! !!! !!! !!! !!! !!!"
+"!   !   !   !   !   !   !   !   "
+;12345678901234567890123456789012
+String1=0x00,Fence
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10203
+UseOrientation=N
+Xpm="32 5 2  1"
+"! c #FF306A"
+"  c none"
+"!!!!            !!!!            "
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!            !!!!            "
+;12345678901234567890123456789012
+String1=0x00,Weir
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10204
+UseOrientation=N
+Xpm="32 6 2  1"
+"! c #C5C5C5"
+"# c #B4B4B4"
+"#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!"
+"!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#"
+"#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!"
+"!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#"
+"#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!"
+"!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#!#"
+;12345678901234567890123456789012
+String1=0x00,Dam
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10205
+UseOrientation=N
+Xpm="32 4 2  1"
+"! c #BD3041"
+"  c none"
+"     !!!!!!!!!!!     !!!!!!!!!!!"
+"!   !           !   !           "
+" ! !             ! !            "
+"  !               !             "
+;12345678901234567890123456789012
+String1=0x00,Cliff
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10206
+UseOrientation=N
+Xpm="32 5 2  1"
+"! c #7BCAFF"
+"# c #0000B4"
+"#!!!!!!!!!!!!!!!#!!!!!!!!!!!!!!!"
+"!#!!!!!!!!!!!!!!!#!!!!!!!!!!!!!!"
+"!!#!!!!!!!!!!!!!!!#!!!!!!!!!!!!!"
+"!#!!!!!!!!!!!!!!!#!!!!!!!!!!!!!!"
+"#!!!!!!!!!!!!!!!#!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x00,Canal
 ExtendedLabels=N
 [end]
 
