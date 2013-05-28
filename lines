@@ -258,7 +258,7 @@ route=ferry | waterway=ferry_way | line=ferry										[0x1b resolution 18]
 
 
 waterway=weir									{set name='weir ${name}' | 'weir'}	[0x33 resolution 23]
-waterway=canal 									{set name='canal ${name}' | 'canal'}	[0x38 resolution 18]
+#waterway=canal 									{set name='canal ${name}' | 'canal'}	[0x38 resolution 18]
 
 waterway=dam									{set name='dam ${name}' | 'dam'}	[0x34 resolution 22]
 
