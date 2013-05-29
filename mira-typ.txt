@@ -1,7 +1,7 @@
 ; test30.TYP
-; Longueur: 15276 octets
-; Fichier TYP compilé     29/05/2013     13:07:25
-; Décompilé le 5/29/2013 à 1:07:36 PM
+; Longueur: 15294 octets
+; Fichier TYP compilé     29/05/2013     14:08:11
+; Décompilé le 5/29/2013 à 2:08:23 PM
 
 [_id]
 ProductCode=1
@@ -2496,9 +2496,9 @@ ExtendedLabels=N
 [_line]
 Type=0x10218
 UseOrientation=N
-LineWidth=2
+LineWidth=1
 Xpm="0 0 1 0"
-"1 c #00FFB4"
+"1 c #7B95D5"
 String1=0x00,coast
 ExtendedLabels=N
 [end]
