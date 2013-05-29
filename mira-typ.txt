@@ -1,7 +1,7 @@
 ; test30.TYP
-; Longueur: 15252 octets
-; Fichier TYP compilé     29/05/2013     01:02:17
-; Décompilé le 5/29/2013 à 1:04:49 AM
+; Longueur: 15272 octets
+; Fichier TYP compilé     29/05/2013     05:05:14
+; Décompilé le 5/29/2013 à 5:25:02 AM
 
 [_id]
 ProductCode=1
@@ -2432,7 +2432,7 @@ ExtendedLabels=N
 Type=0x10205
 UseOrientation=N
 Xpm="32 4 2  1"
-"! c #BD3041"
+"! c #BD308B"
 "  c none"
 "     !!!!!!!!!!!     !!!!!!!!!!!"
 "!   !           !   !           "
@@ -2457,6 +2457,38 @@ Xpm="32 5 2  1"
 "#!!!!!!!!!!!!!!!#!!!!!!!!!!!!!!!"
 ;12345678901234567890123456789012
 String1=0x00,Canal
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10210
+UseOrientation=N
+Xpm="32 5 2  1"
+"! c #FF658B"
+"# c #BD006A"
+"!!!!!!!!!!!!!!!!!!!!#!!!!!!!!!!!"
+"!!!!!!!!!!!!!!!!!!!!##!!!!!!!!!!"
+"!!!!!!!!!!!!!!!########!!!!!!!!!"
+"!!!!!!!!!!!!!!!!!!!!##!!!!!!!!!!"
+"!!!!!!!!!!!!!!!!!!!!#!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x00,rapids river
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10211
+UseOrientation=N
+Xpm="32 3 2  1"
+"! c #FF658B"
+"# c #BD006A"
+"!!!!!!!!!!!!!!!!!!!!!#!!!!!!!!!!"
+"!!!!!!!!!!!!!!!!!######!!!!!!!!!"
+"!!!!!!!!!!!!!!!!!!!!!#!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x00,rapids stream
 ExtendedLabels=N
 [end]
 

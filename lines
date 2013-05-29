@@ -256,6 +256,7 @@ tunnel=* 	& tunnel!=no													[0x27 resolution 22 continue]
 
 route=ferry | waterway=ferry_way | line=ferry											[0x1b resolution 18]
 
+#####################################################################################
 
 waterway=weir 		& natural!=water					{set name='weir ${name}' | 'weir'}		[0x10203 resolution 23]
 waterway=rapids 	& natural!=water					{set name='rapids ${name}' | 'rapids'}		[0x10203 resolution 22]
@@ -263,14 +264,47 @@ waterway=waterfall 	& natural!=water					{set name='waterfall${name}' | 'waterfa
 
 waterway=dam 		& natural!=water					{set name='dam ${name}' | 'dam'}		[0x10204 resolution 22]
 
-waterway=canal 		& natural!=water					{set name='canal ${name}' | 'canal'}		[0x10206 resolution 18]
 
-waterway=river 		& natural!=water					{set name='${name}'}				[0x1f resolution 18]
-waterway=stream 	& natural!=water					{set name='${name}'}				[0x18 resolution 22]
-waterway=drain 		& natural!=water 											[0x18 resolution 23]
-waterway=ditch 		& natural!=water 											[0x18 resolution 23]
+waterway=river 		& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade!=* {set name='${name}'}			[0x1f resolution 18]
+waterway=stream 	& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade!=* {set name='${name}'}			[0x18 resolution 22]
+waterway=drain 		& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade!=* {set name='${name}'}			[0x18 resolution 23]
+waterway=ditch 		& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade!=* {set name='${name}'}			[0x18 resolution 23]
+
+waterway=canal 		& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade!=* {set name='canal ${name}' | 'canal'}	[0x10206 resolution 18]
+
+#######################################################################################
+
+# Rapids
+
+waterway=* 	& natural!=water 	& whitewater:rapid_name=* 	& whitewater:section_name!=*	 & whitewater:rapid_grade!=* 	& whitewater:section_grade=* {set whitewater:rapid_grade = '${whitewater:section_grade}' }
 
 
+waterway=* 	& natural!=water 	& whitewater:section_name=* 	& whitewater:rapid_name!=* 	& whitewater:section_grade!=* 	& whitewater:rapid_grade=* {set whitewater:section_grade = '${whitewater:rapid_grade}' }
+
+
+waterway=* 	& natural!=water & whitewater:rapid_name=* & whitewater:rapid_grade!=* {add whitewater:rapid_grade = '- unknown' }
+waterway=* 	& natural!=water & whitewater:section_name=* & whitewater:section_grade!=* {add whitewater:section_grade = '- unknown' }
+
+
+
+
+
+waterway=river 	& natural!=water & whitewater:rapid_grade=* {set name='${whitewater:rapid_name} RG ${whitewater:rapid_grade}' | 'RG ${whitewater:rapid_grade}' | '${whitewater:rapid_name}' } [0x10210 resolution 18]
+waterway=stream & natural!=water & whitewater:rapid_grade=* {set name='${whitewater:rapid_name} RG ${whitewater:rapid_grade}' | 'RG ${whitewater:rapid_grade}' | '${whitewater:rapid_name}' } [0x10211 resolution 22]
+waterway=drain 	& natural!=water & whitewater:rapid_grade=* {set name='${whitewater:rapid_name} RG ${whitewater:rapid_grade}' | 'RG ${whitewater:rapid_grade}' | '${whitewater:rapid_name}' } [0x10211 resolution 23]
+waterway=ditch 	& natural!=water & whitewater:rapid_grade=* {set name='${whitewater:rapid_name} RG ${whitewater:rapid_grade}' | 'RG ${whitewater:rapid_grade}' | '${whitewater:rapid_name}' } [0x10211 resolution 23]
+
+waterway=canal 	& natural!=water & whitewater:rapid_grade=* {set name='${whitewater:rapid_name} RG$ {whitewater:rapid_grade}' | 'RG ${whitewater:rapid_grade}' | '${whitewater:rapid_name}' } [0x10210 resolution 18]
+
+waterway=river 	& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade=* {set name='${whitewater:section_name} SG ${whitewater:section_grade}' | 'SG  ${whitewater:section_grade}' | '${whitewater:section_name}' } [0x10210 resolution 18]
+waterway=stream & natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade=* {set name='${whitewater:section_name} SG ${whitewater:section_grade}' | 'SG  ${whitewater:section_grade}' | '${whitewater:section_name}' } [0x10211 resolution 22]
+waterway=drain 	& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade=* {set name='${whitewater:section_name} SG ${whitewater:section_grade}' | 'SG  ${whitewater:section_grade}' | '${whitewater:section_name}' } [0x10211 resolution 23]
+waterway=ditch 	& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade=* {set name='${whitewater:section_name} SG ${whitewater:section_grade}' | 'SG  ${whitewater:section_grade}' | '${whitewater:section_name}' } [0x10211 resolution 23]
+
+waterway=canal 	& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade=* {set name='${whitewater:section_name} SG ${whitewater:section_grade}' | 'SG  ${whitewater:section_grade}' | '${whitewater:section_name}' } [0x10210 resolution 18]
+
+
+######################################################################################
 
 #natural=coastline 													[0xXX resolution 14]
 
