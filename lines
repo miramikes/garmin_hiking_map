@@ -306,7 +306,7 @@ waterway=canal 	& natural!=water & whitewater:rapid_grade!=* & whitewater:sectio
 
 ######################################################################################
 
-#natural=coastline 													[0xXX resolution 14]
+natural=coastline 															[0x10218 resolution 16]
 
 ######################################################################################
 
