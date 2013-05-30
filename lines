@@ -80,11 +80,11 @@ highway=construction 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${
 
 # hiking
 
-iwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'} 						[0x0b resolution 20 continue]
-iwn_from_relation=yes 		{name '${iref} ${iname}' | '${iref}' | '${iref} - ${iname}'} 				[0x10000 resolution 21 continue]
+iwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'} 						[0x0b resolution 21 continue]
+iwn_from_relation=yes 		{name '${iref} ${iname}' | '${iref}' | '${iref} - ${iname}'} 				[0x10000 resolution 22 continue]
 
-nwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'}    						[0x0b resolution 20 continue]
-nwn_from_relation=yes 		{name '${nref} ${nname}' | '${nref}' | '${nname}'}    					[0x10000 resolution 21 continue]
+nwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'}    						[0x0b resolution 21 continue]
+nwn_from_relation=yes 		{name '${nref} ${nname}' | '${nref}' | '${nname}'}    					[0x10000 resolution 22 continue]
 
 rwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 21 continue]
 rwn_from_relation=yes  		{name '${rref} ${rname}' | '${rref}' | '${rname}'}   					[0x10000 resolution 22 continue]
@@ -101,11 +101,11 @@ nonet_from_relation=yes 	{name '${nnref} ${nnname}' | '${nnref}' | '${nnname}'} 
 # bicycle
 
 
-icn_from_relation=yes 		{name '${iref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
-icn_from_relation=yes 		{name '${iname}'}									[0x10001 resolution 21 continue]
+icn_from_relation=yes 		{name '${iref|highway-symbol:hbox}'}							[0x0c resolution 21 continue]
+icn_from_relation=yes 		{name '${iname}'}									[0x10001 resolution 22 continue]
 
-ncn_from_relation=yes 		{name '${nref|highway-symbol:hbox}'} 							[0x0c resolution 20 continue]
-ncn_from_relation=yes 		{name '${nname}'} 									[0x10001 resolution 21 continue]
+ncn_from_relation=yes 		{name '${nref|highway-symbol:hbox}'} 							[0x0c resolution 21 continue]
+ncn_from_relation=yes 		{name '${nname}'} 									[0x10001 resolution 22 continue]
 
 
 rcn_from_relation=yes  		{name '${rref|highway-symbol:hbox}'} 							[0x0c resolution 21 continue]
@@ -254,7 +254,7 @@ highway=pier | man_made=pier													[0x19 resolution 23]
 bridge=*	& bridge!=no | historic=aqueduct | man_made=bridge								[0x26 resolution 22 continue]
 tunnel=* 	& tunnel!=no													[0x27 resolution 22 continue]
 
-route=ferry | waterway=ferry_way | line=ferry											[0x1b resolution 18]
+route=ferry | waterway=ferry_way | line=ferry		{set name='${name} ${operator}' | '${name}' | '${operator}' }		[0x1b resolution 18]
 
 #####################################################################################
 
@@ -265,10 +265,10 @@ waterway=waterfall 	& natural!=water					{set name='waterfall${name}' | 'waterfa
 waterway=dam 		& natural!=water					{set name='dam ${name}' | 'dam'}		[0x10204 resolution 22]
 
 
-waterway=river 		& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade!=* {set name='${name}'}			[0x1f resolution 18]
-waterway=stream 	& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade!=* {set name='${name}'}			[0x18 resolution 22]
-waterway=drain 		& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade!=* {set name='${name}'}			[0x18 resolution 23]
-waterway=ditch 		& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade!=* {set name='${name}'}			[0x18 resolution 23]
+waterway=river 		& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade!=* {set name='${name}'}		[0x1f resolution 18]
+waterway=stream 	& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade!=* {set name='${name}'}		[0x18 resolution 22]
+waterway=drain 		& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade!=* {set name='${name}'}		[0x18 resolution 23]
+waterway=ditch 		& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade!=* {set name='${name}'}		[0x18 resolution 23]
 
 waterway=canal 		& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade!=* {set name='canal ${name}' | 'canal'}	[0x10206 resolution 18]
 
