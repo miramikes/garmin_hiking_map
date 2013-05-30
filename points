@@ -198,10 +198,10 @@ historic=ruins | building=collapsed 					[0x4806 resolution 22 default_name 'rui
 ######################################################
 
 #  Picnic
-tourism=picnic_site | leisure=picnic_table 						[0x4a00 resolution 21 default_name 'picnic site']
-amenity=bbq 										[0x4a01 resolution 21 default_name 'bbq']
+tourism=picnic_site | leisure=picnic_table 				[0x4a00 resolution 21 default_name 'picnic site']
+amenity=bbq 								[0x4a01 resolution 21 default_name 'bbq']
 
-amenity=bench										[0x6605 resolution 24]
+amenity=bench								[0x6605 resolution 24]
 
 #######################################################################
 
@@ -252,13 +252,8 @@ ford=yes | highway=ford											[0x6401 resolution 21 default_name 'ford' cont
 
 #  Geographical (land-based)
 
-natural=peak & altitude=number    	{name '${name|def:} (${ele|def:}m)'} 				[0x6616 resolution 21]
-natural=peak & altitude=no_number 	{name '${name|def:} (${ele|def:})'} 				[0x6616 resolution 21]
-natural=peak & ele!=* 			{name '${name|def:}' } 						[0x6616 resolution 21]
-
-mountain_pass=yes & altitude=number     {name '${name|def:} (${ele|def:}m)'} 				[0x6401 resolution 22]
-mountain_pass=yes & altitude=no_number  {name '${name|def:} (${ele|def:})'} 				[0x6401 resolution 22]
-mountain_pass=yes & ele!=* 		{name '${name|def:}' } 						[0x6401 resolution 22]
+natural=peak 			    	{name '${name} (${ele}m)' | '(${ele}m)' | '${name}' } 		[0x6616 resolution 21 default_name 'peak']
+mountain_pass=yes    			{name '${name} (${ele}m)' | '(${ele}m)' | '${name}' } 		[0x6401 resolution 22 default_name 'pass']
 
 natural=rock 												[0x6614 resolution 21 default_name 'rock']
 natural=volcano 											[0x2c0c resolution 21 default_name 'volcano']
