@@ -157,43 +157,44 @@ leisure=marina 					[0x2f09 resolution 24]
 
 ##########################################################
 
-historic=museum 							[0x2c02 resolution 24 default_name 'museum']
-historic=archaeological_site | historic=ruins 				[0x2c02 resolution 24 default_name 'historic ruins']
-historic=memorial | historic=monument					[0x2c02 resolution 24 default_name 'memorial']
+historic=museum 							{ name '${name}' | '${ref}' } 	[0x2c02 resolution 24 default_name 'museum']
+historic=archaeological_site | historic=ruins 				{ name '${name}' | '${ref}' } 	[0x2c02 resolution 24 default_name 'historic ruins']
+historic=memorial | historic=monument					{ name '${name}' | '${ref}' } 	[0x2c02 resolution 24 default_name 'memorial']
 
 
-tourism=attraction & historic=* & historic!=wayside_cross		[0x2c02 resolution 21 default_name 'historic attraction']
-tourism=attraction 							[0x2c04 resolution 21 default_name 'attraction']
+tourism=attraction & historic=* & historic!=wayside_cross		{ name '${name}' | '${ref}' } 	[0x2c02 resolution 21 default_name 'historic attraction']
+tourism=attraction 							{ name '${name}' | '${ref}' } 	[0x2c04 resolution 21 default_name 'attraction']
 
-cross=yes | man_made=cross | historic=wayside_cross 			[0x481f resolution 23]
+cross=yes | man_made=cross | historic=wayside_cross 							[0x481f resolution 23]
 
 #  Attractions / community
-historic=* 	& historic!=wayside_cross	& historic!=ruins	[0x2c0b resolution 23]
+historic=* 	& historic!=wayside_cross	& historic!=ruins 	{ name '${name}' | '${ref}' } 	[0x2c0b resolution 23]
 
 #######################################################
 
 tourism=hotel | tourism=motel { name '${name|def:}(${stars}*)${operator|def:}' | '${name} ${operator}' | '${name}' | '${operator}' } 	[0x2b01 resolution 23]
-tourism=guest_house 							[0x2b02 resolution 21 default_name 'guest house']
-tourism=camp_site 							[0x2b03 resolution 21 default_name 'camp site']
-tourism=caravan_site 							[0x2b03 resolution 21 default_name 'caravan site']
 
-tourism=bed_and_breakfast 						[0x2b02 resolution 22 default_name 'b&b']
+tourism=guest_house 					{ name '${name}' | '${ref}' } 				[0x2b02 resolution 21 default_name 'guest house']
+tourism=camp_site 					{ name '${name}' | '${ref}' } 				[0x2b03 resolution 21 default_name 'camp site']
+tourism=caravan_site 					{ name '${name}' | '${ref}' } 				[0x2b03 resolution 21 default_name 'caravan site']
 
-tourism=hostel 								[0x480a resolution 21 default_name 'hostel']
-tourism=chalet { name '${name}' | '${ref}' } 				[0x480b resolution 21 default_name 'chalet']
+tourism=bed_and_breakfast 				{ name '${name}' | '${ref}' } 				[0x2b02 resolution 22 default_name 'b&b']
+
+tourism=hostel 						{ name '${name}' | '${ref}' } 				[0x480a resolution 21 default_name 'hostel']
+tourism=chalet 						{ name '${name}' | '${ref}' } 				[0x480b resolution 21 default_name 'chalet']
 
 # tourism=lean_to replaces some uses of amenity=shelter
 
-tourism=alpine_hut 							[0x4800 resolution 21 default_name 'alpine hut']
-tourism=wilderness_hut 							[0x4801 resolution 21 default_name 'wilderness hut']
-amenity=shelter | shelter_type=basic_hut 				[0x4803 resolution 21 default_name 'shelter']
-tourism=lean_to | shelter_type=lean_to					[0x4804 resolution 21 default_name 'lean-to']
+tourism=alpine_hut 					{ name '${name}' | '${ref}' } 				[0x4800 resolution 21 default_name 'alpine hut']
+tourism=wilderness_hut 					{ name '${name}' | '${ref}' } 				[0x4801 resolution 21 default_name 'wilderness hut']
+amenity=shelter | shelter_type=basic_hut 		{ name '${name}' | '${ref}' } 				[0x4803 resolution 21 default_name 'shelter']
+tourism=lean_to | shelter_type=lean_to			{ name '${name}' | '${ref}' } 				[0x4804 resolution 21 default_name 'lean-to']
 
-natural=* & shelter=yes | shelter_type=rock_shelter			[0x4807 resolution 21 default_name 'natural shelter']
+natural=* & shelter=yes | shelter_type=rock_shelter	{ name '${name}' | '${ref}' } 				[0x4807 resolution 21 default_name 'natural shelter']
 
 # Private 
-building=cabin | tourism=cabin 						[0x4805 resolution 21 default_name 'cabin']
-historic=ruins | building=collapsed 					[0x4806 resolution 22 default_name 'ruins']
+building=cabin | tourism=cabin 				{ name '${name}' | '${ref}' } 				[0x4805 resolution 21 default_name 'cabin']
+historic=ruins | building=collapsed 			{ name '${name}' | '${ref}' } 				[0x4806 resolution 22 default_name 'ruins']
 
 ######################################################
 
@@ -255,12 +256,12 @@ ford=yes | highway=ford											[0x6401 resolution 21 default_name 'ford' cont
 natural=peak 			    	{name '${name} (${ele}m)' | '(${ele}m)' | '${name}' } 		[0x6616 resolution 21 default_name 'peak']
 mountain_pass=yes    			{name '${name} (${ele}m)' | '(${ele}m)' | '${name}' } 		[0x6401 resolution 22 default_name 'pass']
 
-natural=rock 												[0x6614 resolution 21 default_name 'rock']
-natural=volcano 											[0x2c0c resolution 21 default_name 'volcano']
-natural=stone 												[0x6606 resolution 21 default_name 'stone']
-natural=tree 												[0x6618 resolution 23]
+natural=rock 				{name '${name}'}						[0x6614 resolution 21 default_name 'rock']
+natural=volcano 			{name '${name} (${ele}m)' | '(${ele}m)' | '${name}' } 		[0x2c0c resolution 21 default_name 'volcano']
+natural=stone 				{name '${name}'}						[0x6606 resolution 21 default_name 'stone']
+natural=tree 				{name '${name}'}						[0x6618 resolution 23]
 
-natural=cave_entrance 											[0x6601 resolution 21]
+natural=cave_entrance 			{name '${name}'}						[0x6601 resolution 21 default_name 'cave']
 
 
 ################################################################
@@ -280,8 +281,8 @@ information=map 					[0x4c04 resolution 21]
 #  Beacons and Buoyes
 
 
-man_made=beacon | airmark=beacon | landmark=beacon 	[0x190e resolution 23]
+man_made=beacon | airmark=beacon | landmark=beacon 	[0x190e resolution 23 default_name 'beacon']
 
-seamark:type=* 						[0x180e resolution 23]
+seamark:type=* 						[0x180e resolution 23 default_name 'buoy']
 
 
