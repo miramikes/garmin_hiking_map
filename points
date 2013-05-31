@@ -6,35 +6,47 @@ ele=* & altitude!=number  {add altitude=no_number}
 #
 
 # don't render not relevant mkgmap:line2poi tags
-amenity=* 	& mkgmap:line2poi=true 					{delete amenity}
-barrier=* 	& mkgmap:line2poi=true 					{delete barrier}
-historic=* 	& mkgmap:line2poi=true 					{delete historic}
-landuse=* 	& mkgmap:line2poi=true 					{delete landuse}
-leisure=* 	& mkgmap:line2poi=true 					{delete leisure}
-man_made=* 	& mkgmap:line2poi=true 					{delete man_made}
-natural=* 	& mkgmap:line2poi=true 					{delete natural}
-place=* 	& mkgmap:line2poi=true 					{delete place}
-shop=* 		& mkgmap:line2poi=true 					{delete shop}
-sport=* 	& mkgmap:line2poi=true 					{delete sport}
-tourism=* 	& mkgmap:line2poi=true 					{delete tourism}
+amenity=* 					& mkgmap:line2poi=true 			{delete amenity}
+barrier=* 					& mkgmap:line2poi=true 			{delete barrier}
+historic=* 					& mkgmap:line2poi=true 			{delete historic}
+landuse=* 					& mkgmap:line2poi=true 			{delete landuse}
+leisure=* 					& mkgmap:line2poi=true 			{delete leisure}
+man_made=* 					& mkgmap:line2poi=true 			{delete man_made}
+natural=* 					& mkgmap:line2poi=true 			{delete natural}
+place=* 					& mkgmap:line2poi=true 			{delete place}
+shop=* 						& mkgmap:line2poi=true 			{delete shop}
+sport=* 					& mkgmap:line2poi=true 			{delete sport}
+tourism=* 					& mkgmap:line2poi=true 			{delete tourism}
 
 #
 
 # don't render not relevant mkgmap:area2poi tags
 
-amenity=* 	& mkgmap:area2poi=true 					{delete amenity}
-barrier=* 	& mkgmap:area2poi=true 					{delete barrier}
-historic=* 	& mkgmap:area2poi=true 					{delete historic}
-landuse=* 	& mkgmap:area2poi=true 					{delete landuse}
-leisure=* 	& mkgmap:area2poi=true 					{delete leisure}
-man_made=* 	& mkgmap:area2poi=true 					{delete man_made}
-natural=* 	& mkgmap:area2poi=true 					{delete natural}
-place=* 	& place!=island & place!=islet & mkgmap:line2poi=true 	{delete place}
-shop=* 		& mkgmap:area2poi=true 					{delete shop}
-sport=* 	& mkgmap:area2poi=true 					{delete sport}
-tourism=* 	& mkgmap:area2poi=true 					{delete tourism}
+amenity=* 												& mkgmap:area2poi=true 		{delete amenity}
+barrier=* 												& mkgmap:area2poi=true 		{delete barrier}
+historic=* 												& mkgmap:area2poi=true 		{delete historic}
+landuse=* 	& landuse!=military									& mkgmap:area2poi=true 		{delete landuse}
+leisure=* 	& leisure!=nature_reserve								& mkgmap:area2poi=true 		{delete leisure}
+man_made=* 												& mkgmap:area2poi=true 		{delete man_made}
+natural=* 												& mkgmap:area2poi=true 		{delete natural}
+place=* 	& place!=island & place!=islet 								& mkgmap:line2poi=true 		{delete place}
+shop=* 													& mkgmap:area2poi=true 		{delete shop}
+sport=* 												& mkgmap:area2poi=true 		{delete sport}
+tourism=* 												& mkgmap:area2poi=true 		{delete tourism}
+military=* 	& military!=danger_area 	& military!=range	& military!=airfield		& mkgmap:area2poi=true 		{delete military}
 
-#
+################################################################
+
+# Polygons naming
+
+leisure=nature_reserve											[0x01 resolution 21]
+
+landuse=military 											[0x01 resolution 21]
+military=danger_area 											[0x01 resolution 21]
+military=range 												[0x01 resolution 21]
+military=airfield 											[0x01 resolution 21]
+
+############################################################
 
 aeroway=airport 		[0x5900 resolution 22]
 aeroway=helipad 		[0x5904 resolution 22]
@@ -262,7 +274,6 @@ natural=stone 				{name '${name}'}						[0x6606 resolution 21 default_name 'ston
 natural=tree 				{name '${name}'}						[0x6618 resolution 23]
 
 natural=cave_entrance 			{name '${name}'}						[0x6601 resolution 21 default_name 'cave']
-
 
 ################################################################
 

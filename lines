@@ -237,6 +237,14 @@ boundary=administrative & admin_level>6 & admin_level<8 	[0x1c resolution 21]
 
 boundary=political 						[0x1c resolution 18]
 
+boundary=national_park | boundary=protected_area		[0x10217 resolution 20]
+
+leisure=nature_reserve 						[0x10217 resolution 20]
+
+military=danger_area | military=range | landuse=military | military=airfield 	[0x10216 resolution 20 continue]
+amenity=prison 									[0x10216 resolution 22 continue]
+military=barracks 								[0x10216 resolution 23 continue]
+
 #####################################################################################
 
 natural=cliff | barrier=cliff 	 						{set name='${name} cliff' | 'cliff'}		[0x10205 resolution 22]

@@ -1,7 +1,7 @@
 ; test30.TYP
-; Longueur: 15294 octets
-; Fichier TYP compilé     29/05/2013     14:08:11
-; Décompilé le 5/29/2013 à 2:08:23 PM
+; Longueur: 15377 octets
+; Fichier TYP compilé     31/05/2013     06:00:57
+; Décompilé le 5/31/2013 à 7:14:40 AM
 
 [_id]
 ProductCode=1
@@ -456,40 +456,40 @@ Type=0x16
 String1=0x00,Natural reserve
 ExtendedLabels=N
 Xpm="32 32 2 1"
-"! c #FFFF00"
+"! c #39CA00"
 "  c none"
-"              !                !"
-"             !                ! "
-"            !                !  "
-"           !                !   "
-"          !                !    "
-"         !                !     "
-"        !                !      "
-"       !                !       "
-"      !                !        "
-"     !                !         "
-"    !                !          "
-"   !                !           "
-"  !                !            "
-" !                !             "
-"!                !              "
+"                               !"
+"                              ! "
+"                             !  "
+"                            !   "
+"                           !    "
+"                          !     "
+"                         !      "
+"                        !       "
+"                       !        "
+"                      !         "
+"                     !          "
+"                    !           "
+"                   !            "
+"                  !             "
+"                 !              "
 "                !               "
-"               !               !"
-"              !               ! "
-"             !               !  "
-"            !               !   "
-"           !               !    "
-"          !               !     "
-"         !               !      "
-"        !               !       "
-"       !               !        "
-"      !               !         "
-"     !               !          "
-"    !               !           "
-"   !               !            "
-"  !               !             "
-" !               !              "
-"!               !               "
+"               !                "
+"              !                 "
+"             !                  "
+"            !                   "
+"           !                    "
+"          !                     "
+"         !                      "
+"        !                       "
+"       !                        "
+"      !                         "
+"     !                          "
+"    !                           "
+"   !                            "
+"  !                             "
+" !                              "
+"!                               "
 ;12345678901234567890123456789012
 [end]
 
@@ -2494,6 +2494,34 @@ ExtendedLabels=N
 
 
 [_line]
+Type=0x10216
+UseOrientation=N
+Xpm="32 2 2  1"
+"! c #FF0000"
+"  c none"
+"!!!!!!!!!!!!!   !!!!!!!!!!!!!   "
+"!!!!!!!!!!!!!   !!!!!!!!!!!!!   "
+;12345678901234567890123456789012
+String1=0x00,Restricted area
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10217
+UseOrientation=N
+Xpm="32 2 2  1"
+"! c #00CA00"
+"  c none"
+"!!!!!!!!!!!!    !!!!!!!!!!!!    "
+"!!!!!!!!!!!!    !!!!!!!!!!!!    "
+;12345678901234567890123456789012
+String1=0x00,National Park
+ExtendedLabels=N
+[end]
+
+
+[_line]
 Type=0x10218
 UseOrientation=N
 LineWidth=1
@@ -2505,6 +2533,21 @@ ExtendedLabels=N
 
 
 ;====================== POINTS ==========================
+
+
+[_point]
+Type=0x001
+SubType=0x00
+String1=0x00,place
+ExtendedLabels=N
+DayXpm="3 3 2 1"   Colormode=16
+"!	c #FFFFFF"
+"  	c none"
+"   "
+"   "
+"   "
+;123
+[end]
 
 
 [_point]
