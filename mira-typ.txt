@@ -1,7 +1,7 @@
 ; test30.TYP
 ; Longueur: 15468 octets
-; Fichier TYP compilé     06/01/2013     02:54:07
-; Décompilé le 6/1/2013 à 2:54:21 AM
+; Fichier TYP compilé     06/01/2013     03:46:25
+; Décompilé le 6/1/2013 à 11:57:48 AM
 
 [_id]
 ProductCode=1
@@ -760,7 +760,7 @@ String1=0x00,Riverbank
 ExtendedLabels=N
 Xpm="32 32 2 1"
 "! c #000000"
-"# c #39CAD5"
+"# c #00CAD5"
 "################################"
 "################################"
 "################################"
@@ -1232,7 +1232,7 @@ Type=0x4d
 String1=0x00,Glaciar
 ExtendedLabels=N
 Xpm="32 32 2 1"
-"! c #7BFFFF"
+"! c #BDFFFF"
 "# c #FFFFFF"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
