@@ -1,7 +1,7 @@
 #
 
-ele=* & ele ~ '^[+-]?(?:\d+\,?\d*|\d*\.?\d+)[\r\n]*$' {add altitude=number}
-ele=* & altitude!=number  {add altitude=no_number}
+#ele=* & ele ~ '^[+-]?(?:\d+\,?\d*|\d*\.?\d+)[\r\n]*$' {add altitude=number}
+#ele=* & altitude!=number  {add altitude=no_number}
 
 #
 
@@ -157,15 +157,15 @@ place=islet 			[0x650c resolution 22]
   name '${name|def:} ${ref|def:}*${operator|def:}';
 }
 
-railway=halt 					[0x4d02 resolution 23]
-railway=station 				[0x4d02 resolution 22]
+railway=halt 					[0x4d02 resolution 23 default_name 'train']
+railway=station 				[0x4d02 resolution 22 default_name 'train']
 
-railway=tram_stop 				[0x4d01 resolution 24]
+railway=tram_stop 				[0x4d01 resolution 24 default_name 'tram']
 
-highway=bus_stop | amenity=bus_station 		[0x2f08 resolution 23]
+highway=bus_stop | amenity=bus_station 		[0x2f08 resolution 23 default_name 'bus']
 
-amenity=ferry_terminal 				[0x2f09 resolution 22]
-leisure=marina 					[0x2f09 resolution 24]
+amenity=ferry_terminal 				[0x2f09 resolution 22 default_name 'ferry']
+leisure=marina 					[0x2f09 resolution 24 default_name 'marina']
 
 ##########################################################
 
@@ -187,7 +187,7 @@ historic=* 	& historic!=wayside_cross	& historic!=ruins 	{ name '${name}' | '${r
 tourism=hotel | tourism=motel { name '${name|def:}(${stars}*)${operator|def:}' | '${name} ${operator}' | '${name}' | '${operator}' } 	[0x2b01 resolution 23]
 
 tourism=guest_house 					{ name '${name}' | '${ref}' } 				[0x2b02 resolution 21 default_name 'guest house']
-tourism=camp_site 					{ name '${name}' | '${ref}' } 				[0x2b03 resolution 21 default_name 'camp site']
+tourism=camp_site 					{ name '${name}' | '${ref}' } 				[0x2b03 resolution 24-21 default_name 'camp site']
 tourism=caravan_site 					{ name '${name}' | '${ref}' } 				[0x2b03 resolution 21 default_name 'caravan site']
 
 tourism=bed_and_breakfast 				{ name '${name}' | '${ref}' } 				[0x2b02 resolution 22 default_name 'b&b']
@@ -242,12 +242,12 @@ natural=spring									 			[0x6511 resolution 21]
 ########################################################################
 
 #  Sights
-tourism=viewpoint & man_made=tower 									[0x5201 resolution 21]
-tourism=viewpoint {name '${name} - ${description}' | '${name}'} 					[0x5200 resolution 21]
+tourism=viewpoint & man_made=tower 									[0x5201 resolution 24-21]
+tourism=viewpoint {name '${name} - ${description}' | '${name}'} 					[0x5200 resolution 24-21]
 
-man_made=mast | power=tower										[0x660f resolution 21]
+man_made=mast | power=tower										[0x660f resolution 24-21]
 
-man_made=tower | landmark=chimney 									[0x6411 resolution 20 default_name 'tower']
+man_made=tower | landmark=chimney 									[0x6411 resolution 24-20 default_name 'tower']
 
 #  Geographical (man-made)
 man_made=mineshaft | man_made=adit | historic=mine 							[0x640c resolution 24 default_name 'mine']
