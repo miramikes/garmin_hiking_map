@@ -116,8 +116,8 @@ natural=bay 											[0x3d resolution 18]
 waterway=riverbank | waterway=canal								[0x3e resolution 20]
 natural=water 											[0x3c resolution 18]
 
-landuse=basin | landuse=pond									[0x3e resolution 20]
-landuse=reservoir 										[0x3e resolution 18]
+landuse=basin | landuse=pond									[0x3c resolution 20]
+landuse=reservoir 										[0x3c resolution 18]
 
 # Vegetation
 
