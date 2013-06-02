@@ -1,10 +1,5 @@
 #
 
-#ele=* & ele ~ '^[+-]?(?:\d+\,?\d*|\d*\.?\d+)[\r\n]*$' {add altitude=number}
-#ele=* & altitude!=number  {add altitude=no_number}
-
-#
-
 # don't render not relevant mkgmap:line2poi tags
 amenity=* 					& mkgmap:line2poi=true 			{delete amenity}
 barrier=* 					& mkgmap:line2poi=true 			{delete barrier}
@@ -264,6 +259,9 @@ waterway=rapids 											[0x650e resolution 21 default_name 'rapids']
 ford=yes | highway=ford											[0x6401 resolution 21 default_name 'ford' continue]
 
 #  Geographical (land-based)
+
+#ele=* & ele ~ '^[+-]?(?:\d+\,?\d*|\d*\.?\d+)[\r\n]*$' {add altitude=number}
+#ele=* & altitude!=number  {add altitude=no_number}
 
 natural=peak 			    	{name '${name} (${ele}m)' | '(${ele}m)' | '${name}' } 		[0x6616 resolution 21 default_name 'peak']
 mountain_pass=yes    			{name '${name} (${ele}m)' | '(${ele}m)' | '${name}' } 		[0x6401 resolution 22 default_name 'pass']
