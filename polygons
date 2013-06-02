@@ -105,7 +105,8 @@ leisure=nature_reserve 										[0x16 resolution 20]
 
 # Sand
 
-natural=beach | natural=sand									[0x53 resolution 21]
+natural=beach | natural=sand | natural=dune							[0x53 resolution 21]
+natural=desert											[0x53 resolution 20]
 surface=sand 					& area=yes & highway!=*				[0x53 resolution 22]
 water=tidal											[0x52 resolution 21]
 natural=shelf | tidal=yes | tidal=true								[0x52 resolution 21]
@@ -125,20 +126,27 @@ wood=mixed											[0x44 resolution 21]
 wood=deciduos | wood=deciduous									[0x43 resolution 21]
 wood=coniferous 										[0x42 resolution 21]
 
-( landuse=forest | natural=wood | landuse=wood | natural=forest )	& wood!=*		[0x50 resolution 21]
+( landuse=forest | natural=wood | landuse=wood | natural=forest | natural=woodland )	& wood!=* 	[0x50 resolution 21]
+
+natural=scrub | natural=shrub | natural=scrubland | natural=scrubs | natural=shrubs | natural=shrubland				[0x4f resolution 21]
+
+natural=fell 											[0x41 resolution 21]
+natural=heath 											[0x46 resolution 21]
+natural=mud | natural=marsh | natural=wetland | natural=swamp 					[0x51 resolution 21]
+natural=meadow | landuse=meadow	| natural=grassland | natural=grass | landuse=grass		[0x3b resolution 21]
+surface=grass			& area=yes							[0x3b resolution 22]
+
+##########
 
 natural=bare_rock 		{ name '${name} rock' | 'bare_rock' }				[0x40 resolution 22]
 natural=cliff & area=yes	{ name '${name} cliff' | 'cliff' } 				[0x40 resolution 22]
-
-natural=scrub | natural=shrub | natural=scrubland | natural=scrubs | natural=shrubs | natural=shrubland				[0x4f resolution 21]
 natural=scree											[0x45 resolution 21]
 natural=bedrock 										[0x40 resolution 21]
-natural=fell 											[0x41 resolution 21]
-natural=heath 											[0x46 resolution 21]
-natural=mud | natural=marsh | natural=wetland 							[0x51 resolution 21]
-natural=meadow | landuse=meadow									[0x3b resolution 21]
+natural=lava 											[0x40 resolution 21]
 
 natural=glacier 										[0x4d resolution 18]
+
+##########
 
 natural=sea 											[0x32 resolution 14]
 natural=land 											[0x10100 resolution 14]
