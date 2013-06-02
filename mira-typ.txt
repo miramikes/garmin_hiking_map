@@ -1,4 +1,7 @@
-
+; test30.TYP
+; Longueur: 15491 octets
+; Fichier TYP compilé     06/02/2013     01:35:11
+; Décompilé le 6/2/2013 à 1:35:20 AM
 
 [_id]
 ProductCode=1
@@ -661,7 +664,7 @@ Type=0x3b
 String1=0x00,Meadow
 ExtendedLabels=N
 Xpm="32 32 2 1"
-"! c #7BCA6A"
+"! c #7BCA8B"
 "# c #BDFFB4"
 "########!####################!##"
 "########!############!#######!##"
@@ -885,7 +888,7 @@ Type=0x42
 String1=0x00,Forest conifernous
 ExtendedLabels=N
 Xpm="32 32 2 1"
-"! c #7BCA00"
+"! c #7BCA6A"
 "# c #BDFF8B"
 "################################"
 "################################"
@@ -928,7 +931,7 @@ Type=0x43
 String1=0x00,Forest deciduous
 ExtendedLabels=N
 Xpm="32 32 2 1"
-"! c #7BCA00"
+"! c #7BCA6A"
 "# c #BDFF8B"
 "################################"
 "################################"
@@ -971,7 +974,7 @@ Type=0x44
 String1=0x00,Forest mixed
 ExtendedLabels=N
 Xpm="32 32 2 1"
-"! c #7BCA00"
+"! c #7BCA6A"
 "# c #BDFF8B"
 "################################"
 "################################"
