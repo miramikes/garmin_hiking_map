@@ -333,7 +333,9 @@ aerialway=chair_lift  | aerialway=mixed_lift 		{set name='${name} chair_lift' | 
 
 # Contours take their name from the elevation setting.
 
-contour=elevation & contour_ext=elevation_minor			{ name '${ele|conv:m=>ft}'; }			[0x20 resolution 22]
-contour=elevation & contour_ext=elevation_medium		{ name '${ele|conv:m=>ft}'; }			[0x21 resolution 20]
-contour=elevation & contour_ext=elevation_major			{ name '${ele|conv:m=>ft}'; }			[0x22 resolution 18]
-contour=elevation | contour_ext=elevation			{ name '${ele|conv:m=>ft}'; }			[0x21 resolution 22]
+contour=elevation & contour_ext=elevation_minor & (ele ~'.*10' | ele ~'.*30' | ele ~'.*50' | ele ~'.*70' | ele ~'.*90') { name '${ele|conv:m=>ft}'; } [0x20 resolution 24]
+contour=elevation & contour_ext=elevation_minor & (ele ~'.*20' | ele ~'.*40' | ele ~'.*60' | ele ~'.*80') 		{ name '${ele|conv:m=>ft}'; } [0x20 resolution 22]
+
+contour=elevation & contour_ext=elevation_medium				{ name '${ele|conv:m=>ft}'; }			[0x21 resolution 20]
+contour=elevation & contour_ext=elevation_major					{ name '${ele|conv:m=>ft}'; }			[0x22 resolution 18]
+contour=elevation | contour_ext=elevation					{ name '${ele|conv:m=>ft}'; }			[0x21 resolution 22]
