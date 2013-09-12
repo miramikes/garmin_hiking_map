@@ -115,10 +115,15 @@ natural=shelf | tidal=yes | tidal=true								[0x52 resolution 21]
 
 natural=bay 											[0x3d resolution 18]
 waterway=riverbank | waterway=canal								[0x3e resolution 20]
-natural=water 											[0x3c resolution 18]
 
-landuse=basin | landuse=pond									[0x3c resolution 20]
-landuse=reservoir 										[0x3c resolution 18]
+natural=water 					& salt!=*					[0x3c resolution 18]
+natural=water 					& salt=yes					[0x3f resolution 18]
+
+landuse=basin | landuse=pond			& salt!=*					[0x3c resolution 20]
+landuse=basin | landuse=pond			& salt=yes					[0x3f resolution 20]
+
+landuse=reservoir 				& salt!=*					[0x3c resolution 18]
+landuse=reservoir 				& salt=yes					[0x3f resolution 18]
 
 # Vegetation
 
@@ -126,7 +131,7 @@ wood=mixed											[0x44 resolution 21]
 wood=deciduos | wood=deciduous									[0x43 resolution 21]
 wood=coniferous 										[0x42 resolution 21]
 
-( landuse=forest | natural=wood | landuse=wood | natural=forest | natural=woodland )	& wood!=* 	[0x50 resolution 21]
+( landuse=forest | natural=wood | landuse=wood | natural=forest | natural=woodland )	& wood!=* 				[0x50 resolution 21]
 
 natural=scrub | natural=shrub | natural=scrubland | natural=scrubs | natural=shrubs | natural=shrubland				[0x4f resolution 21]
 
