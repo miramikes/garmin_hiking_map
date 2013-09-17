@@ -34,12 +34,12 @@ military=* 	& military!=danger_area 	& military!=range	& military!=airfield		& m
 
 # Polygons naming
 
-leisure=nature_reserve											[0x01 resolution 21]
+leisure=nature_reserve											[0x01 resolution 20]
 
-landuse=military 											[0x01 resolution 21]
-military=danger_area 											[0x01 resolution 21]
-military=range 												[0x01 resolution 21]
-military=airfield 											[0x01 resolution 21]
+landuse=military 											[0x01 resolution 20]
+military=danger_area 											[0x01 resolution 20]
+military=range 												[0x01 resolution 22]
+military=airfield 											[0x01 resolution 22]
 
 ############################################################
 
@@ -47,24 +47,24 @@ aeroway=airport 		[0x5900 resolution 22]
 aeroway=helipad 		[0x5904 resolution 22]
 
 aeroway=aerodrome 		[0x5900 resolution 22]
-aeroway=terminal 		[0x5900 resolution 24 continue]
+aeroway=terminal 		[0x5900 resolution 23 continue]
 
 ###########################################################
 
-amenity=atm 	{ name '${operator}: ${name}' | '${name}' | '${operator}' } 	[0x2f06 resolution 24]
-amenity=bank 	{ name '${name} (${operator})' | '${name}' | '${operator}' } 	[0x2f06 resolution 24]
+amenity=atm 	{ name '${operator}: ${name}' | '${name}' | '${operator}' } 	[0x2f06 resolution 23]
+amenity=bank 	{ name '${name} (${operator})' | '${name}' | '${operator}' } 	[0x2f06 resolution 23]
 
 
 ###########################################################
 
-amenity=restaurant 							[0x4500 resolution 24 continue]
-amenity=food_court 							[0x4500 resolution 24 continue]
+amenity=restaurant 							[0x4500 resolution 23 continue]
+amenity=food_court 							[0x4500 resolution 23 continue]
 
-amenity=fast_food 							[0x2a07 resolution 24 continue]
+amenity=fast_food 							[0x2a07 resolution 23 continue]
 
-amenity=cafe 								[0x2a0e resolution 24 continue]
+amenity=cafe 								[0x2a0e resolution 23 continue]
 
-amenity=pub | amenity=bar | amenity=biergarten | amenity=nightclub 	[0x2d02 resolution 24 continue]
+amenity=pub | amenity=bar | amenity=biergarten | amenity=nightclub 	[0x2d02 resolution 23 continue]
 
 
 ###########################################################
@@ -72,8 +72,8 @@ amenity=pub | amenity=bar | amenity=biergarten | amenity=nightclub 	[0x2d02 reso
 # amenity=supermarket is superceded by shop=supermarket
 
 
-shop=supermarket | amenity=supermarket 		[0x2e01 resolution 24]
-shop=*  & shop!=bicycle & shop!=outdoor		[0x2e03 resolution 24]
+shop=supermarket | amenity=supermarket 		[0x2e01 resolution 23]
+shop=*  & shop!=bicycle & shop!=outdoor		[0x2e03 resolution 23]
 
 amenity=bicycle_rental 				[0x2e0a resolution 23 default_name 'rental']
 shop=bicycle 					[0x2e0a resolution 23 default_name 'shop']
@@ -83,59 +83,59 @@ shop=outdoor 					[0x2e06 resolution 23 default_name 'outdoor']
 
 ###########################################################
 
-amenity=police 							[0x3001 resolution 24]
+amenity=police 							[0x3001 resolution 23]
 
-amenity=embassy & country=* { name 'Embassy ${country}' } 	[0x3003 resolution 24]
-amenity=embassy & country!=* 					[0x3003 resolution 24 default_name 'Embassy']
+amenity=embassy & country=* { name 'Embassy ${country}' } 	[0x3003 resolution 23]
+amenity=embassy & country!=* 					[0x3003 resolution 23 default_name 'Embassy']
 
 healthcare=hospital | amenity=hospital 				[0x3002 resolution 22]
-healthcare=* | amenity=dentist | amenity=doctors 		[0x3002 resolution 24]
+healthcare=* | amenity=dentist | amenity=doctors 		[0x3002 resolution 23]
 
-amenity=fire_station 						[0x3004 resolution 24]
+amenity=fire_station 						[0x3004 resolution 23]
 
-amenity=emergency_phone 					[0x5100 resolution 24 default_name 'Emergency Phone']
-amenity=telephone 						[0x5100 resolution 24 default_name 'Telephone']
+amenity=emergency_phone 					[0x5100 resolution 23 default_name 'Emergency Phone']
+amenity=telephone 						[0x5100 resolution 23 default_name 'Telephone']
 
 mkgmap:is_in!=* & is_in=* { set mkgmap:is_in='${is_in}' }
-internet_access=yes 						{ name 'Internet ${name}' | 'Internet' } [0x5101 resolution 24 continue]
-internet_access=* & internet_access!=no & internet_access!=yes 	{ name 'Internet ${name}' | 'Internet' } [0x5101 resolution 24 continue]
+internet_access=yes 						{ name 'Internet ${name}' | 'Internet' } [0x5101 resolution 23 continue]
+internet_access=* & internet_access!=no & internet_access!=yes 	{ name 'Internet ${name}' | 'Internet' } [0x5101 resolution 23 continue]
 
-amenity=pharmacy 						[0x2e05 resolution 24]
+amenity=pharmacy 						[0x2e05 resolution 23]
 
-amenity=post_office 						[0x2f05 resolution 24]
-amenity=post_box 						[0x2f05 resolution 24]
+amenity=post_office 						[0x2f05 resolution 23]
+amenity=post_box 						[0x2f05 resolution 23]
 
 ###########################################################
 
 
-amenity=fuel { name '${operator}: ${name}' | '${name}' | '${operator}' } 	[0x2f01 resolution 24]
+amenity=fuel { name '${operator}: ${name}' | '${name}' | '${operator}' } 	[0x2f01 resolution 23]
 
-amenity=parking 								[0x2f0b resolution 24]
+amenity=parking 								[0x2f0b resolution 23]
 
-amenity=place_of_worship 							[0x6404 resolution 24]
+amenity=place_of_worship 							[0x6404 resolution 23]
 
 
-amenity=library 								[0x2c03 resolution 24 default_name 'Library']
-amenity=theatre 								[0x2d01 resolution 24]
-amenity=townhall 								[0x3003 resolution 24 default_name 'Townhall']
+amenity=library 								[0x2c03 resolution 23 default_name 'Library']
+amenity=theatre 								[0x2d01 resolution 23]
+amenity=townhall 								[0x3003 resolution 23 default_name 'Townhall']
 
-amenity=toilets 								[0x4e00 resolution 24]
+amenity=toilets 								[0x4e00 resolution 23]
 
 # amenity=zoo is superceded by tourism=zoo
-#tourism=zoo | amenity=zoo [0x2c07 resolution 24]
+#tourism=zoo | amenity=zoo [0x2c07 resolution 23]
 
 
 ###########################################################
 
-leisure=sports_center | leisure=sports_centre 	{ name '${name} (${sport})' | '${name}' } 	[0x2d0a resolution 24 default_name 'Sport center']
-sport=multi 											[0x2d0a resolution 24 default_name 'Sport place']
-sport=swimming 											[0x2d09 resolution 24 default_name 'Swimming place']
+leisure=sports_center | leisure=sports_centre 	{ name '${name} (${sport})' | '${name}' } 	[0x2d0a resolution 23 default_name 'Sport center']
+sport=multi 											[0x2d0a resolution 23 default_name 'Sport place']
+sport=swimming 											[0x2d09 resolution 23 default_name 'Swimming place']
 
 ##########################################################
 
 place=city 			[0x0400 resolution 22-16]
 place=town 			[0x0800 resolution 23-18]
-place=village 			[0x0900 resolution 21]
+place=village 			[0x0900 resolution 20]
 place=hamlet 			[0x0b00 resolution 22]
 
 place=suburb 			[0x0a00 resolution 22]
@@ -155,22 +155,22 @@ place=islet 			[0x650c resolution 22]
 railway=halt 					[0x4d02 resolution 23 default_name 'train']
 railway=station 				[0x4d02 resolution 22 default_name 'train']
 
-railway=tram_stop 				[0x4d01 resolution 24 default_name 'tram']
+railway=tram_stop 				[0x4d01 resolution 23 default_name 'tram']
 
 highway=bus_stop | amenity=bus_station 		[0x2f08 resolution 23 default_name 'bus']
 
 amenity=ferry_terminal 				[0x2f09 resolution 22 default_name 'ferry']
-leisure=marina 					[0x2f09 resolution 24 default_name 'marina']
+leisure=marina 					[0x2f09 resolution 23 default_name 'marina']
 
 ##########################################################
 
-historic=museum 							{ name '${name}' | '${ref}' } 	[0x2c02 resolution 24 default_name 'museum']
-historic=archaeological_site | historic=ruins 				{ name '${name}' | '${ref}' } 	[0x2c02 resolution 24 default_name 'historic ruins']
-historic=memorial | historic=monument					{ name '${name}' | '${ref}' } 	[0x2c02 resolution 24 default_name 'memorial']
+historic=museum 							{ name '${name}' | '${ref}' } 	[0x2c02 resolution 23 default_name 'museum']
+historic=archaeological_site | historic=ruins 				{ name '${name}' | '${ref}' } 	[0x2c02 resolution 23 default_name 'historic ruins']
+historic=memorial | historic=monument					{ name '${name}' | '${ref}' } 	[0x2c02 resolution 23 default_name 'memorial']
 
 
-tourism=attraction & historic=* & historic!=wayside_cross		{ name '${name}' | '${ref}' } 	[0x2c02 resolution 21 default_name 'historic attraction']
-tourism=attraction 							{ name '${name}' | '${ref}' } 	[0x2c04 resolution 21 default_name 'attraction']
+tourism=attraction & historic=* & historic!=wayside_cross		{ name '${name}' | '${ref}' } 	[0x2c02 resolution 22 default_name 'historic attraction']
+tourism=attraction 							{ name '${name}' | '${ref}' } 	[0x2c04 resolution 22 default_name 'attraction']
 
 cross=yes | man_made=cross | historic=wayside_cross 							[0x481f resolution 23]
 
@@ -181,109 +181,109 @@ historic=* 	& historic!=wayside_cross	& historic!=ruins 	{ name '${name}' | '${r
 
 tourism=hotel | tourism=motel { name '${name|def:}(${stars}*)${operator|def:}' | '${name} ${operator}' | '${name}' | '${operator}' } 	[0x2b01 resolution 23]
 
-tourism=guest_house 					{ name '${name}' | '${ref}' } 				[0x2b02 resolution 21 default_name 'guest house']
-tourism=camp_site 					{ name '${name}' | '${ref}' } 				[0x2b03 resolution 24-21 default_name 'camp site']
-tourism=caravan_site 					{ name '${name}' | '${ref}' } 				[0x2b03 resolution 21 default_name 'caravan site']
+tourism=guest_house 					{ name '${name}' | '${ref}' } 				[0x2b02 resolution 22 default_name 'guest house']
+tourism=camp_site 					{ name '${name}' | '${ref}' } 				[0x2b03 resolution 23-21 default_name 'camp site']
+tourism=caravan_site 					{ name '${name}' | '${ref}' } 				[0x2b03 resolution 22 default_name 'caravan site']
 
 tourism=bed_and_breakfast 				{ name '${name}' | '${ref}' } 				[0x2b02 resolution 22 default_name 'b&b']
 
-tourism=hostel 						{ name '${name}' | '${ref}' } 				[0x480a resolution 21 default_name 'hostel']
-tourism=chalet 						{ name '${name}' | '${ref}' } 				[0x480b resolution 21 default_name 'chalet']
+tourism=hostel 						{ name '${name}' | '${ref}' } 				[0x480a resolution 22 default_name 'hostel']
+tourism=chalet 						{ name '${name}' | '${ref}' } 				[0x480b resolution 22 default_name 'chalet']
 
 # tourism=lean_to replaces some uses of amenity=shelter
 
-tourism=alpine_hut 					{ name '${name}' | '${ref}' } 				[0x4800 resolution 21 default_name 'alpine hut']
-tourism=wilderness_hut 					{ name '${name}' | '${ref}' } 				[0x4801 resolution 21 default_name 'wilderness hut']
-amenity=shelter | shelter_type=basic_hut 		{ name '${name}' | '${ref}' } 				[0x4803 resolution 21 default_name 'shelter']
-tourism=lean_to | shelter_type=lean_to			{ name '${name}' | '${ref}' } 				[0x4804 resolution 21 default_name 'lean-to']
+tourism=alpine_hut 					{ name '${name}' | '${ref}' } 				[0x4800 resolution 22 default_name 'alpine hut']
+tourism=wilderness_hut 					{ name '${name}' | '${ref}' } 				[0x4801 resolution 22 default_name 'wilderness hut']
+amenity=shelter | shelter_type=basic_hut 		{ name '${name}' | '${ref}' } 				[0x4803 resolution 22 default_name 'shelter']
+tourism=lean_to | shelter_type=lean_to			{ name '${name}' | '${ref}' } 				[0x4804 resolution 22 default_name 'lean-to']
 
-natural=* & shelter=yes | shelter_type=rock_shelter	{ name '${name}' | '${ref}' } 				[0x4807 resolution 21 default_name 'natural shelter']
+natural=* & shelter=yes | shelter_type=rock_shelter	{ name '${name}' | '${ref}' } 				[0x4807 resolution 22 default_name 'natural shelter']
 
 # Private 
-building=cabin | tourism=cabin 				{ name '${name}' | '${ref}' } 				[0x4805 resolution 21 default_name 'cabin']
+building=cabin | tourism=cabin 				{ name '${name}' | '${ref}' } 				[0x4805 resolution 22 default_name 'cabin']
 historic=ruins | building=collapsed 			{ name '${name}' | '${ref}' } 				[0x4806 resolution 22 default_name 'ruins']
 
 ######################################################
 
 #  Picnic
-tourism=picnic_site | leisure=picnic_table 				[0x4a00 resolution 21 default_name 'picnic site']
-amenity=bbq 								[0x4a01 resolution 21 default_name 'bbq']
+tourism=picnic_site | leisure=picnic_table 				[0x4a00 resolution 22 default_name 'picnic site']
+amenity=bbq 								[0x4a01 resolution 22 default_name 'bbq']
 
-amenity=bench								[0x6605 resolution 24]
+amenity=bench								[0x6605 resolution 23]
 
 #######################################################################
 
 #  Barriers
-barrier=gate | barrier=lift_gate | barrier=swing_gate | barrier=bump_gate | barrier=bollard | barrier=block | barrier=chain 	[0x3006 resolution 24]
+barrier=gate | barrier=lift_gate | barrier=swing_gate | barrier=bump_gate | barrier=bollard | barrier=block | barrier=chain 	[0x3006 resolution 23]
 barrier=toll_booth 														[0x3006 resolution 23 default_name 'toll']
 
-barrier=bollard | barrier=bus_trap    {add access = no; add bicycle = yes; add foot = yes} 					[0x3006 resolution 24]
-barrier=block | barrier=cycle_barrier | barrier=stile | barrier=kissing_gate    {add access = no; add foot = yes} 		[0x3006 resolution 24]
+barrier=bollard | barrier=bus_trap    {add access = no; add bicycle = yes; add foot = yes} 					[0x3006 resolution 23]
+barrier=block | barrier=cycle_barrier | barrier=stile | barrier=kissing_gate    {add access = no; add foot = yes} 		[0x3006 resolution 23]
 
 amenity=border_control | barrier=border_control 										[0x3006 resolution 20 default_name 'border control']
 
 
 ########################################################################
 
-amenity=drinking_water 											[0x5000 resolution 21]
-waterway=drinking_point											[0x5000 resolution 21]
+amenity=drinking_water 											[0x5000 resolution 22]
+waterway=drinking_point											[0x5000 resolution 22]
 
 ( man_made=waterwell | amenity=water_well | amenity=waterwell ) {set man_made=water_well}
-man_made=water_well 											[0x5001 resolution 21]
+man_made=water_well 											[0x5001 resolution 22]
 
 ( amenity=quelle | natural=quelle | amenity=spring ) {set natural=spring}
-natural=spring									 			[0x6511 resolution 21]
+natural=spring									 			[0x6511 resolution 22]
 
 ########################################################################
 
 #  Sights
-tourism=viewpoint & man_made=tower 									[0x5201 resolution 24-21]
-tourism=viewpoint {name '${name} - ${description}' | '${name}'} 					[0x5200 resolution 24-21]
+tourism=viewpoint & man_made=tower 									[0x5201 resolution 22]
+tourism=viewpoint {name '${name} - ${description}' | '${name}'} 					[0x5200 resolution 22]
 
-man_made=mast | power=tower										[0x660f resolution 24-21]
+man_made=mast | power=tower										[0x660f resolution 22]
 
-man_made=tower | landmark=chimney 									[0x6411 resolution 24-20 default_name 'tower']
+man_made=tower | landmark=chimney 									[0x6411 resolution 20 default_name 'tower']
 
 #  Geographical (man-made)
-man_made=mineshaft | man_made=adit | historic=mine 							[0x640c resolution 24 default_name 'mine']
+man_made=mineshaft | man_made=adit | historic=mine 							[0x640c resolution 23 default_name 'mine']
 man_made=survey_point 											[0x1a0e resolution 20 default_name 'survay point']
 man_made=lighthouse 											[0x1b0e resolution 20]
-man_made=cairn 						 						[0x6607 resolution 21 default_name 'cairn']
-boundary=marker 			 								[0x6607 resolution 21 default_name 'boundary marker']
-historic=boundary_stone 										[0x6607 resolution 21 default_name 'boundary stone']
+man_made=cairn 						 						[0x6607 resolution 22 default_name 'cairn']
+boundary=marker 			 								[0x6607 resolution 22 default_name 'boundary marker']
+historic=boundary_stone 										[0x6607 resolution 22 default_name 'boundary stone']
 
 
 #  Geographical (water-based)
-waterway=waterfall | natural=waterfall 									[0x6508 resolution 21 default_name 'waterfall']
-waterway=rapids 											[0x650e resolution 21 default_name 'rapids']
-ford=yes | highway=ford											[0x6401 resolution 21 default_name 'ford' continue]
+waterway=waterfall | natural=waterfall 									[0x6508 resolution 20 default_name 'waterfall']
+waterway=rapids 											[0x650e resolution 20 default_name 'rapids']
+ford=yes | highway=ford											[0x6401 resolution 22 default_name 'ford' continue]
 
 #  Geographical (land-based)
 
 #ele=* & ele ~ '^[+-]?(?:\d+\,?\d*|\d*\.?\d+)[\r\n]*$' {add altitude=number}
 #ele=* & altitude!=number  {add altitude=no_number}
 
-natural=peak 			    	{name '${name} (${ele}m)' | '(${ele}m)' | '${name}' } 		[0x6616 resolution 21 default_name 'peak']
+natural=peak 			    	{name '${name} (${ele}m)' | '(${ele}m)' | '${name}' } 		[0x6616 resolution 20 default_name 'peak']
 mountain_pass=yes    			{name '${name} (${ele}m)' | '(${ele}m)' | '${name}' } 		[0x6401 resolution 22 default_name 'pass']
 
-natural=rock 				{name '${name}'}						[0x6614 resolution 21 default_name 'rock']
-natural=volcano 			{name '${name} (${ele}m)' | '(${ele}m)' | '${name}' } 		[0x2c0c resolution 21 default_name 'volcano']
-natural=stone 				{name '${name}'}						[0x6606 resolution 21 default_name 'stone']
+natural=rock 				{name '${name}'}						[0x6614 resolution 20 default_name 'rock']
+natural=volcano 			{name '${name} (${ele}m)' | '(${ele}m)' | '${name}' } 		[0x2c0c resolution 20 default_name 'volcano']
+natural=stone 				{name '${name}'}						[0x6606 resolution 22 default_name 'stone']
 natural=tree 				{name '${name}'}						[0x6618 resolution 23]
 
-natural=cave_entrance 			{name '${name}'}						[0x6601 resolution 21 default_name 'cave']
+natural=cave_entrance 			{name '${name}'}						[0x6601 resolution 22 default_name 'cave']
 
 ################################################################
 
 #  Information
 
-tourism=information & information!=* {name '${name} - ${description} (${operator})'| '${name} - (${description})' | '${name}' | '${description}' | '${operator}' | '${ref}'}	 [0x4c01 resolution 21]
+tourism=information & information!=* {name '${name} - ${description} (${operator})'| '${name} - (${description})' | '${name}' | '${description}' | '${operator}' | '${ref}'}	 [0x4c01 resolution 20]
 
-information=office  {name '${name} - ${description} (${operator})'| '${name} - (${description})' | '${name}' | '${description}' | '${operator}' | '${ref}'}			[0x4c01 resolution 21]
+information=office  {name '${name} - ${description} (${operator})'| '${name} - (${description})' | '${name}' | '${description}' | '${operator}' | '${ref}'}			[0x4c01 resolution 20]
 
-information=guidepost 					[0x4c02 resolution 21]
-information=board | information=terminal 		[0x4c03 resolution 21]
-information=map 					[0x4c04 resolution 21]
+information=guidepost 					[0x4c02 resolution 20]
+information=board | information=terminal 		[0x4c03 resolution 20]
+information=map 					[0x4c04 resolution 20]
 
 ################################################################
 

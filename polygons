@@ -3,7 +3,7 @@
 # Airport
 
 aeroway=airport 										[0x07 resolution 20]
-aeroway=aerodrome 										[0x07 resolution 21]
+aeroway=aerodrome 										[0x07 resolution 20]
 aeroway=helipad 										[0x0e resolution 22]
 
 
@@ -53,37 +53,37 @@ highway=pedestrian 	& area=yes 								[0x17 resolution 22]
 
 highway=* 		& area=yes 								[0x05 resolution 22]
 
-landuse=allotments 										[0x1f resolution 21]
-landuse=cemetery | landuse=cemetary | amenity=grave_yard 					[0x1a resolution 21]
-landuse=commercial 										[0x03 resolution 21]
-landuse=construction 										[0x0c resolution 21]
-landuse=quarry 											[0x02 resolution 21]
+landuse=allotments 										[0x1f resolution 22]
+landuse=cemetery | landuse=cemetary | amenity=grave_yard 					[0x1a resolution 22]
+landuse=commercial 										[0x03 resolution 22]
+landuse=construction 										[0x0c resolution 22]
+landuse=quarry 											[0x02 resolution 22]
 landuse=industrial 										[0x0c resolution 22]
 landuse=residential 										[0x01 resolution 22]
 landuse=retail 											[0x08 resolution 22]
 
-landuse=recreation_ground 									[0x19 resolution 21]
-landuse=greenfield 										[0x17 resolution 21]
-landuse=village_green 										[0x17 resolution 21]
+landuse=recreation_ground 									[0x19 resolution 22]
+landuse=greenfield 										[0x17 resolution 22]
+landuse=village_green 										[0x17 resolution 22]
 
 # building tag should be last
-(building=* | amenity=*) 	& area!=no 							[0x13 resolution 24]
-tourism=* 			& area!=no & waterway!=* 					[0x13 resolution 24]
-man_made=* 			& area=yes 							[0x13 resolution 24]
+(building=* | amenity=*) 	& area!=no 							[0x13 resolution 23]
+tourism=* 			& area!=no & waterway!=* 					[0x13 resolution 23]
+man_made=* 			& area=yes 							[0x13 resolution 23]
 
 # man_made can be used on areas or lines
-man_made=* & area!=no & (man_made!=door & man_made!=embankment & man_made!=breakwater & man_made!=cable_line & man_made!=cutline & man_made!=cutting & man_made!=levee & man_made!=trench) 		[0x13 resolution 24]
+man_made=* & area!=no & (man_made!=door & man_made!=embankment & man_made!=breakwater & man_made!=cable_line & man_made!=cutline & man_made!=cutting & man_made!=levee & man_made!=trench) 		[0x13 resolution 23]
 
 # Historic
 
-historic=museum | historic=memorial 								[0x1e resolution 21]
-historic=archaeological_site | historic=ruins 							[0x1e resolution 21]
+historic=museum | historic=memorial 								[0x1e resolution 22]
+historic=archaeological_site | historic=ruins 							[0x1e resolution 20]
 
 # Agriculture
 
-landuse=farm 											[0x49 resolution 21]
+landuse=farm 											[0x49 resolution 20]
 landuse=farmyard 										[0x49 resolution 22]
-landuse=vineyard 										[0x48 resolution 21]
+landuse=vineyard 										[0x48 resolution 20]
 natural=orchard | landuse=orchard | landuse=orchards | natural=orchards				[0x4e resolution 22]
 
 # Danger
@@ -105,11 +105,11 @@ leisure=nature_reserve 										[0x16 resolution 20]
 
 # Sand
 
-natural=beach | natural=sand | natural=dune							[0x53 resolution 21]
+natural=beach | natural=sand | natural=dune							[0x53 resolution 20]
 natural=desert											[0x53 resolution 20]
 surface=sand 					& area=yes & highway!=*				[0x53 resolution 22]
-water=tidal											[0x52 resolution 21]
-natural=shelf | tidal=yes | tidal=true								[0x52 resolution 21]
+water=tidal											[0x52 resolution 20]
+natural=shelf | tidal=yes | tidal=true								[0x52 resolution 20]
 
 # Water
 
@@ -127,27 +127,27 @@ landuse=reservoir 				& salt=yes					[0x3f resolution 18]
 
 # Vegetation
 
-wood=mixed											[0x44 resolution 21]
-wood=deciduos | wood=deciduous									[0x43 resolution 21]
-wood=coniferous 										[0x42 resolution 21]
+wood=mixed											[0x44 resolution 20]
+wood=deciduos | wood=deciduous									[0x43 resolution 20]
+wood=coniferous 										[0x42 resolution 20]
 
-( landuse=forest | natural=wood | landuse=wood | natural=forest | natural=woodland )	& wood!=* 				[0x50 resolution 21]
+( landuse=forest | natural=wood | landuse=wood | natural=forest | natural=woodland )	& wood!=* 				[0x50 resolution 20]
 
-natural=scrub | natural=shrub | natural=scrubland | natural=scrubs | natural=shrubs | natural=shrubland				[0x4f resolution 21]
+natural=scrub | natural=shrub | natural=scrubland | natural=scrubs | natural=shrubs | natural=shrubland				[0x4f resolution 20]
 
-natural=fell 											[0x41 resolution 21]
-natural=heath 											[0x46 resolution 21]
-natural=mud | natural=marsh | natural=wetland | natural=swamp 					[0x51 resolution 21]
-natural=meadow | landuse=meadow	| natural=grassland | natural=grass | landuse=grass		[0x3b resolution 21]
+natural=fell 											[0x41 resolution 20]
+natural=heath 											[0x46 resolution 20]
+natural=mud | natural=marsh | natural=wetland | natural=swamp 					[0x51 resolution 20]
+natural=meadow | landuse=meadow	| natural=grassland | natural=grass | landuse=grass		[0x3b resolution 20]
 surface=grass			& area=yes							[0x3b resolution 22]
 
 ##########
 
-natural=bare_rock 		{ name '${name} rock' | 'bare_rock' }				[0x40 resolution 22]
-natural=cliff & area=yes	{ name '${name} cliff' | 'cliff' } 				[0x40 resolution 22]
-natural=scree											[0x45 resolution 21]
-natural=bedrock 										[0x40 resolution 21]
-natural=lava 											[0x40 resolution 21]
+natural=bare_rock 		{ name '${name} rock' | 'bare_rock' }				[0x40 resolution 20]
+natural=cliff & area=yes	{ name '${name} cliff' | 'cliff' } 				[0x40 resolution 20]
+natural=scree											[0x45 resolution 20]
+natural=bedrock 										[0x40 resolution 22]
+natural=lava 											[0x40 resolution 22]
 
 natural=glacier 										[0x4d resolution 18]
 

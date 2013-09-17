@@ -80,19 +80,19 @@ highway=construction 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${
 
 # hiking
 
-iwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'} 						[0x0b resolution 21 continue]
+iwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'} 						[0x0b resolution 20 continue]
 iwn_from_relation=yes 		{name '${iref} ${iname}' | '${iref}' | '${iref} - ${iname}'} 				[0x10000 resolution 22 continue]
 
-nwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'}    						[0x0b resolution 21 continue]
+nwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'}    						[0x0b resolution 20 continue]
 nwn_from_relation=yes 		{name '${nref} ${nname}' | '${nref}' | '${nname}'}    					[0x10000 resolution 22 continue]
 
-rwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 21 continue]
+rwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 20 continue]
 rwn_from_relation=yes  		{name '${rref} ${rname}' | '${rref}' | '${rname}'}   					[0x10000 resolution 22 continue]
 
-lwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 21 continue]
+lwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 20 continue]
 lwn_from_relation=yes  		{name '${lref} ${lname}' | '${lref}' | '${lname}'}   					[0x10000 resolution 22 continue]
 
-nonet_from_relation=yes 	{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 21 continue]
+nonet_from_relation=yes 	{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 20 continue]
 nonet_from_relation=yes 	{name '${nnref} ${nnname}' | '${nnref}' | '${nnname}'}   				[0x10000 resolution 22 continue]
 
 
@@ -101,51 +101,51 @@ nonet_from_relation=yes 	{name '${nnref} ${nnname}' | '${nnref}' | '${nnname}'} 
 # bicycle
 
 
-icn_from_relation=yes 		{name '${iref|highway-symbol:hbox}'}							[0x0c resolution 21 continue]
+icn_from_relation=yes 		{name '${iref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
 icn_from_relation=yes 		{name '${iname}'}									[0x10001 resolution 22 continue]
 
-ncn_from_relation=yes 		{name '${nref|highway-symbol:hbox}'} 							[0x0c resolution 21 continue]
+ncn_from_relation=yes 		{name '${nref|highway-symbol:hbox}'} 							[0x0c resolution 20 continue]
 ncn_from_relation=yes 		{name '${nname}'} 									[0x10001 resolution 22 continue]
 
 
-rcn_from_relation=yes  		{name '${rref|highway-symbol:hbox}'} 							[0x0c resolution 21 continue]
+rcn_from_relation=yes  		{name '${rref|highway-symbol:hbox}'} 							[0x0c resolution 20 continue]
 rcn_from_relation=yes  		{name '${rname}'} 									[0x10001 resolution 22 continue]
 
-lcn_from_relation=yes  		{name '${lref|highway-symbol:hbox}'}							[0x0c resolution 21 continue]
+lcn_from_relation=yes  		{name '${lref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
 lcn_from_relation=yes  		{name '${lname}'}									[0x10001 resolution 22 continue]
 
-tcn_from_relation=yes 		{name '${tref|highway-symbol:hbox}'}							[0x0c resolution 21 continue]
+tcn_from_relation=yes 		{name '${tref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
 tcn_from_relation=yes 		{name '${tname}'}									[0x10001 resolution 22 continue]
 
-mtb_from_relation=yes 		{name '${mref|highway-symbol:hbox}'}							[0x0c resolution 21 continue]
+mtb_from_relation=yes 		{name '${mref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
 mtb_from_relation=yes 		{name '${mname}'}									[0x10001 resolution 22 continue]
 
 #####################################
 
 # route=ski
 
-piste:type=nordic & piste:grooming=classic 		[0x10111 resolution 21 continue]
-piste:type=nordic & piste:grooming=skating 		[0x10111 resolution 21 continue]
-piste:type=nordic & piste:grooming='classic+skating' 	[0x10111 resolution 21 continue]
-piste:type=nordic & piste:grooming='classic;skating' 	[0x10111 resolution 21 continue]
+piste:type=nordic & piste:grooming=classic 		[0x10111 resolution 22 continue]
+piste:type=nordic & piste:grooming=skating 		[0x10111 resolution 22 continue]
+piste:type=nordic & piste:grooming='classic+skating' 	[0x10111 resolution 22 continue]
+piste:type=nordic & piste:grooming='classic;skating' 	[0x10111 resolution 22 continue]
 
-piste:type=nordic & piste:grooming=scooter		[0x10112 resolution 21 continue]
-piste:type=nordic & piste:grooming=backcountry 		[0x10112 resolution 21 continue]
-piste:type=nordic & piste:grooming!=*			[0x10112 resolution 21 continue]
+piste:type=nordic & piste:grooming=scooter		[0x10112 resolution 22 continue]
+piste:type=nordic & piste:grooming=backcountry 		[0x10112 resolution 22 continue]
+piste:type=nordic & piste:grooming!=*			[0x10112 resolution 22 continue]
 
-piste:type=nordic & piste:grooming=* & piste:grooming!=classic & piste:grooming!=skating & piste:grooming!='classic+skating' & piste:grooming!='classic;skating'		[0x10112 resolution 21 continue]
+piste:type=nordic & piste:grooming=* & piste:grooming!=classic & piste:grooming!=skating & piste:grooming!='classic+skating' & piste:grooming!='classic;skating'		[0x10112 resolution 22 continue]
 
 # route=snowmobile
 
-snowmobile=yes | snowmobile=designated			[0x10113 resolution 21 continue]
-snowmobile=permissive | snowmobile=private		[0x10114 resolution 21 continue]
+snowmobile=yes | snowmobile=designated			[0x10113 resolution 20 continue]
+snowmobile=permissive | snowmobile=private		[0x10114 resolution 20 continue]
 
 # route=horse
 
-highway=bridleway 					[0x10115  resolution 21 continue]
-highway=* & horse=designated 				[0x10115  resolution 21 continue]
-highway=* & horse=yes 					[0x10115  resolution 21 continue]
-highway=* & horse=permissive				[0x10115  resolution 21 continue]
+highway=bridleway 					[0x10115  resolution 22 continue]
+highway=* & horse=designated 				[0x10115  resolution 22 continue]
+highway=* & horse=yes 					[0x10115  resolution 22 continue]
+highway=* & horse=permissive				[0x10115  resolution 22 continue]
 
 #########################################################################################
 
@@ -153,8 +153,8 @@ highway=* & horse=permissive				[0x10115  resolution 21 continue]
 junction=roundabout & highway=trunk 			[0x02 resolution 18]
 junction=roundabout & highway=primary 			[0x03 resolution 20]
 junction=roundabout & highway=secondary 		[0x04 resolution 20]
-junction=roundabout & highway=tertiary 			[0x05 resolution 21]
-junction=roundabout & highway=unclassified 		[0x06 resolution 21]
+junction=roundabout & highway=tertiary 			[0x05 resolution 22]
+junction=roundabout & highway=unclassified 		[0x06 resolution 22]
 junction=roundabout 					[0x06 resolution 22]
 
 #################################
@@ -179,7 +179,7 @@ highway=primary       		[0x03 resolution 18 continue]
 
 highway=secondary 		[0x04 resolution 20 continue]
 
-highway=tertiary 		[0x05 resolution 21 continue]
+highway=tertiary 		[0x05 resolution 20 continue]
 
 
 highway=unclassified  		[0x06 resolution 22 continue]
@@ -190,7 +190,7 @@ highway=unsurfaced		[0x07 resolution 22 continue]
 
 highway=motorway_link 		[0x06 resolution 20 continue]
 highway=trunk_link    		[0x06 resolution 20 continue]
-highway=primary_link  		[0x06 resolution 21 continue]
+highway=primary_link  		[0x06 resolution 20 continue]
 
 highway=cycleway 		[0x09 resolution 22 continue]
 highway=footway 		[0x08 resolution 22 continue]
@@ -202,11 +202,11 @@ highway=path 			[0x0a resolution 22 continue]
 highway=track 			[0x16 resolution 22 continue]
 
 # Mop up any unrecognised highway types
-highway=* & highway!=proposed & area!=yes & highway!=motorway & highway!=trunk & highway!=primary & highway!=secondary & highway!=tertiary & highway!=unclassified & highway!=residential & highway!=motorway_link & highway!=trunk_link & highway!=primary_link & highway!=living_street & highway!=service & highway!=unsurfaced & highway!=steps & highway!=cycleway & highway!=footway & highway!=pedestrian & highway!=bridleway & highway!=path & highway!=track	[0x07 resolution 24 continue]
+highway=* & highway!=proposed & area!=yes & highway!=motorway & highway!=trunk & highway!=primary & highway!=secondary & highway!=tertiary & highway!=unclassified & highway!=residential & highway!=motorway_link & highway!=trunk_link & highway!=primary_link & highway!=living_street & highway!=service & highway!=unsurfaced & highway!=steps & highway!=cycleway & highway!=footway & highway!=pedestrian & highway!=bridleway & highway!=path & highway!=track	[0x07 resolution 23 continue]
 
 #######################################################################################
 
-power=line 														[0x29 resolution 21]
+power=line 														[0x29 resolution 20]
 power=minor_line 													[0x29 resolution 23]
 man_made=cable|(man_made=* & man_made ~ '.*pipe.*') {name '${name} (${operator})' | '${name}' | '${operator}' } 	[0x28 resolution 23]
 
@@ -223,7 +223,7 @@ railway=rail 	& service!=yard & service!=siding & service!=spur					[0x10 resolu
 
 railway=subway  											[0x12 resolution 22 continue]
 
-railway=* & railway!=abandoned & railway!=platform & railway!=tram & railway!=rail & railway!=subway	[0x11 resolution 21 continue]
+railway=* & railway!=abandoned & railway!=platform & railway!=tram & railway!=rail & railway!=subway	[0x11 resolution 22 continue]
 
 #######################################################################################
 
@@ -233,7 +233,7 @@ boundary=administrative { name '${mkgmap:boundary_name}' }
 
 boundary=administrative & admin_level=2 			[0x1e resolution 14]
 boundary=administrative & admin_level>2 & admin_level<7  	[0x1d resolution 18]
-boundary=administrative & admin_level>6 & admin_level<8 	[0x1c resolution 21]
+boundary=administrative & admin_level>6 & admin_level<8 	[0x1c resolution 22]
 
 boundary=political 						[0x1c resolution 18]
 
@@ -252,7 +252,7 @@ natural=cliff | barrier=cliff 	 						{set name='${name} cliff' | 'cliff'}		[0x1
 barrier=wall | barrier=retaining_wall | barrier=city_wall 			{set name='${name} wall' | 'wall'}		[0x10201 resolution 22]
 barrier=fence | barrier=wood_fence | barrier=wire_fence | barrier=metal_fence 	{set name='${name} fence' | 'fence'}		[0x10202 resolution 23]
 
-barrier=hedge | natural=hedge 							{set name='${name} hedge' | 'hedge'}		[0x10200 resolution 24]
+barrier=hedge | natural=hedge 							{set name='${name} hedge' | 'hedge'}		[0x10200 resolution 23]
 
 aeroway=runway 									{set name='runway ${name}' | 'runway'}		[0x10011 resolution 20]
 aeroway=taxiway 														[0x10010 resolution 22]
@@ -318,7 +318,7 @@ natural=coastline 															[0x10218 resolution 16]
 
 ######################################################################################
 
-piste:type=downhill 					{set name='${name} piste' | 'piste'}						[0x10110 resolution 21]
+piste:type=downhill 					{set name='${name} piste' | 'piste'}						[0x10110 resolution 22]
 
 (aerialway=tbar | aerialway=t-bar | piste:lift=tbar | piste:lift=t-bar | aerialway=schlepplift | piste:lift=schlepplift | drag_lift=tbar | drag_lift=t-bar)	{set name='${name} tbar' | 'tbar'}	[0x10012 resolution 22]
 aerialway=platter 					{set name='${name} platter' | 'platter'}					[0x10012 resolution 22]
@@ -333,7 +333,7 @@ aerialway=chair_lift  | aerialway=mixed_lift 		{set name='${name} chair_lift' | 
 
 # Contours take their name from the elevation setting.
 
-contour=elevation & contour_ext=elevation_minor & (ele ~'.*10' | ele ~'.*30' | ele ~'.*50' | ele ~'.*70' | ele ~'.*90') { name '${ele|conv:m=>ft}'; } [0x20 resolution 24]
+contour=elevation & contour_ext=elevation_minor & (ele ~'.*10' | ele ~'.*30' | ele ~'.*50' | ele ~'.*70' | ele ~'.*90') { name '${ele|conv:m=>ft}'; } [0x20 resolution 23]
 contour=elevation & contour_ext=elevation_minor & (ele ~'.*20' | ele ~'.*40' | ele ~'.*60' | ele ~'.*80') 		{ name '${ele|conv:m=>ft}'; } [0x20 resolution 22]
 
 contour=elevation & contour_ext=elevation_medium				{ name '${ele|conv:m=>ft}'; }			[0x21 resolution 20]
