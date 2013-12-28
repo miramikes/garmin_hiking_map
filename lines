@@ -9,9 +9,9 @@ railway=proposed {delete 'railway'; delete 'tunnel'; delete 'bridge'}
 #######################################################################################
 
 # Naming Section
-railwayname=* & railway=* & highway!=* {set name='${railwayname}${name}' | '${railwayname}'}
+railwayname=* & railway=* & highway!=* {add mkgmap:label:1='${railwayname}*${name}' | '${railwayname}' | '${name}'}
 
-#route=* & ref=* & name=* {set name='${name} (${ref})'}
+#route=* & ref=* & name=* {add mkgmap:label:1='${name} (${ref})'}
 
 
 sac:scale=*  {add sac_scale = '${sac:scale}'}
@@ -27,19 +27,19 @@ sac_scale=* & sac_scale!=hiking & sac_scale!=mountain_hiking & sac_scale!=demand
 
 # Add hiking difficulty to name
 
-( highway=path | highway=footway | highway=track ) & sac_scale!=* 				{set name='${name}'}
+( highway=path | highway=footway | highway=track ) & sac_scale!=* 				{add mkgmap:label:1='${name}'}
 
-( highway=path | highway=footway | highway=track ) & sac_scale=hiking 				{set name='${name} T1' | 'T1'}
+( highway=path | highway=footway | highway=track ) & sac_scale=hiking 				{add mkgmap:label:1='${name} T1' | 'T1'}
 
-( highway=path | highway=footway | highway=track ) & sac_scale=mountain_hiking 			{set name='${name} T2' | 'T2'}
+( highway=path | highway=footway | highway=track ) & sac_scale=mountain_hiking 			{add mkgmap:label:1='${name} T2' | 'T2'}
 
-( highway=path | highway=footway | highway=track ) & sac_scale=demanding_mountain_hiking 	{set name='${name} T3' | 'T3'}
+( highway=path | highway=footway | highway=track ) & sac_scale=demanding_mountain_hiking 	{add mkgmap:label:1='${name} T3' | 'T3'}
 
-( highway=path | highway=footway | highway=track ) & sac_scale=alpine_hiking 			{set name='${name} T4' | 'T4'}
+( highway=path | highway=footway | highway=track ) & sac_scale=alpine_hiking 			{add mkgmap:label:1='${name} T4' | 'T4'}
 
-( highway=path | highway=footway | highway=track ) & sac_scale=demanding_alpine_hiking 		{set name='${name} T5' | 'T5'}
+( highway=path | highway=footway | highway=track ) & sac_scale=demanding_alpine_hiking 		{add mkgmap:label:1='${name} T5' | 'T5'}
 
-( highway=path | highway=footway | highway=track ) & sac_scale=difficult_alpine_hiking  	{set name='${name} T6' | 'T6'}
+( highway=path | highway=footway | highway=track ) & sac_scale=difficult_alpine_hiking  	{add mkgmap:label:1='${name} T6' | 'T6'}
 
 
 # set up bicycleroute=yes
@@ -52,27 +52,27 @@ sac_scale=* & sac_scale!=hiking & sac_scale!=mountain_hiking & sac_scale!=demand
 
 
 # Add kind of way to name
-highway=unclassified 	& fixme!=* 	& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name}'|'ucl'}
-highway=minor 				& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name}'|'mnr'}
-highway=road 				& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} rd'|'rd'}
-highway=service 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} ser'|'ser'}
-highway=byway 				& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} byw'|'byw'}
-highway=track 		& fixme!=* 	& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} trk'|'trk'}
-highway=unsurfaced 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} usf'|'usf'}
-highway=path 				& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} pth'|'pth'}
-highway=bridleway 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} bd'|'bd'}
-highway=cycleway 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} cw'|'cw'}
-highway=footway 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name} ft'|'ft'}
-highway=pedestrian 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name}'|'pdstrn'}
-highway=parking_aisle 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name}'|'parking_aisle'}
-highway=construction 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${name}'|'cstrn'}
+highway=unclassified 	& fixme!=* 	& bicycleroute!=yes 	& hikingroute!=yes 			{add mkgmap:label:1='${name}'|'ucl'}
+highway=minor 				& bicycleroute!=yes 	& hikingroute!=yes 			{add mkgmap:label:1='${name}'|'mnr'}
+highway=road 				& bicycleroute!=yes 	& hikingroute!=yes 			{add mkgmap:label:1='${name} rd'|'rd'}
+highway=service 			& bicycleroute!=yes 	& hikingroute!=yes 			{add mkgmap:label:1='${name} ser'|'ser'}
+highway=byway 				& bicycleroute!=yes 	& hikingroute!=yes 			{add mkgmap:label:1='${name} byw'|'byw'}
+highway=track 		& fixme!=* 	& bicycleroute!=yes 	& hikingroute!=yes 			{add mkgmap:label:1='${name} trk'|'trk'}
+highway=unsurfaced 			& bicycleroute!=yes 	& hikingroute!=yes 			{add mkgmap:label:1='${name} usf'|'usf'}
+highway=path 				& bicycleroute!=yes 	& hikingroute!=yes 			{add mkgmap:label:1='${name} pth'|'pth'}
+highway=bridleway 			& bicycleroute!=yes 	& hikingroute!=yes 			{add mkgmap:label:1='${name} bd'|'bd'}
+highway=cycleway 			& bicycleroute!=yes 	& hikingroute!=yes 			{add mkgmap:label:1='${name} cw'|'cw'}
+highway=footway 			& bicycleroute!=yes 	& hikingroute!=yes 			{add mkgmap:label:1='${name} ft'|'ft'}
+highway=pedestrian 			& bicycleroute!=yes 	& hikingroute!=yes 			{add mkgmap:label:1='${name}'|'pdstrn'}
+highway=parking_aisle 			& bicycleroute!=yes 	& hikingroute!=yes 			{add mkgmap:label:1='${name}'|'parking_aisle'}
+highway=construction 			& bicycleroute!=yes 	& hikingroute!=yes 			{add mkgmap:label:1='${name}'|'cstrn'}
 
 
 # Need ref inside Name from here onwards 
 
-( highway=motorway | highway=trunk | highway=primary | highway=secondary | highway=tertiary )	& name=* & bicycleroute!=yes & hikingroute!=yes 	{set name='${name}'}
+( highway=motorway | highway=trunk | highway=primary | highway=secondary | highway=tertiary )	& name=* & bicycleroute!=yes & hikingroute!=yes 	{add mkgmap:label:1='${name}'}
 
-( highway=motorway | highway=trunk | highway=primary | highway=secondary | highway=tertiary )	& ref=*  			{ set name='${ref|highway-symbol:oval}' }
+( highway=motorway | highway=trunk | highway=primary | highway=secondary | highway=tertiary )	& ref=*  			{ add mkgmap:label:1='${ref|highway-symbol:oval}' }
 
 ########################################################################################
 
@@ -80,20 +80,20 @@ highway=construction 			& bicycleroute!=yes 	& hikingroute!=yes 			{set name='${
 
 # hiking
 
-iwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'} 						[0x0b resolution 20 continue]
-iwn_from_relation=yes 		{name '${iref} ${iname}' | '${iref}' | '${iref} - ${iname}'} 				[0x10000 resolution 22 continue]
+iwn_from_relation=yes 		{add mkgmap:label:1='${color-ref|highway-symbol:oval}'} 						[0x0b resolution 20 continue]
+iwn_from_relation=yes 		{add mkgmap:label:1='${iref} ${iname}' | '${iref}' | '${iref} - ${iname}'} 				[0x10000 resolution 22 continue]
 
-nwn_from_relation=yes 		{name '${color-ref|highway-symbol:oval}'}    						[0x0b resolution 20 continue]
-nwn_from_relation=yes 		{name '${nref} ${nname}' | '${nref}' | '${nname}'}    					[0x10000 resolution 22 continue]
+nwn_from_relation=yes 		{add mkgmap:label:1='${color-ref|highway-symbol:oval}'}    						[0x0b resolution 20 continue]
+nwn_from_relation=yes 		{add mkgmap:label:1='${nref} ${nname}' | '${nref}' | '${nname}'}    					[0x10000 resolution 22 continue]
 
-rwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 20 continue]
-rwn_from_relation=yes  		{name '${rref} ${rname}' | '${rref}' | '${rname}'}   					[0x10000 resolution 22 continue]
+rwn_from_relation=yes  		{add mkgmap:label:1='${color-ref|highway-symbol:oval}'}   						[0x0b resolution 20 continue]
+rwn_from_relation=yes  		{add mkgmap:label:1='${rref} ${rname}' | '${rref}' | '${rname}'}   					[0x10000 resolution 22 continue]
 
-lwn_from_relation=yes  		{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 20 continue]
-lwn_from_relation=yes  		{name '${lref} ${lname}' | '${lref}' | '${lname}'}   					[0x10000 resolution 22 continue]
+lwn_from_relation=yes  		{add mkgmap:label:1='${color-ref|highway-symbol:oval}'}   						[0x0b resolution 20 continue]
+lwn_from_relation=yes  		{add mkgmap:label:1='${lref} ${lname}' | '${lref}' | '${lname}'}   					[0x10000 resolution 22 continue]
 
-nonet_from_relation=yes 	{name '${color-ref|highway-symbol:oval}'}   						[0x0b resolution 20 continue]
-nonet_from_relation=yes 	{name '${nnref} ${nnname}' | '${nnref}' | '${nnname}'}   				[0x10000 resolution 22 continue]
+nonet_from_relation=yes 	{add mkgmap:label:1='${color-ref|highway-symbol:oval}'}   						[0x0b resolution 20 continue]
+nonet_from_relation=yes 	{add mkgmap:label:1='${nnref} ${nnname}' | '${nnref}' | '${nnname}'}   					[0x10000 resolution 22 continue]
 
 
 ######################################
@@ -101,24 +101,24 @@ nonet_from_relation=yes 	{name '${nnref} ${nnname}' | '${nnref}' | '${nnname}'} 
 # bicycle
 
 
-icn_from_relation=yes 		{name '${iref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
-icn_from_relation=yes 		{name '${iname}'}									[0x10001 resolution 22 continue]
+icn_from_relation=yes 		{add mkgmap:label:1='${iref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
+icn_from_relation=yes 		{add mkgmap:label:1='${iname}'}										[0x10001 resolution 22 continue]
 
-ncn_from_relation=yes 		{name '${nref|highway-symbol:hbox}'} 							[0x0c resolution 20 continue]
-ncn_from_relation=yes 		{name '${nname}'} 									[0x10001 resolution 22 continue]
+ncn_from_relation=yes 		{add mkgmap:label:1='${nref|highway-symbol:hbox}'} 							[0x0c resolution 20 continue]
+ncn_from_relation=yes 		{add mkgmap:label:1='${nname}'} 									[0x10001 resolution 22 continue]
 
 
-rcn_from_relation=yes  		{name '${rref|highway-symbol:hbox}'} 							[0x0c resolution 20 continue]
-rcn_from_relation=yes  		{name '${rname}'} 									[0x10001 resolution 22 continue]
+rcn_from_relation=yes  		{add mkgmap:label:1='${rref|highway-symbol:hbox}'} 							[0x0c resolution 20 continue]
+rcn_from_relation=yes  		{add mkgmap:label:1='${rname}'} 									[0x10001 resolution 22 continue]
 
-lcn_from_relation=yes  		{name '${lref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
-lcn_from_relation=yes  		{name '${lname}'}									[0x10001 resolution 22 continue]
+lcn_from_relation=yes  		{add mkgmap:label:1='${lref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
+lcn_from_relation=yes  		{add mkgmap:label:1='${lname}'}										[0x10001 resolution 22 continue]
 
-tcn_from_relation=yes 		{name '${tref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
-tcn_from_relation=yes 		{name '${tname}'}									[0x10001 resolution 22 continue]
+tcn_from_relation=yes 		{add mkgmap:label:1='${tref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
+tcn_from_relation=yes 		{add mkgmap:label:1='${tname}'}										[0x10001 resolution 22 continue]
 
-mtb_from_relation=yes 		{name '${mref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
-mtb_from_relation=yes 		{name '${mname}'}									[0x10001 resolution 22 continue]
+mtb_from_relation=yes 		{add mkgmap:label:1='${mref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
+mtb_from_relation=yes 		{add mkgmap:label:1='${mname}'}										[0x10001 resolution 22 continue]
 
 #####################################
 
@@ -206,9 +206,9 @@ highway=* & highway!=proposed & area!=yes & highway!=motorway & highway!=trunk &
 
 #######################################################################################
 
-power=line 														[0x29 resolution 20]
-power=minor_line 													[0x29 resolution 23]
-man_made=cable|(man_made=* & man_made ~ '.*pipe.*') {name '${name} (${operator})' | '${name}' | '${operator}' } 	[0x28 resolution 23]
+power=line 																		[0x29 resolution 20]
+power=minor_line 																	[0x29 resolution 23]
+man_made=cable|(man_made=* & man_made ~ '.*pipe.*') {add mkgmap:label:1='${name} (${operator})' | '${name}' | '${operator}' } 				[0x28 resolution 23]
 
 
 #######################################################################################
@@ -229,60 +229,61 @@ railway=* & railway!=abandoned & railway!=platform & railway!=tram & railway!=ra
 
 # Boundary
 
-boundary=administrative { name '${mkgmap:boundary_name}' }
+boundary=administrative 		{add mkgmap:label:1='${mkgmap:boundary_name}' }
 
-boundary=administrative & admin_level=2 			[0x1e resolution 14]
-boundary=administrative & admin_level>2 & admin_level<7  	[0x1d resolution 18]
-boundary=administrative & admin_level>6 & admin_level<8 	[0x1c resolution 22]
+boundary=administrative & admin_level=2 							[0x1e resolution 14]
+boundary=administrative & admin_level>2 & admin_level<7  					[0x1d resolution 18]
+boundary=administrative & admin_level>6 & admin_level<8 					[0x1c resolution 22]
 
-boundary=political 						[0x1c resolution 18]
+boundary=political 										[0x1c resolution 18]
 
-boundary=national_park | boundary=protected_area		[0x10217 resolution 20]
+boundary=national_park | boundary=protected_area						[0x10217 resolution 20]
 
-leisure=nature_reserve 						[0x10217 resolution 20]
+leisure=nature_reserve 										[0x10217 resolution 20]
 
-military=danger_area | military=range | landuse=military | military=airfield 	[0x10216 resolution 20 continue]
-amenity=prison 									[0x10216 resolution 22 continue]
-military=barracks 								[0x10216 resolution 23 continue]
-
-#####################################################################################
-
-natural=cliff | barrier=cliff 	 						{set name='${name} cliff' | 'cliff'}		[0x10205 resolution 22]
-
-barrier=wall | barrier=retaining_wall | barrier=city_wall 			{set name='${name} wall' | 'wall'}		[0x10201 resolution 22]
-barrier=fence | barrier=wood_fence | barrier=wire_fence | barrier=metal_fence 	{set name='${name} fence' | 'fence'}		[0x10202 resolution 23]
-
-barrier=hedge | natural=hedge 							{set name='${name} hedge' | 'hedge'}		[0x10200 resolution 23]
-
-aeroway=runway 									{set name='runway ${name}' | 'runway'}		[0x10011 resolution 20]
-aeroway=taxiway 														[0x10010 resolution 22]
-
-highway=pier | man_made=pier													[0x19 resolution 23]
-
-bridge=*	& bridge!=no | historic=aqueduct | man_made=bridge								[0x26 resolution 22 continue]
-tunnel=* 	& tunnel!=no													[0x27 resolution 22 continue]
-
-route=ferry | waterway=ferry_way | line=ferry		{set name='${name} ${operator}' | '${name}' | '${operator}' }		[0x1b resolution 18]
+military=danger_area | military=range | landuse=military | military=airfield 			[0x10216 resolution 20 continue]
+amenity=prison 											[0x10216 resolution 22 continue]
+military=barracks 										[0x10216 resolution 23 continue]
 
 #####################################################################################
 
-waterway=weir 		& natural!=water	{set name='weir ${name}' | 'weir'}				[0x10203 resolution 23]
+natural=cliff | barrier=cliff 	 						{add mkgmap:label:1='${name} cliff' | 'cliff'}		[0x10205 resolution 22]
 
-waterway=rapids 	& natural!=water									[0x1f resolution 22 continue]
-waterway=rapids 	& natural!=water	{set name='rapids ${name}' | 'rapids'}				[0x10210 resolution 22]
+barrier=wall | barrier=retaining_wall | barrier=city_wall 			{add mkgmap:label:1='${name} wall' | 'wall'}		[0x10201 resolution 22]
+barrier=fence | barrier=wood_fence | barrier=wire_fence | barrier=metal_fence 	{add mkgmap:label:1='${name} fence' | 'fence'}		[0x10202 resolution 23]
 
-waterway=waterfall 	& natural!=water									[0x1f resolution 22 continue]
-waterway=waterfall 	& natural!=water	{set name='waterfall${name}' | 'waterfall'}			[0x10210 resolution 22]
+barrier=hedge | natural=hedge 							{add mkgmap:label:1='${name} hedge' | 'hedge'}		[0x10200 resolution 23]
 
-waterway=dam 		& natural!=water	{set name='dam ${name}' | 'dam'}				[0x10204 resolution 22]
+aeroway=runway 									{add mkgmap:label:1='runway ${name}' | 'runway'}	[0x10011 resolution 20]
+
+aeroway=taxiway 															[0x10010 resolution 22]
+
+highway=pier | man_made=pier														[0x19 resolution 23]
+
+bridge=*	& bridge!=no | historic=aqueduct | man_made=bridge									[0x26 resolution 22 continue]
+tunnel=* 	& tunnel!=no														[0x27 resolution 22 continue]
+
+route=ferry | waterway=ferry_way | line=ferry		{add mkgmap:label:1='${name} ${operator}' | '${name}' | '${operator}' | 'ferry'}	[0x1b resolution 18]
+
+#####################################################################################
+
+waterway=weir 		& natural!=water	{add mkgmap:label:1='weir ${name}' | 'weir'}				[0x10203 resolution 23]
+
+waterway=rapids 	& natural!=water										[0x1f resolution 22 continue]
+waterway=rapids 	& natural!=water	{add mkgmap:label:1='rapids ${name}' | 'rapids'}			[0x10210 resolution 22]
+
+waterway=waterfall 	& natural!=water										[0x1f resolution 22 continue]
+waterway=waterfall 	& natural!=water	{add mkgmap:label:1='waterfall ${name}' | 'waterfall'}			[0x10210 resolution 22]
+
+waterway=dam 		& natural!=water	{add mkgmap:label:1='dam ${name}' | 'dam'}				[0x10204 resolution 22]
 
 
-waterway=river 		& natural!=water 	{set name='${name}                    '}			[0x1f resolution 18 continue]
-waterway=stream 	& natural!=water 	{set name='${name}                    '}			[0x18 resolution 22 continue]
-waterway=drain 		& natural!=water 	{set name='${name}                    '}			[0x18 resolution 23 continue]
-waterway=ditch 		& natural!=water 	{set name='${name}                    '}			[0x18 resolution 23 continue]
+waterway=river 		& natural!=water 	{add mkgmap:label:1='${name}                    '}			[0x1f resolution 18 continue]
+waterway=stream 	& natural!=water 	{add mkgmap:label:1='${name}                    '}			[0x18 resolution 22 continue]
+waterway=drain 		& natural!=water 	{add mkgmap:label:1='${name}                    '}			[0x18 resolution 23 continue]
+waterway=ditch 		& natural!=water 	{add mkgmap:label:1='${name}                    '}			[0x18 resolution 23 continue]
 
-waterway=canal 		& natural!=water 	{set name='canal ${name}' | 'canal'}				[0x10206 resolution 18 continue]
+waterway=canal 		& natural!=water 	{add mkgmap:label:1='canal ${name}' | 'canal'}				[0x10206 resolution 18 continue]
 
 #######################################################################################
 
@@ -297,19 +298,19 @@ waterway=* 	& natural!=water 	& whitewater:section_name=* 	& whitewater:rapid_na
 waterway=* 	& natural!=water & whitewater:rapid_name=* & whitewater:rapid_grade!=* {add whitewater:rapid_grade = '- unknown' }
 waterway=* 	& natural!=water & whitewater:section_name=* & whitewater:section_grade!=* {add whitewater:section_grade = '- unknown' }
 
-waterway=river 	& natural!=water & whitewater:rapid_grade=* {set name='${whitewater:rapid_name}* RG* ${whitewater:rapid_grade}' | 'RG* ${whitewater:rapid_grade}' | '${whitewater:rapid_name}' } [0x10210 resolution 18]
-waterway=stream & natural!=water & whitewater:rapid_grade=* {set name='${whitewater:rapid_name}* RG* ${whitewater:rapid_grade}' | 'RG* ${whitewater:rapid_grade}' | '${whitewater:rapid_name}' } [0x10211 resolution 22]
-waterway=drain 	& natural!=water & whitewater:rapid_grade=* {set name='${whitewater:rapid_name}* RG* ${whitewater:rapid_grade}' | 'RG* ${whitewater:rapid_grade}' | '${whitewater:rapid_name}' } [0x10211 resolution 23]
-waterway=ditch 	& natural!=water & whitewater:rapid_grade=* {set name='${whitewater:rapid_name}* RG* ${whitewater:rapid_grade}' | 'RG* ${whitewater:rapid_grade}' | '${whitewater:rapid_name}' } [0x10211 resolution 23]
+waterway=river 	& natural!=water & whitewater:rapid_grade=* {add mkgmap:label:1='${whitewater:rapid_name}* RG* ${whitewater:rapid_grade}' | 'RG* ${whitewater:rapid_grade}' | '${whitewater:rapid_name}' } [0x10210 resolution 18]
+waterway=stream & natural!=water & whitewater:rapid_grade=* {add mkgmap:label:1='${whitewater:rapid_name}* RG* ${whitewater:rapid_grade}' | 'RG* ${whitewater:rapid_grade}' | '${whitewater:rapid_name}' } [0x10211 resolution 22]
+waterway=drain 	& natural!=water & whitewater:rapid_grade=* {add mkgmap:label:1='${whitewater:rapid_name}* RG* ${whitewater:rapid_grade}' | 'RG* ${whitewater:rapid_grade}' | '${whitewater:rapid_name}' } [0x10211 resolution 23]
+waterway=ditch 	& natural!=water & whitewater:rapid_grade=* {add mkgmap:label:1='${whitewater:rapid_name}* RG* ${whitewater:rapid_grade}' | 'RG* ${whitewater:rapid_grade}' | '${whitewater:rapid_name}' } [0x10211 resolution 23]
 
-waterway=canal 	& natural!=water & whitewater:rapid_grade=* {set name='${whitewater:rapid_name}* RG* ${whitewater:rapid_grade}' | 'RG* ${whitewater:rapid_grade}' | '${whitewater:rapid_name}' } [0x10210 resolution 18]
+waterway=canal 	& natural!=water & whitewater:rapid_grade=* {add mkgmap:label:1='${whitewater:rapid_name}* RG* ${whitewater:rapid_grade}' | 'RG* ${whitewater:rapid_grade}' | '${whitewater:rapid_name}' } [0x10210 resolution 18]
 
-waterway=river 	& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade=* {set name='${whitewater:section_name}* SG* ${whitewater:section_grade}' | 'SG*  ${whitewater:section_grade}' | '${whitewater:section_name}' } [0x10210 resolution 18]
-waterway=stream & natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade=* {set name='${whitewater:section_name}* SG* ${whitewater:section_grade}' | 'SG*  ${whitewater:section_grade}' | '${whitewater:section_name}' } [0x10211 resolution 22]
-waterway=drain 	& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade=* {set name='${whitewater:section_name}* SG* ${whitewater:section_grade}' | 'SG*  ${whitewater:section_grade}' | '${whitewater:section_name}' } [0x10211 resolution 23]
-waterway=ditch 	& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade=* {set name='${whitewater:section_name}* SG* ${whitewater:section_grade}' | 'SG*  ${whitewater:section_grade}' | '${whitewater:section_name}' } [0x10211 resolution 23]
+waterway=river 	& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade=* {add mkgmap:label:1='${whitewater:section_name}* SG* ${whitewater:section_grade}' | 'SG*  ${whitewater:section_grade}' | '${whitewater:section_name}' } [0x10210 resolution 18]
+waterway=stream & natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade=* {add mkgmap:label:1='${whitewater:section_name}* SG* ${whitewater:section_grade}' | 'SG*  ${whitewater:section_grade}' | '${whitewater:section_name}' } [0x10211 resolution 22]
+waterway=drain 	& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade=* {add mkgmap:label:1='${whitewater:section_name}* SG* ${whitewater:section_grade}' | 'SG*  ${whitewater:section_grade}' | '${whitewater:section_name}' } [0x10211 resolution 23]
+waterway=ditch 	& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade=* {add mkgmap:label:1='${whitewater:section_name}* SG* ${whitewater:section_grade}' | 'SG*  ${whitewater:section_grade}' | '${whitewater:section_name}' } [0x10211 resolution 23]
 
-waterway=canal 	& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade=* {set name='${whitewater:section_name}* SG* ${whitewater:section_grade}' | 'SG*  ${whitewater:section_grade}' | '${whitewater:section_name}' } [0x10210 resolution 18]
+waterway=canal 	& natural!=water & whitewater:rapid_grade!=* & whitewater:section_grade=* {add mkgmap:label:1='${whitewater:section_name}* SG* ${whitewater:section_grade}' | 'SG*  ${whitewater:section_grade}' | '${whitewater:section_name}' } [0x10210 resolution 18]
 
 
 ######################################################################################
@@ -318,24 +319,24 @@ natural=coastline 															[0x10218 resolution 16]
 
 ######################################################################################
 
-piste:type=downhill 					{set name='${name} piste' | 'piste'}						[0x10110 resolution 22]
+piste:type=downhill 					{add mkgmap:label:1='${name} piste' | 'piste'}						[0x10110 resolution 22]
 
-(aerialway=tbar | aerialway=t-bar | piste:lift=tbar | piste:lift=t-bar | aerialway=schlepplift | piste:lift=schlepplift | drag_lift=tbar | drag_lift=t-bar)	{set name='${name} tbar' | 'tbar'}	[0x10012 resolution 22]
-aerialway=platter 					{set name='${name} platter' | 'platter'}					[0x10012 resolution 22]
-aerialway=rope_tow 					{set name='${name} ropetow' | 'ropetow'}					[0x10012 resolution 22]
-aerialway=jbar | aerialway=j-bar			{set name='${name} jbar' | 'jbar'}						[0x10012 resolution 22]
-aerialway=drag_lift | piste:lift=drag_lift		{set name='${name} drag_lift' | 'drag_lift'}					[0x10012 resolution 22]
+(aerialway=tbar | aerialway=t-bar | piste:lift=tbar | piste:lift=t-bar | aerialway=schlepplift | piste:lift=schlepplift | drag_lift=tbar | drag_lift=t-bar)	{add mkgmap:label:1='${name} tbar' | 'tbar'}	[0x10012 resolution 22]
+aerialway=platter 					{add mkgmap:label:1='${name} platter' | 'platter'}					[0x10012 resolution 22]
+aerialway=rope_tow 					{add mkgmap:label:1='${name} ropetow' | 'ropetow'}					[0x10012 resolution 22]
+aerialway=jbar | aerialway=j-bar			{add mkgmap:label:1='${name} jbar' | 'jbar'}						[0x10012 resolution 22]
+aerialway=drag_lift | piste:lift=drag_lift		{add mkgmap:label:1='${name} drag_lift' | 'drag_lift'}					[0x10012 resolution 22]
 
-aerialway=cable_car | aerialway=gondola			{set name='${name} cable_car' | 'cable_car'}					[0x10013 resolution 22]
+aerialway=cable_car | aerialway=gondola			{add mkgmap:label:1='${name} cable_car' | 'cable_car'}					[0x10013 resolution 22]
 
-aerialway=chair_lift  | aerialway=mixed_lift 		{set name='${name} chair_lift' | 'chair_lift'}					[0x10013 resolution 22]
+aerialway=chair_lift  | aerialway=mixed_lift 		{add mkgmap:label:1='${name} chair_lift' | 'chair_lift'}					[0x10013 resolution 22]
 
 
 # Contours take their name from the elevation setting.
 
-contour=elevation & contour_ext=elevation_minor & (ele ~'.*10' | ele ~'.*30' | ele ~'.*50' | ele ~'.*70' | ele ~'.*90') { name '${ele|conv:m=>ft}'; } [0x20 resolution 23]
-contour=elevation & contour_ext=elevation_minor & (ele ~'.*20' | ele ~'.*40' | ele ~'.*60' | ele ~'.*80') 		{ name '${ele|conv:m=>ft}'; } [0x20 resolution 22]
+contour=elevation & contour_ext=elevation_minor & (ele ~'.*10' | ele ~'.*30' | ele ~'.*50' | ele ~'.*70' | ele ~'.*90') {add mkgmap:label:1='${ele|conv:m=>ft}'; } [0x20 resolution 23]
+contour=elevation & contour_ext=elevation_minor & (ele ~'.*20' | ele ~'.*40' | ele ~'.*60' | ele ~'.*80') 		{add mkgmap:label:1='${ele|conv:m=>ft}'; } [0x20 resolution 22]
 
-contour=elevation & contour_ext=elevation_medium				{ name '${ele|conv:m=>ft}'; }			[0x21 resolution 20]
-contour=elevation & contour_ext=elevation_major					{ name '${ele|conv:m=>ft}'; }			[0x22 resolution 18]
-contour=elevation | contour_ext=elevation					{ name '${ele|conv:m=>ft}'; }			[0x21 resolution 22]
+contour=elevation & contour_ext=elevation_medium				{add mkgmap:label:1='${ele|conv:m=>ft}'}			[0x21 resolution 20]
+contour=elevation & contour_ext=elevation_major					{add mkgmap:label:1='${ele|conv:m=>ft}'}			[0x22 resolution 18]
+contour=elevation | contour_ext=elevation					{add mkgmap:label:1='${ele|conv:m=>ft}'}			[0x21 resolution 22]
