@@ -70,9 +70,9 @@ highway=construction 			& bicycleroute!=yes 	& hikingroute!=yes 			{add mkgmap:l
 
 # Need ref inside Name from here onwards 
 
-( highway=motorway | highway=trunk | highway=primary | highway=secondary | highway=tertiary )	& name=* & bicycleroute!=yes & hikingroute!=yes 	{add mkgmap:label:1='${name}'}
+( highway=motorway | highway=trunk | highway=primary | highway=secondary | highway=tertiary )	& name=* & bicycleroute!=yes & hikingroute!=yes  {add mkgmap:label:1='${name}'}
 
-( highway=motorway | highway=trunk | highway=primary | highway=secondary | highway=tertiary )	& ref=*  			{ add mkgmap:label:1='${ref|highway-symbol:oval}' }
+( highway=motorway | highway=trunk | highway=primary | highway=secondary | highway=tertiary )	& ref=*  {add mkgmap:label:1='${int_ref|highway-symbol:oval}' | '${ref|highway-symbol:oval}'}
 
 ########################################################################################
 
@@ -171,15 +171,15 @@ highway=steps {add access = no; add foot = yes}
 highway=bridleway {add access = no; add bicycle = yes; add foot = yes}
 
 
-highway=motorway      	{add mkgmap:label:1='${int_ref|highway-symbol:box}' | '${ref|highway-symbol:box}'}	[0x01 resolution 16 continue]
+highway=motorway      						[0x01 resolution 16 continue]
 
-highway=trunk         	{add mkgmap:label:1='${int_ref|highway-symbol:box}' | '${ref|highway-symbol:box}'}	[0x02 resolution 16 continue]
+highway=trunk         						[0x02 resolution 16 continue]
 
-highway=primary       	{add mkgmap:label:1='${ref|highway-symbol:box}'}					[0x03 resolution 18 continue]
+highway=primary       						[0x03 resolution 18 continue]
 
-highway=secondary 	{add mkgmap:label:1='${ref|highway-symbol:box}'}					[0x04 resolution 18 continue]
+highway=secondary 						[0x04 resolution 18 continue]
 
-highway=tertiary 	{add mkgmap:label:1='${ref|highway-symbol:box}'}					[0x05 resolution 20 continue]
+highway=tertiary 						[0x05 resolution 20 continue]
 
 
 highway=unclassified  		[0x06 resolution 22 continue]
