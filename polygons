@@ -143,18 +143,18 @@ surface=grass			& area=yes						{add mkgmap:label:1='${name}' | 'Grass'}	[0x3b r
 
 ##########
 
-natural=bare_rock 								{add mkgmap:label:1='${name} rock' | 'Bare rock'}	[0x40 resolution 20]
-natural=cliff & area=yes							{add mkgmap:label:1='${name} cliff' | 'Cliff'} 		[0x40 resolution 20]
-natural=scree									{add mkgmap:label:1='${name}' | 'Scree'}		[0x45 resolution 20]
-natural=bedrock 								{add mkgmap:label:1='${name}' | 'Bedrock'}		[0x40 resolution 22]
-natural=lava 									{add mkgmap:label:1='${name}' | 'Lava'}			[0x40 resolution 22]
+natural=bare_rock 								{add mkgmap:label:1='${name}'}				[0x40 resolution 20]
+natural=cliff & area=yes							{add mkgmap:label:1='${name}'} 				[0x40 resolution 20]
+natural=scree									{add mkgmap:label:1='${name}'}				[0x45 resolution 20]
+natural=bedrock 								{add mkgmap:label:1='${name}'}				[0x40 resolution 22]
+natural=lava 									{add mkgmap:label:1='${name}'}				[0x40 resolution 22]
 
-natural=glacier 								{add mkgmap:label:1='${name}' | 'Glacier'}		[0x4d resolution 18]
+natural=glacier 								{add mkgmap:label:1='${name}'}				[0x4d resolution 18]
 
 ##########
 
-natural=sea 									{add mkgmap:label:1='${name}' | 'Sea'}			[0x32 resolution 14]
-natural=land 									{add mkgmap:label:1='${name}' | 'Land'}			[0x10100 resolution 14]
+natural=sea 									{add mkgmap:label:1='${name}'}				[0x32 resolution 14]
+natural=land 									{add mkgmap:label:1='${name}'}				[0x10100 resolution 14]
 natural=background 															[0x10200 resolution 14]
 
 place=island 									{add mkgmap:label:1='${name}' | 'Island'}		[0x10101 resolution 20]
