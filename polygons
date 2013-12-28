@@ -37,7 +37,7 @@ leisure=stadium 								{add mkgmap:label:1='${name} (${sport})' | '${name}' } 	
 leisure=track & area=yes 							{add mkgmap:label:1='${name} (${sport})' | '${name}' } 	[0x19 resolution 22]
 
 leisure=water_park 								{add mkgmap:label:1='${name}' | 'Water park'}		[0x09 resolution 22]
-leisure=marina 									{add mkgmap:label:1='${name}' | 'Marina}		[0x09 resolution 22]
+leisure=marina 									{add mkgmap:label:1='${name}' | 'Marina'}		[0x09 resolution 22]
 
 # Shopping
 
@@ -159,4 +159,3 @@ natural=background 															[0x10200 resolution 14]
 
 place=island 									{add mkgmap:label:1='${name}' | 'Island'}		[0x10101 resolution 20]
 place=islet	 								{add mkgmap:label:1='${name}' | 'Islet'}		[0x10101 resolution 22]
-
