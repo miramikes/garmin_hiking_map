@@ -235,13 +235,13 @@ railway=* & railway!=abandoned & railway!=platform & railway!=tram & railway!=ra
 
 # Boundary
 
-boundary=administrative 		{add mkgmap:label:1='${mkgmap:boundary_name}' }
+#boundary=administrative 		{add mkgmap:label:1='${left:country}-${right:country}'}
 
-boundary=administrative & admin_level=2 							[0x1e resolution 14]
-boundary=administrative & admin_level>2 & admin_level<7  					[0x1d resolution 18]
-boundary=administrative & admin_level>6 & admin_level<8 					[0x1c resolution 22]
+boundary=administrative & admin_level=2 			{add mkgmap:label:1='${left:country}-${right:country}'}		[0x1e resolution 14]
+boundary=administrative & admin_level>2 & admin_level<7  	{add mkgmap:label:1='${name}'}					[0x1d resolution 18]
+boundary=administrative & admin_level>6 & admin_level<8 	{add mkgmap:label:1='${name}'}					[0x1c resolution 22]
 
-boundary=political 										[0x1c resolution 18]
+boundary=political 						{add mkgmap:label:1='${name}'}					[0x1c resolution 18]
 
 boundary=national_park | boundary=protected_area						[0x10217 resolution 20]
 
@@ -253,14 +253,14 @@ military=barracks 										[0x10216 resolution 23 continue]
 
 #####################################################################################
 
-natural=cliff | barrier=cliff 	 						{add mkgmap:label:1='${name} cliff' | 'cliff'}		[0x10205 resolution 22]
+natural=cliff | barrier=cliff 	 						{add mkgmap:label:1='${name}'}				[0x10205 resolution 22]
 
-barrier=wall | barrier=retaining_wall | barrier=city_wall 			{add mkgmap:label:1='${name} wall' | 'wall'}		[0x10201 resolution 22]
-barrier=fence | barrier=wood_fence | barrier=wire_fence | barrier=metal_fence 	{add mkgmap:label:1='${name} fence' | 'fence'}		[0x10202 resolution 23]
+barrier=wall | barrier=retaining_wall | barrier=city_wall 			{add mkgmap:label:1='${name}'}				[0x10201 resolution 22]
+barrier=fence | barrier=wood_fence | barrier=wire_fence | barrier=metal_fence 	{add mkgmap:label:1='${name}'}				[0x10202 resolution 23]
 
-barrier=hedge | natural=hedge 							{add mkgmap:label:1='${name} hedge' | 'hedge'}		[0x10200 resolution 23]
+barrier=hedge | natural=hedge 							{add mkgmap:label:1='${name}'}				[0x10200 resolution 23]
 
-aeroway=runway 									{add mkgmap:label:1='runway ${name}' | 'runway'}	[0x10011 resolution 20]
+aeroway=runway 									{add mkgmap:label:1='runway ${name}'}			[0x10011 resolution 20]
 
 aeroway=taxiway 															[0x10010 resolution 22]
 
@@ -269,19 +269,19 @@ highway=pier | man_made=pier														[0x19 resolution 23]
 bridge=*	& bridge!=no | historic=aqueduct | man_made=bridge									[0x26 resolution 22 continue]
 tunnel=* 	& tunnel!=no														[0x27 resolution 22 continue]
 
-route=ferry | waterway=ferry_way | line=ferry		{add mkgmap:label:1='${name} ${operator}' | '${name}' | '${operator}' | 'ferry'}	[0x1b resolution 18]
+route=ferry | waterway=ferry_way | line=ferry		{add mkgmap:label:1='${name} ${operator}' | '${name}' | '${operator}'}		[0x1b resolution 18]
 
 #####################################################################################
 
-waterway=weir 		& natural!=water	{add mkgmap:label:1='weir ${name}' | 'weir'}				[0x10203 resolution 23]
+waterway=weir 		& natural!=water	{add mkgmap:label:1='${name}'}								[0x10203 resolution 23]
 
-waterway=rapids 	& natural!=water										[0x1f resolution 22 continue]
-waterway=rapids 	& natural!=water	{add mkgmap:label:1='rapids ${name}' | 'rapids'}			[0x10210 resolution 22]
+waterway=rapids 	& natural!=water												[0x1f resolution 22 continue]
+waterway=rapids 	& natural!=water	{add mkgmap:label:1='${name}'}								[0x10210 resolution 22]
 
-waterway=waterfall 	& natural!=water										[0x1f resolution 22 continue]
-waterway=waterfall 	& natural!=water	{add mkgmap:label:1='waterfall ${name}' | 'waterfall'}			[0x10210 resolution 22]
+waterway=waterfall 	& natural!=water												[0x1f resolution 22 continue]
+waterway=waterfall 	& natural!=water	{add mkgmap:label:1='${name}'}								[0x10210 resolution 22]
 
-waterway=dam 		& natural!=water	{add mkgmap:label:1='dam ${name}' | 'dam'}				[0x10204 resolution 22]
+waterway=dam 		& natural!=water	{add mkgmap:label:1='${name}'}								[0x10204 resolution 22]
 
 
 waterway=river 		& natural!=water 	{add mkgmap:label:1='${name}                    '}			[0x1f resolution 18 continue]
@@ -289,7 +289,7 @@ waterway=stream 	& natural!=water 	{add mkgmap:label:1='${name}                 
 waterway=drain 		& natural!=water 	{add mkgmap:label:1='${name}                    '}			[0x18 resolution 23 continue]
 waterway=ditch 		& natural!=water 	{add mkgmap:label:1='${name}                    '}			[0x18 resolution 23 continue]
 
-waterway=canal 		& natural!=water 	{add mkgmap:label:1='canal ${name}' | 'canal'}				[0x10206 resolution 18 continue]
+waterway=canal 		& natural!=water 	{add mkgmap:label:1='${name}'}						[0x10206 resolution 18 continue]
 
 #######################################################################################
 
@@ -321,7 +321,7 @@ waterway=canal 	& natural!=water & whitewater:rapid_grade!=* & whitewater:sectio
 
 ######################################################################################
 
-natural=coastline 															[0x10218 resolution 16]
+natural=coastline 																[0x10218 resolution 16]
 
 ######################################################################################
 
@@ -335,13 +335,13 @@ aerialway=drag_lift | piste:lift=drag_lift		{add mkgmap:label:1='${name} drag_li
 
 aerialway=cable_car | aerialway=gondola			{add mkgmap:label:1='${name} cable_car' | 'cable_car'}					[0x10013 resolution 22]
 
-aerialway=chair_lift  | aerialway=mixed_lift 		{add mkgmap:label:1='${name} chair_lift' | 'chair_lift'}					[0x10013 resolution 22]
+aerialway=chair_lift  | aerialway=mixed_lift 		{add mkgmap:label:1='${name} chair_lift' | 'chair_lift'}				[0x10013 resolution 22]
 
 
 # Contours take their name from the elevation setting.
 
-contour=elevation & contour_ext=elevation_minor & (ele ~'.*10' | ele ~'.*30' | ele ~'.*50' | ele ~'.*70' | ele ~'.*90') {add mkgmap:label:1='${ele|conv:m=>ft}'; } [0x20 resolution 23]
-contour=elevation & contour_ext=elevation_minor & (ele ~'.*20' | ele ~'.*40' | ele ~'.*60' | ele ~'.*80') 		{add mkgmap:label:1='${ele|conv:m=>ft}'; } [0x20 resolution 22]
+contour=elevation & contour_ext=elevation_minor & (ele ~'.*10' | ele ~'.*30' | ele ~'.*50' | ele ~'.*70' | ele ~'.*90') {add mkgmap:label:1='${ele|conv:m=>ft}'} [0x20 resolution 23]
+contour=elevation & contour_ext=elevation_minor & (ele ~'.*20' | ele ~'.*40' | ele ~'.*60' | ele ~'.*80') 		{add mkgmap:label:1='${ele|conv:m=>ft}'} [0x20 resolution 22]
 
 contour=elevation & contour_ext=elevation_medium				{add mkgmap:label:1='${ele|conv:m=>ft}'}			[0x21 resolution 20]
 contour=elevation & contour_ext=elevation_major					{add mkgmap:label:1='${ele|conv:m=>ft}'}			[0x22 resolution 18]
