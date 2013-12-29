@@ -1,7 +1,7 @@
 ; smallpois.TYP
-; Longueur: 13397 octets
-; Fichier TYP compilé     29/12/2013     00:32:36
-; Décompilé le 12/29/2013 à 12:32:48 AM
+; Longueur: 13467 octets
+; Fichier TYP compilé     29/12/2013     11:52:21
+; Décompilé le 12/29/2013 à 12:07:17 PM
 
 [_id]
 ProductCode=1
@@ -1966,19 +1966,17 @@ ExtendedLabels=N
 [_line]
 Type=0x1c
 UseOrientation=N
-Xpm="32 10 2  1"
+Xpm="32 8 2  1"
 "! c #FF30FF"
 "  c none"
+"!   !!!   !     !   !!!   !     "
+"!   !!!   !     !   !!!   !     "
 "                                "
 "                                "
 "                                "
 "                                "
 "                                "
 "                                "
-"                                "
-"                                "
-"!  !!!  !       !  !!!  !       "
-"!  !!!  !       !  !!!  !       "
 ;12345678901234567890123456789012
 String1=0x00,Border subregional
 ExtendedLabels=N
@@ -1991,6 +1989,8 @@ UseOrientation=N
 Xpm="32 10 2  1"
 "! c #FF30FF"
 "  c none"
+"!  !!!!!  !     !  !!!!!  !     "
+"!  !!!!!  !     !  !!!!!  !     "
 "                                "
 "                                "
 "                                "
@@ -1999,8 +1999,6 @@ Xpm="32 10 2  1"
 "                                "
 "                                "
 "                                "
-"!!  !!!  !!     !!  !!!  !!     "
-"!!  !!!  !!     !!  !!!  !!     "
 ;12345678901234567890123456789012
 String1=0x00,Border regional
 ExtendedLabels=N
@@ -2010,19 +2008,21 @@ ExtendedLabels=N
 [_line]
 Type=0x1e
 UseOrientation=N
-Xpm="32 10 2  1"
+Xpm="32 12 2  1"
 "! c #FF30FF"
 "  c none"
+"!   !   !   !   !   !   !   !   "
+" !   !   !   !   !   !   !   !  "
+"  !   !   !   !   !   !   !   ! "
+"   !   !   !   !   !   !   !   !"
+"!   !   !   !   !   !   !   !   "
+" !   !   !   !   !   !   !   !  "
 "                                "
 "                                "
 "                                "
 "                                "
 "                                "
 "                                "
-"                                "
-"                                "
-"!!! !!! !!! !!! !!! !!! !!! !!! "
-"!!! !!! !!! !!! !!! !!! !!! !!! "
 ;12345678901234567890123456789012
 String1=0x00,Border national
 ExtendedLabels=N
@@ -2265,6 +2265,20 @@ Xpm="32 5 2  1"
 " !!!                            "
 ;12345678901234567890123456789012
 String1=0x00,Cable_car
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x1001e
+UseOrientation=N
+Xpm="32 2 2  1"
+"! c #FF30FF"
+"  c none"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x00,Border national
 ExtendedLabels=N
 [end]
 

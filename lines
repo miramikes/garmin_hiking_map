@@ -237,11 +237,13 @@ railway=* & railway!=abandoned & railway!=platform & railway!=tram & railway!=ra
 
 #boundary=administrative 		{add mkgmap:label:1='${left:country}-${right:country}'}
 
-boundary=administrative & admin_level=2 			{add mkgmap:label:1='${left:country}-${right:country}'}		[0x1e resolution 14]
-boundary=administrative & admin_level>2 & admin_level<7  	{add mkgmap:label:1='${name}'}					[0x1d resolution 18]
-boundary=administrative & admin_level>6 & admin_level<8 	{add mkgmap:label:1='${name}'}					[0x1c resolution 22]
+boundary=administrative & admin_level<3 									{add mkgmap:label:1='${name}'}	[0x1001e resolution 14-20 continue]
+boundary=administrative & admin_level<3 									{add mkgmap:label:1='${name}'}	[0x1e resolution 22]
+#boundary=administrative & admin_level>2 & admin_level<7 & admin_level!=0 & admin_level!=1 & admin_level!=2	{add mkgmap:label:1='${name}'}	[0x1d resolution 18]
 
-boundary=political 						{add mkgmap:label:1='${name}'}					[0x1c resolution 18]
+#boundary=administrative & admin_level>6 & admin_level<9 & admin_level!=0 & admin_level!=1 & admin_level!=2 & admin_level!=3 & admin_level!=4 & admin_level!=5 & admin_level!=6 	{add mkgmap:label:1='${name}'} [0x1c resolution 22]
+
+#boundary=political 						{add mkgmap:label:1='${name}'}					[0x1c resolution 18]
 
 boundary=national_park | boundary=protected_area						[0x10217 resolution 20]
 
