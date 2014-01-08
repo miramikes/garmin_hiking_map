@@ -1,4 +1,7 @@
-
+; smallpois.TYP
+; Longueur: 13502 octets
+; Fichier TYP compilé     01/08/2014     16:55:53
+; Décompilé le 1/8/2014 à 4:56:01 PM
 
 [_id]
 ProductCode=1
@@ -2812,15 +2815,17 @@ DayXpm="9 13 3 1"   Colormode=16
 
 
 [_point]
-Type=0x01c
-SubType=0x0e
+Type=0x01b
+SubType=0x0f
 String1=0x00,place
 ExtendedLabels=N
-DayXpm="1 1 2 1"   Colormode=16
+DayXpm="3 3 2 1"   Colormode=16
 "!	c #FFFFFF"
 "  	c none"
-" "
-;1
+"   "
+"   "
+"   "
+;123
 [end]
 
 

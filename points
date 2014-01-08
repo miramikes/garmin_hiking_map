@@ -34,12 +34,12 @@ military=* 	& military!=danger_area 	& military!=range	& military!=airfield		& m
 
 # Polygons naming
 
-leisure=nature_reserve							{add mkgmap:label:1='${name}' | 'Natural reserve'}	[0x1c0e resolution 20]
+leisure=nature_reserve							{add mkgmap:label:1='${name}' | 'Natural reserve'}	[0x1b0f resolution 20]
 
-landuse=military 							{add mkgmap:label:1='${name}' | 'Military area'}	[0x1c0e resolution 20]
-military=danger_area 							{add mkgmap:label:1='${name}' | 'Danger area'}		[0x1c0e resolution 20]
-military=range 								{add mkgmap:label:1='${name}' | 'Military area'}	[0x1c0e resolution 22]
-military=airfield 							{add mkgmap:label:1='${name}' | 'Airfield'}		[0x1c0e resolution 22]
+landuse=military 							{add mkgmap:label:1='${name}' | 'Military area'}	[0x1b0f resolution 20]
+military=danger_area 							{add mkgmap:label:1='${name}' | 'Danger area'}		[0x1b0f resolution 20]
+military=range 								{add mkgmap:label:1='${name}' | 'Military area'}	[0x1b0f resolution 22]
+military=airfield 							{add mkgmap:label:1='${name}' | 'Airfield'}		[0x1b0f resolution 22]
 
 ############################################################
 
