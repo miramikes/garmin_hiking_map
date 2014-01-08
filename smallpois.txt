@@ -1,7 +1,7 @@
 ; smallpois.TYP
 ; Longueur: 13502 octets
-; Fichier TYP compilé     01/08/2014     16:55:53
-; Décompilé le 1/8/2014 à 4:56:01 PM
+; Fichier TYP compilé     01/08/2014     20:49:11
+; Décompilé le 1/8/2014 à 8:49:25 PM
 
 [_id]
 ProductCode=1
@@ -50,6 +50,7 @@ Type=0x001,9
 Type=0x002,9
 Type=0x003,9
 Type=0x005,9
+Type=0x006,9
 Type=0x007,9
 Type=0x008,9
 Type=0x00b,9
@@ -216,6 +217,15 @@ String1=0x00,Parking
 ExtendedLabels=N
 Xpm="0 0 1 0"
 "1 c #C5C5C5"
+[end]
+
+
+[_polygon]
+Type=0x06
+String1=0x00,area
+ExtendedLabels=N
+Xpm="0 0 1 0"
+"1 c #D5D5D5"
 [end]
 
 
@@ -1694,7 +1704,7 @@ UseOrientation=N
 LineWidth=3
 BorderWidth=1
 Xpm="0 0 2 0"
-"1 c #FFCA20"
+"1 c #FFCA00"
 "2 c #B4B4B4"
 String1=0x00,Tertiary
 ExtendedLabels=N
@@ -1707,7 +1717,7 @@ UseOrientation=N
 LineWidth=2
 BorderWidth=1
 Xpm="0 0 2 0"
-"1 c #FFFF8B"
+"1 c #FFFF00"
 "2 c #B4B4B4"
 String1=0x00,Unclassified
 ExtendedLabels=N
