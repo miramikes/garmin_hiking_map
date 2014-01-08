@@ -1,7 +1,4 @@
-; smallpois.TYP
-; Longueur: 13467 octets
-; Fichier TYP compilé     29/12/2013     11:52:21
-; Décompilé le 12/29/2013 à 12:07:17 PM
+
 
 [_id]
 ProductCode=1
@@ -1732,7 +1729,7 @@ Type=0x08
 UseOrientation=N
 LineWidth=2
 Xpm="0 0 1 0"
-"1 c #949494"
+"1 c #A4A4A4"
 String1=0x00,Footway
 ExtendedLabels=N
 [end]
@@ -1899,9 +1896,9 @@ ExtendedLabels=N
 [_line]
 Type=0x16
 UseOrientation=N
-LineWidth=2
+LineWidth=3
 Xpm="0 0 1 0"
-"1 c #525252"
+"1 c #A4A4A4"
 String1=0x00,Track
 ExtendedLabels=N
 [end]
@@ -2629,21 +2626,6 @@ ExtendedLabels=N
 
 
 [_point]
-Type=0x001
-SubType=0x00
-String1=0x00,place
-ExtendedLabels=N
-DayXpm="3 3 2 1"   Colormode=16
-"!	c #FFFFFF"
-"  	c none"
-"   "
-"   "
-"   "
-;123
-[end]
-
-
-[_point]
 Type=0x004
 SubType=0x00
 String1=0x00,City
@@ -2826,6 +2808,19 @@ DayXpm="9 13 3 1"   Colormode=16
 "!!#####!!"
 "!!!!!!!!!"
 ;123456789
+[end]
+
+
+[_point]
+Type=0x01c
+SubType=0x0e
+String1=0x00,place
+ExtendedLabels=N
+DayXpm="1 1 2 1"   Colormode=16
+"!	c #FFFFFF"
+"  	c none"
+" "
+;1
 [end]
 
 

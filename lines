@@ -165,7 +165,7 @@ junction=roundabout 					[0x06 resolution 22]
 
 #################################
 
-highway=construction 						[0x07 resolution 23 continue]
+highway=construction 						[0x07 resolution 22 continue]
 
 highway=motorway {add oneway = yes; add bicycle = no; add foot = no }
 highway=motorway_link {add oneway = yes; add bicycle = no; add foot = no }
@@ -204,11 +204,11 @@ highway=pedestrian & area!=yes 	[0x08 resolution 22 continue]
 highway=steps 			[0x1a resolution 22 continue]
 highway=bridleway 		[0x08 resolution 22 continue]
 
-highway=path 			[0x0a resolution 20 continue]
-highway=track 			[0x16 resolution 20 continue]
+highway=path 			[0x0a resolution 22 continue]
+highway=track 			[0x16 resolution 22 continue]
 
 # Mop up any unrecognised highway types
-highway=* & highway!=proposed & area!=yes & highway!=motorway & highway!=trunk & highway!=primary & highway!=secondary & highway!=tertiary & highway!=unclassified & highway!=residential & highway!=motorway_link & highway!=trunk_link & highway!=primary_link & highway!=living_street & highway!=service & highway!=unsurfaced & highway!=steps & highway!=cycleway & highway!=footway & highway!=pedestrian & highway!=bridleway & highway!=path & highway!=track	[0x07 resolution 23 continue]
+highway=* & highway!=proposed & area!=yes & highway!=motorway & highway!=trunk & highway!=primary & highway!=secondary & highway!=tertiary & highway!=unclassified & highway!=residential & highway!=motorway_link & highway!=trunk_link & highway!=primary_link & highway!=living_street & highway!=service & highway!=unsurfaced & highway!=steps & highway!=cycleway & highway!=footway & highway!=pedestrian & highway!=bridleway & highway!=path & highway!=track	[0x07 resolution 22 continue]
 
 #######################################################################################
 
