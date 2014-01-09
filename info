@@ -6,21 +6,17 @@
 
 # A short one line description of the style
 #
+summary: Mira's hiking style
 
 # Version of the style itself
 #
 version= 1.0
-
-summary: Mira's hiking style
-
-
 
 description {
 	This is a style that is designed
 	for use for hiking, biking
 	and other outdoor activities
 	especially in lightly covered areas.
-
 	Not routeable yet.
 	Might be overcrowded in cities.
 }

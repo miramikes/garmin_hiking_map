@@ -1,5 +1,7 @@
 #
 
+include 'inc/address';
+
 # Airport
 
 aeroway=airport 								{add mkgmap:label:1='${name}' | 'Airport'}		[0x07 resolution 20]

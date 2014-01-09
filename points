@@ -1,5 +1,7 @@
 #
 
+include 'inc/address';
+
 # don't render not relevant mkgmap:line2poi tags
 amenity=* 					& mkgmap:line2poi=true 			{delete amenity}
 barrier=* 					& mkgmap:line2poi=true 			{delete barrier}

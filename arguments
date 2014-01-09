@@ -15,5 +15,6 @@ add-pois-to-areas
 gmapsupp
 latin1
 #route
-#index
+index
+location-autofill
 verbose

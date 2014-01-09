@@ -1,5 +1,6 @@
 #
 
+include 'inc/address';
 
 # ways under construction
 highway=proposed {delete 'highway'; delete 'tunnel'; delete 'bridge'}
