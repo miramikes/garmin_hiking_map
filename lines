@@ -1,6 +1,8 @@
 #
 
-include 'inc/address';
+highway=* & name=* { set mkgmap:street='${name}' }
+
+include 'address';
 
 # ways under construction
 highway=proposed {delete 'highway'; delete 'tunnel'; delete 'bridge'}
