@@ -134,8 +134,8 @@ sport=swimming 					{add mkgmap:label:1='${name}'}						[0x2d09 resolution 23]
 
 ##########################################################
 
-place=city 	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}				[0x0400 resolution 22-14]
-place=town 	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}				[0x0800 resolution 23-16]
+place=city 	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}				[0x0400 resolution 14-22]
+place=town 	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}				[0x0800 resolution 16-23]
 place=village 	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}				[0x0900 resolution 20]
 place=hamlet 	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}				[0x0b00 resolution 22]
 

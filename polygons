@@ -4,9 +4,9 @@ include 'address';
 
 # Airport
 
-aeroway=airport 								{add mkgmap:label:1='${name}' | 'Airport'}		[0x07 resolution 20]
-aeroway=aerodrome 								{add mkgmap:label:1='${name}' | 'Aerodrome'}		[0x07 resolution 20]
-aeroway=helipad 								{add mkgmap:label:1='${name}' | 'Helipad'}		[0x0e resolution 22]
+aeroway=airport 								{add mkgmap:label:1='${name}' | 'Airport'}		[0x07 resolution 20 continue]
+aeroway=aerodrome 								{add mkgmap:label:1='${name}' | 'Aerodrome'}		[0x07 resolution 20 continue]
+aeroway=helipad 								{add mkgmap:label:1='${name}' | 'Helipad'}		[0x0e resolution 22 continue]
 
 
 #######################################################################################
@@ -105,11 +105,12 @@ amenity=prison 									{add mkgmap:label:1='${name}'}				[0x04 resolution 22]
 
 ##############################
 
-boundary=protected_area  							{set boundary=nature_reserve}
-boundary = national_park & protect_class > 2 					{set boundary=nature_reserve}
-boundary = national_park 							{add mkgmap:label:1='${name}' | 'National park'}	[0x16 resolution 18 continue] 
+boundary = national_park & protect_class > 2 					{set leisure=nature_reserve}
+boundary = national_park 							{add mkgmap:label:1='${name}' | 'National park'}	[0x16 resolution 16-22 continue] 
 
-leisure=nature_reserve | boundary=nature_reserve				{add mkgmap:label:1='${name}' | 'Natural reserve'}	[0x16 resolution 20 continue]
+landuse=nature_reserve | boundary=nature_reserve | boundary=protected_area	{set leisure=nature_reserve}
+
+leisure=nature_reserve								{add mkgmap:label:1='${name}' | 'Natural reserve'}	[0x16 resolution 18-22 continue]
 
 # Sand
 
