@@ -49,24 +49,24 @@ aeroway=airport 							{add mkgmap:label:1='${name}' | 'Airport'}		[0x5900 resol
 aeroway=helipad 							{add mkgmap:label:1='${name}' | 'Helipad'}		[0x5904 resolution 22]
 
 aeroway=aerodrome 							{add mkgmap:label:1='${name}' | 'Aerodrom'}		[0x5900 resolution 22]
-aeroway=terminal 							{add mkgmap:label:1='${name}' | 'Terminal'}		[0x5900 resolution 23 continue]
+aeroway=terminal 							{add mkgmap:label:1='${name}' | 'Terminal'}		[0x5900 resolution 22 continue]
 
 ###########################################################
 
-amenity=atm 					{add mkgmap:label:1='${operator}: ${name}' | '${name}' | '${operator}' } 	[0x2f06 resolution 23]
-amenity=bank 					{add mkgmap:label:1='${name} (${operator})' | '${name}' | '${operator}' } 	[0x2f06 resolution 23]
+amenity=atm 					{add mkgmap:label:1='${operator}: ${name}' | '${name}' | '${operator}' } 	[0x2f06 resolution 24]
+amenity=bank 					{add mkgmap:label:1='${name} (${operator})' | '${name}' | '${operator}' } 	[0x2f06 resolution 24]
 
 
 ###########################################################
 
-amenity=restaurant 							{add mkgmap:label:1='${name}' | 'Restaurant'}		[0x4500 resolution 23 continue]
-amenity=food_court 							{add mkgmap:label:1='${name}' | 'Food court'}		[0x4500 resolution 23 continue]
+amenity=restaurant 							{add mkgmap:label:1='${name}' | 'Restaurant'}		[0x4500 resolution 24 continue]
+amenity=food_court 							{add mkgmap:label:1='${name}' | 'Food court'}		[0x4500 resolution 24 continue]
 
-amenity=fast_food 							{add mkgmap:label:1='${name}' | 'Fast food'}		[0x2a07 resolution 23 continue]
+amenity=fast_food 							{add mkgmap:label:1='${name}' | 'Fast food'}		[0x2a07 resolution 24 continue]
 
-amenity=cafe 								{add mkgmap:label:1='${name}' | 'Cafe'}			[0x2a0e resolution 23 continue]
+amenity=cafe 								{add mkgmap:label:1='${name}' | 'Cafe'}			[0x2a0e resolution 24 continue]
 
-amenity=pub | amenity=bar | amenity=biergarten | amenity=nightclub 	{add mkgmap:label:1='${name}'}				[0x2d02 resolution 23 continue]
+amenity=pub | amenity=bar | amenity=biergarten | amenity=nightclub 	{add mkgmap:label:1='${name}'}				[0x2d02 resolution 24 continue]
 
 
 ###########################################################
@@ -74,68 +74,68 @@ amenity=pub | amenity=bar | amenity=biergarten | amenity=nightclub 	{add mkgmap:
 # amenity=supermarket is superceded by shop=supermarket
 
 
-shop=supermarket | amenity=supermarket 		{add mkgmap:label:1='${name}'}							[0x2e01 resolution 23]
-shop=*  & shop!=bicycle & shop!=outdoor		{add mkgmap:label:1='${name}'}							[0x2e03 resolution 23]
+shop=supermarket | amenity=supermarket 		{add mkgmap:label:1='${name}'}							[0x2e01 resolution 22]
+shop=*  & shop!=bicycle & shop!=outdoor		{add mkgmap:label:1='${name}'}							[0x2e03 resolution 22]
 
-amenity=bicycle_rental 				{add mkgmap:label:1='${name}'}							[0x2e0a resolution 23]
-shop=bicycle 					{add mkgmap:label:1='${name}'}							[0x2e0a resolution 23]
-service:bicycle:repair=yes 			{add mkgmap:label:1='${name}'}							[0x2f00 resolution 23]
+amenity=bicycle_rental 				{add mkgmap:label:1='${name}'}							[0x2e0a resolution 22]
+shop=bicycle 					{add mkgmap:label:1='${name}'}							[0x2e0a resolution 22]
+service:bicycle:repair=yes 			{add mkgmap:label:1='${name}'}							[0x2f00 resolution 22]
 
-shop=outdoor 					{add mkgmap:label:1='${name}'}							[0x2e06 resolution 23]
+shop=outdoor 					{add mkgmap:label:1='${name}'}							[0x2e06 resolution 22]
 
 ###########################################################
 
-amenity=police 							{add mkgmap:label:1='${name}'}				[0x3001 resolution 23]
+amenity=police 							{add mkgmap:label:1='${name}'}				[0x3001 resolution 22]
 
-amenity=embassy & country=* 					{add mkgmap:label:1='Embassy ${country}' | 'Embassy'} 	[0x3003 resolution 23]
+amenity=embassy & country=* 					{add mkgmap:label:1='Embassy ${country}' | 'Embassy'} 	[0x3003 resolution 24]
 
 healthcare=hospital | amenity=hospital 				{add mkgmap:label:1='${name}'}				[0x3002 resolution 22]
-healthcare=* | amenity=dentist | amenity=doctors 		{add mkgmap:label:1='${name}'}				[0x3002 resolution 23]
+healthcare=* | amenity=dentist | amenity=doctors 		{add mkgmap:label:1='${name}'}				[0x3002 resolution 22]
 
-amenity=fire_station 						{add mkgmap:label:1='${name}'}				[0x3004 resolution 23]
+amenity=fire_station 						{add mkgmap:label:1='${name}'}				[0x3004 resolution 22]
 
-amenity=emergency_phone 					{add mkgmap:label:1='${name}'}				[0x5100 resolution 23]
-amenity=telephone 						{add mkgmap:label:1='${name}'}				[0x5100 resolution 23]
+amenity=emergency_phone 					{add mkgmap:label:1='${name}'}				[0x5100 resolution 24]
+amenity=telephone 						{add mkgmap:label:1='${name}'}				[0x5100 resolution 24]
 
 mkgmap:is_in!=* & is_in=* { set mkgmap:is_in='${is_in}' }
-internet_access=yes 						{add mkgmap:label:1='Internet ${name}'} 		[0x5101 resolution 23 continue]
-internet_access=* & internet_access!=no & internet_access!=yes 	{add mkgmap:label:1='Internet ${name}' } 		[0x5101 resolution 23 continue]
+internet_access=yes 						{add mkgmap:label:1='Internet ${name}'} 		[0x5101 resolution 24 continue]
+internet_access=* & internet_access!=no & internet_access!=yes 	{add mkgmap:label:1='Internet ${name}' } 		[0x5101 resolution 24 continue]
 
-amenity=pharmacy 						{add mkgmap:label:1='${name}'}				[0x2e05 resolution 23]
+amenity=pharmacy 						{add mkgmap:label:1='${name}'}				[0x2e05 resolution 22]
 
-amenity=post_office 						{add mkgmap:label:1='${name}'}				[0x2f05 resolution 23]
-amenity=post_box 						{add mkgmap:label:1='${name}'}				[0x2f04 resolution 23]
+amenity=post_office 						{add mkgmap:label:1='${name}'}				[0x2f05 resolution 24]
+amenity=post_box 						{add mkgmap:label:1='${name}'}				[0x2f04 resolution 24]
 
 ###########################################################
 
 
-amenity=fuel 				{add mkgmap:label:1='${operator}: ${name}' | '${name}' | '${operator}'} 	[0x2f01 resolution 23]
+amenity=fuel 				{add mkgmap:label:1='${operator}: ${name}' | '${name}' | '${operator}'} 	[0x2f01 resolution 22]
 
-amenity=parking 													[0x2f0b resolution 23]
+amenity=parking 													[0x2f0b resolution 22]
 
-amenity=place_of_worship 		{add mkgmap:label:1='${name}'}							[0x6404 resolution 23]
+amenity=place_of_worship 		{add mkgmap:label:1='${name}'}							[0x6404 resolution 24]
 
 
-amenity=library 			{add mkgmap:label:1='${name}'}							[0x2c03 resolution 23]
-amenity=theatre 			{add mkgmap:label:1='${name}'}							[0x2d01 resolution 23]
-amenity=townhall 			{add mkgmap:label:1='${name}' | 'Townhall'}					[0x3003 resolution 23]
+amenity=library 			{add mkgmap:label:1='${name}'}							[0x2c03 resolution 24]
+amenity=theatre 			{add mkgmap:label:1='${name}'}							[0x2d01 resolution 24]
+amenity=townhall 			{add mkgmap:label:1='${name}' | 'Townhall'}					[0x3003 resolution 24]
 
-amenity=toilets 													[0x4e00 resolution 23]
+amenity=toilets 													[0x4e00 resolution 22]
 
 # amenity=zoo is superceded by tourism=zoo
-#tourism=zoo | amenity=zoo [0x2c07 resolution 23]
+#tourism=zoo | amenity=zoo [0x2c07 resolution 24]
 
 
 ###########################################################
 
-leisure=sports_center | leisure=sports_centre 	{add mkgmap:label:1='${name} (${sport})' | '${name}'} 			[0x2d0a resolution 23]
-sport=multi 					{add mkgmap:label:1='${name}'}						[0x2d0a resolution 23]
-sport=swimming 					{add mkgmap:label:1='${name}'}						[0x2d09 resolution 23]
+leisure=sports_center | leisure=sports_centre 	{add mkgmap:label:1='${name} (${sport})' | '${name}'} 			[0x2d0a resolution 24]
+sport=multi 					{add mkgmap:label:1='${name}'}						[0x2d0a resolution 24]
+sport=swimming 					{add mkgmap:label:1='${name}'}						[0x2d09 resolution 24]
 
 ##########################################################
 
 place=city 	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}				[0x0400 resolution 14-22]
-place=town 	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}				[0x0800 resolution 16-23]
+place=town 	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}				[0x0800 resolution 16-22]
 place=village 	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}				[0x0900 resolution 20]
 place=hamlet 	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}				[0x0b00 resolution 22]
 
@@ -153,34 +153,34 @@ place=islet 	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}				[
   name '${name|def:} ${ref|def:}*${operator|def:}';
 }
 
-railway=halt 					{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}			[0x4d02 resolution 23]
+railway=halt 					{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}			[0x4d02 resolution 22]
 railway=station 				{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'} 			[0x4d02 resolution 22]
 
-railway=tram_stop 				{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}			[0x4d01 resolution 23]
+railway=tram_stop 				{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}			[0x4d01 resolution 24]
 
-highway=bus_stop | amenity=bus_station 		{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}			[0x2f08 resolution 23]
+highway=bus_stop | amenity=bus_station 		{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}			[0x2f08 resolution 22]
 
 amenity=ferry_terminal 				{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}			[0x2f09 resolution 22]
-leisure=marina 					{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}			[0x2f09 resolution 23]
+leisure=marina 					{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}			[0x2f09 resolution 22]
 
 ##########################################################
 
-historic=museum 					{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'} 		[0x2c02 resolution 23]
-historic=archaeological_site | historic=ruins 		{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}  	[0x2c02 resolution 23]
-historic=memorial | historic=monument			{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'} 		[0x2c02 resolution 23]
+historic=museum 					{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'} 		[0x2c02 resolution 22]
+historic=archaeological_site | historic=ruins 		{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}  	[0x2c02 resolution 22]
+historic=memorial | historic=monument			{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'} 		[0x2c02 resolution 22]
 
 
 tourism=attraction & historic=* & historic!=wayside_cross	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}' | 'historic attraction'}	[0x2c02 resolution 22]
 tourism=attraction 						{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}' | 'attraction'} 		[0x2c04 resolution 22]
 
-cross=yes | man_made=cross | historic=wayside_cross 													[0x481f resolution 23]
+cross=yes | man_made=cross | historic=wayside_cross 													[0x481f resolution 24]
 
 #  Attractions / community
-historic=* 	& historic!=wayside_cross	& historic!=ruins 	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'} 			[0x2c0b resolution 23]
+historic=* 	& historic!=wayside_cross	& historic!=ruins 	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'} 			[0x2c0b resolution 24]
 
 #######################################################
 
-tourism=hotel | tourism=motel {add mkgmap:label:1= '${name|def:}(${stars}*)${operator|def:}' | '${name} ${operator}' | '${name}' | '${operator}' } 	[0x2b01 resolution 23]
+tourism=hotel | tourism=motel {add mkgmap:label:1= '${name|def:}(${stars}*)${operator|def:}' | '${name} ${operator}' | '${name}' | '${operator}' } 	[0x2b01 resolution 22]
 
 tourism=guest_house 					{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}' | 'guest house'}		[0x2b02 resolution 22]
 tourism=camp_site 					{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}' | 'camp site'}		[0x2b03 resolution 21]
@@ -210,16 +210,16 @@ historic=ruins | building=collapsed 			{add mkgmap:label:1='${name} (${ref})' | 
 tourism=picnic_site | leisure=picnic_table 		{add mkgmap:label:1='picnic site'}		[0x4a00 resolution 22]
 amenity=bbq 						{add mkgmap:label:1='bbq'}			[0x4a01 resolution 22]
 
-amenity=bench												[0x6605 resolution 23]
+amenity=bench												[0x6605 resolution 24]
 
 #######################################################################
 
 #  Barriers
-barrier=gate | barrier=lift_gate | barrier=swing_gate | barrier=bump_gate | barrier=bollard | barrier=block | barrier=chain 	[0x3006 resolution 23]
-barrier=toll_booth 					{add mkgmap:label:1='toll'}						[0x3006 resolution 23]
+barrier=gate | barrier=lift_gate | barrier=swing_gate | barrier=bump_gate | barrier=bollard | barrier=block | barrier=chain 	[0x3006 resolution 24]
+barrier=toll_booth 					{add mkgmap:label:1='toll'}						[0x3006 resolution 24]
 
-barrier=bollard | barrier=bus_trap    							 					[0x3006 resolution 23]
-barrier=block | barrier=cycle_barrier | barrier=stile | barrier=kissing_gate    						[0x3006 resolution 23]
+barrier=bollard | barrier=bus_trap    							 					[0x3006 resolution 24]
+barrier=block | barrier=cycle_barrier | barrier=stile | barrier=kissing_gate    						[0x3006 resolution 24]
 
 amenity=border_control | barrier=border_control 	{add mkgmap:label:1='border'}						[0x3006 resolution 20]
 
@@ -246,7 +246,7 @@ man_made=mast | power=tower												[0x660f resolution 22]
 man_made=tower | landmark=chimney 	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'} 			[0x6411 resolution 20]
 
 #  Geographical (man-made)
-man_made=mineshaft | man_made=adit | historic=mine 	{add mkgmap:label:1='${name}'} 				[0x640c resolution 23]
+man_made=mineshaft | man_made=adit | historic=mine 	{add mkgmap:label:1='${name}'} 				[0x640c resolution 22]
 man_made=survey_point 					{add mkgmap:label:1='${name}'}				[0x1a0e resolution 20]
 man_made=lighthouse 					{add mkgmap:label:1='${name}'}				[0x1b0e resolution 20]
 man_made=cairn 						{add mkgmap:label:1='${name}'} 				[0x6607 resolution 22]
@@ -270,7 +270,7 @@ mountain_pass=yes    			{add mkgmap:label:1='${name} (${ele}m)' | '(${ele}m)' | 
 natural=rock 				{add mkgmap:label:1='${name}'}								[0x6614 resolution 20]
 natural=volcano 			{add mkgmap:label:1='${name} (${ele}m)' | '(${ele}m)' | '${name}'} 			[0x2c0c resolution 20]
 natural=stone 				{add mkgmap:label:1='${name}'}								[0x6606 resolution 22]
-natural=tree 				{add mkgmap:label:1='${name}'}								[0x6618 resolution 23]
+natural=tree 				{add mkgmap:label:1='${name}'}								[0x6618 resolution 24]
 
 natural=cave_entrance 			{add mkgmap:label:1='${name}'}								[0x6601 resolution 22]
 
@@ -291,8 +291,8 @@ information=map 											[0x4c04 resolution 20]
 #  Beacons and Buoyes
 
 
-man_made=beacon | airmark=beacon | landmark=beacon 	{add mkgmap:label:1='${name}'} 			[0x190e resolution 23]
+man_made=beacon | airmark=beacon | landmark=beacon 	{add mkgmap:label:1='${name}'} 			[0x190e resolution 22]
 
-seamark:type=* 						{add mkgmap:label:1='${name}'} 			[0x180e resolution 23]
+seamark:type=* 						{add mkgmap:label:1='${name}'} 			[0x180e resolution 22]
 
 

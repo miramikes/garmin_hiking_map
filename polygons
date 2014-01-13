@@ -22,7 +22,7 @@ parking=underground | parking=multi-storey 												[0x06 resolution 22]
 amenity=parking | parking=surface 													[0x05 resolution 22]
 
 healthcare=hospital | amenity=hospital 						{add mkgmap:label:1='${name}'}				[0x0b resolution 22]
-healthcare=* | amenity=dentist | amenity=doctors | amenity=nursing_home 	{add mkgmap:label:1='${name}'}				[0x0b resolution 23]
+healthcare=* | amenity=dentist | amenity=doctors | amenity=nursing_home 	{add mkgmap:label:1='${name}'}				[0x0b resolution 24]
 
 leisure=common 									{add mkgmap:label:1='${name}'}				[0x17 resolution 22]
 leisure=garden 									{add mkgmap:label:1='${name}'}				[0x17 resolution 22]
@@ -71,12 +71,12 @@ landuse=village_green 															[0x17 resolution 22]
 # building tag should be last
 man_made=pier  			& area=yes												[0x0a resolution 22 continue]
 
-(building=* | amenity=*) 	& area!=no 												[0x13 resolution 23]
-tourism=* 			& area!=no & waterway!=* 										[0x06 resolution 23]
-man_made=* 			& area=yes 												[0x06 resolution 23]
+(building=* | amenity=*) 	& area!=no 												[0x13 resolution 22]
+tourism=* 			& area!=no & waterway!=* 										[0x06 resolution 22]
+man_made=* 			& area=yes 												[0x06 resolution 22]
 
 # man_made can be used on areas or lines
-man_made=* & area!=no & (man_made!=door & man_made!=embankment & man_made!=breakwater & man_made!=cable_line & man_made!=cutline & man_made!=cutting & man_made!=levee & man_made!=trench) 		[0x06 resolution 23]
+man_made=* & area!=no & (man_made!=door & man_made!=embankment & man_made!=breakwater & man_made!=cable_line & man_made!=cutline & man_made!=cutting & man_made!=levee & man_made!=trench) 		[0x06 resolution 22]
 
 # Historic
 
@@ -94,7 +94,7 @@ natural=orchard | landuse=orchard | landuse=orchards | natural=orchards		{add mk
 
 landuse=military 								{add mkgmap:label:1='${name}'}				[0x04 resolution 20]
 military=airfield 								{add mkgmap:label:1='${name}'}				[0x04 resolution 20]
-military=barracks 								{add mkgmap:label:1='${name}'}				[0x04 resolution 23]
+military=barracks 								{add mkgmap:label:1='${name}'}				[0x04 resolution 22]
 amenity=prison 									{add mkgmap:label:1='${name}'}				[0x04 resolution 22]
 
 (military=danger_area | military=range ) & landuse!=military 			{add mkgmap:label:1='${name}'}				[0x04 resolution 20]
