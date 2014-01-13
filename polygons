@@ -105,7 +105,11 @@ amenity=prison 									{add mkgmap:label:1='${name}'}				[0x04 resolution 22]
 
 ##############################
 
-leisure=nature_reserve 								{add mkgmap:label:1='${name}' | 'Natural reserve'}	[0x16 resolution 20]
+boundary=protected_area  							{set boundary=nature_reserve}
+boundary = national_park & protect_class > 2 					{set boundary=nature_reserve}
+boundary = national_park 							{add mkgmap:label:1='${name}' | 'National park'}	[0x16 resolution 18 continue] 
+
+leisure=nature_reserve | boundary=nature_reserve				{add mkgmap:label:1='${name}' | 'Natural reserve'}	[0x16 resolution 20 continue]
 
 # Sand
 
