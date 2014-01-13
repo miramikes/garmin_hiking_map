@@ -1,7 +1,7 @@
 ; smallpois.TYP
 ; Longueur: 13522 octets
-; Fichier TYP compilé     13/01/2014     11:20:53
-; Décompilé le 1/13/2014 à 11:20:59 AM
+; Fichier TYP compilé     13/01/2014     13:38:45
+; Décompilé le 1/13/2014 à 1:38:56 PM
 
 [_id]
 ProductCode=1
@@ -21,49 +21,50 @@ CodePage=1252
 Type=0x10200,1
 Type=0x032,2
 Type=0x10100,3
-Type=0x03d,3
-Type=0x009,4
-Type=0x10101,5
-Type=0x017,6
-Type=0x018,6
-Type=0x019,6
-Type=0x01a,6
-Type=0x03b,6
-Type=0x041,6
-Type=0x042,6
-Type=0x043,6
-Type=0x044,6
-Type=0x046,6
-Type=0x047,6
-Type=0x048,6
-Type=0x049,6
-Type=0x04e,6
-Type=0x04f,6
-Type=0x050,6
-Type=0x04d,7
-Type=0x052,7
-Type=0x053,7
-Type=0x040,8
-Type=0x045,8
-Type=0x051,8
-Type=0x001,9
-Type=0x002,9
-Type=0x003,9
-Type=0x005,9
-Type=0x006,9
-Type=0x007,9
-Type=0x008,9
-Type=0x00b,9
-Type=0x00c,9
-Type=0x00e,9
-Type=0x01e,9
-Type=0x01f,9
-Type=0x03c,10
-Type=0x03e,10
-Type=0x03f,10
-Type=0x013,11
-Type=0x004,12
-Type=0x016,12
+Type=0x10101,4
+Type=0x017,5
+Type=0x018,5
+Type=0x019,5
+Type=0x01a,5
+Type=0x03b,5
+Type=0x041,5
+Type=0x042,5
+Type=0x043,5
+Type=0x044,5
+Type=0x046,5
+Type=0x047,5
+Type=0x048,5
+Type=0x049,5
+Type=0x04e,5
+Type=0x04f,5
+Type=0x050,5
+Type=0x04d,6
+Type=0x052,6
+Type=0x053,6
+Type=0x040,7
+Type=0x045,7
+Type=0x051,7
+Type=0x001,8
+Type=0x002,8
+Type=0x003,8
+Type=0x005,8
+Type=0x006,8
+Type=0x007,8
+Type=0x008,8
+Type=0x00b,8
+Type=0x00c,8
+Type=0x00e,8
+Type=0x01e,8
+Type=0x01f,8
+Type=0x03c,9
+Type=0x03e,9
+Type=0x03f,9
+Type=0x009,10
+Type=0x03d,10
+Type=0x00a,11
+Type=0x013,12
+Type=0x004,13
+Type=0x016,13
 [End]
 
 
@@ -291,19 +292,19 @@ Xpm="32 32 2 1"
 "                                "
 "                                "
 "                                "
-"           !                    "
-"          !!                    "
-"         ! !                    "
-"        !  !                    "
-"       !   !                    "
-"      !    !                    "
+"          !                     "
+"         !!                     "
+"        ! !                     "
+"       !  !                     "
+"      !   !                     "
+"     !    !                     "
+"    !     !                     "
+"   !!!!!!!!                     "
+"          !                     "
+"   !!!!!!!!!!!                  "
+"    !       !                   "
 "     !     !                    "
-"    !!!!!!!!                    "
-"           !                    "
-"    !!!!!!!!!!!                 "
-"     !       !                  "
-"      !     !                   "
-"       !!!!!                    "
+"      !!!!!                     "
 "                                "
 "                                "
 "                                "
@@ -321,6 +322,15 @@ Xpm="32 32 2 1"
 "                                "
 "                                "
 ;12345678901234567890123456789012
+[end]
+
+
+[_polygon]
+Type=0x0a
+String1=0x00,Pier
+ExtendedLabels=N
+Xpm="0 0 1 0"
+"1 c #D5D5D5"
 [end]
 
 
@@ -736,8 +746,8 @@ Xpm="32 32 2 1"
 "                                "
 "                                "
 "                                "
-"    ! !             ! !         "
-"   ! ! !           ! ! !        "
+"                    ! !         "
+"                   ! ! !        "
 "                                "
 "                                "
 "                                "
