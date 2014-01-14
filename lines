@@ -89,20 +89,20 @@ highway=tertiary					  {add mkgmap:label:1='${name}'} 				[0x10002 resolution 20
 
 # hiking
 
-iwn_from_relation=yes 		{add mkgmap:label:1='${color-ref|highway-symbol:oval}'} 						[0x0b resolution 20 continue]
-iwn_from_relation=yes 		{add mkgmap:label:1='${iref} ${iname}' | '${iref}' | '${iref} - ${iname}'} 				[0x10000 resolution 22 continue]
+iwn_from_relation=yes 		{add mkgmap:label:1='${color-ref|highway-symbol:oval}'} 			[0x0b road_class=0 road_speed=0 resolution 20 continue with_actions]
+iwn_from_relation=yes 		{add mkgmap:label:1='${iref} ${iname}' | '${iref}' | '${iref} - ${iname}'} 	[0x10000 resolution 22 continue]
 
-nwn_from_relation=yes 		{add mkgmap:label:1='${color-ref|highway-symbol:oval}'}    						[0x0b resolution 20 continue]
-nwn_from_relation=yes 		{add mkgmap:label:1='${nref} ${nname}' | '${nref}' | '${nname}'}    					[0x10000 resolution 22 continue]
+nwn_from_relation=yes 		{add mkgmap:label:1='${color-ref|highway-symbol:oval}'}    			[0x0b road_class=0 road_speed=0 resolution 20 continue with_actions]
+nwn_from_relation=yes 		{add mkgmap:label:1='${nref} ${nname}' | '${nref}' | '${nname}'}    		[0x10000 resolution 22 continue]
 
-rwn_from_relation=yes  		{add mkgmap:label:1='${color-ref|highway-symbol:oval}'}   						[0x0b resolution 20 continue]
-rwn_from_relation=yes  		{add mkgmap:label:1='${rref} ${rname}' | '${rref}' | '${rname}'}   					[0x10000 resolution 22 continue]
+rwn_from_relation=yes  		{add mkgmap:label:1='${color-ref|highway-symbol:oval}'}   			[0x0b road_class=0 road_speed=0 resolution 20 continue with_actions]
+rwn_from_relation=yes  		{add mkgmap:label:1='${rref} ${rname}' | '${rref}' | '${rname}'}   		[0x10000 resolution 22 continue]
 
-lwn_from_relation=yes  		{add mkgmap:label:1='${color-ref|highway-symbol:oval}'}   						[0x0b resolution 20 continue]
-lwn_from_relation=yes  		{add mkgmap:label:1='${lref} ${lname}' | '${lref}' | '${lname}'}   					[0x10000 resolution 22 continue]
+lwn_from_relation=yes  		{add mkgmap:label:1='${color-ref|highway-symbol:oval}'}   			[0x0b road_class=0 road_speed=0 resolution 20 continue with_actions]
+lwn_from_relation=yes  		{add mkgmap:label:1='${lref} ${lname}' | '${lref}' | '${lname}'}   		[0x10000 resolution 22 continue]
 
-nonet_from_relation=yes 	{add mkgmap:label:1='${color-ref|highway-symbol:oval}'}   						[0x0b resolution 20 continue]
-nonet_from_relation=yes 	{add mkgmap:label:1='${nnref} ${nnname}' | '${nnref}' | '${nnname}'}   					[0x10000 resolution 22 continue]
+nonet_from_relation=yes 	{add mkgmap:label:1='${color-ref|highway-symbol:oval}'}   			[0x0b road_class=0 road_speed=0 resolution 20 continue with_actions]
+nonet_from_relation=yes 	{add mkgmap:label:1='${nnref} ${nnname}' | '${nnref}' | '${nnname}'}   		[0x10000 resolution 22 continue]
 
 
 ######################################
@@ -110,108 +110,108 @@ nonet_from_relation=yes 	{add mkgmap:label:1='${nnref} ${nnname}' | '${nnref}' |
 # bicycle
 
 
-icn_from_relation=yes 		{add mkgmap:label:1='${iref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
-icn_from_relation=yes 		{add mkgmap:label:1='${iname}'}										[0x10001 resolution 22 continue]
+icn_from_relation=yes 		{add mkgmap:label:1='${iref|highway-symbol:hbox}'}				[0x0c road_class=1 road_speed=1 resolution 20 continue with_actions]
+icn_from_relation=yes 		{add mkgmap:label:1='${iname}'}							[0x10001 resolution 22 continue]
 
-ncn_from_relation=yes 		{add mkgmap:label:1='${nref|highway-symbol:hbox}'} 							[0x0c resolution 20 continue]
-ncn_from_relation=yes 		{add mkgmap:label:1='${nname}'} 									[0x10001 resolution 22 continue]
+ncn_from_relation=yes 		{add mkgmap:label:1='${nref|highway-symbol:hbox}'} 				[0x0c road_class=1 road_speed=1 resolution 20 continue with_actions]
+ncn_from_relation=yes 		{add mkgmap:label:1='${nname}'} 						[0x10001 resolution 22 continue]
 
 
-rcn_from_relation=yes  		{add mkgmap:label:1='${rref|highway-symbol:hbox}'} 							[0x0c resolution 20 continue]
-rcn_from_relation=yes  		{add mkgmap:label:1='${rname}'} 									[0x10001 resolution 22 continue]
+rcn_from_relation=yes  		{add mkgmap:label:1='${rref|highway-symbol:hbox}'} 				[0x0c road_class=1 road_speed=1 resolution 20 continue with_actions]
+rcn_from_relation=yes  		{add mkgmap:label:1='${rname}'} 						[0x10001 resolution 22 continue]
 
-lcn_from_relation=yes  		{add mkgmap:label:1='${lref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
-lcn_from_relation=yes  		{add mkgmap:label:1='${lname}'}										[0x10001 resolution 22 continue]
+lcn_from_relation=yes  		{add mkgmap:label:1='${lref|highway-symbol:hbox}'}				[0x0c road_class=1 road_speed=1 resolution 20 continue with_actions]
+lcn_from_relation=yes  		{add mkgmap:label:1='${lname}'}							[0x10001 resolution 22 continue]
 
-tcn_from_relation=yes 		{add mkgmap:label:1='${tref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
-tcn_from_relation=yes 		{add mkgmap:label:1='${tname}'}										[0x10001 resolution 22 continue]
+tcn_from_relation=yes 		{add mkgmap:label:1='${tref|highway-symbol:hbox}'}				[0x0c road_class=1 road_speed=1 resolution 20 continue with_actions]
+tcn_from_relation=yes 		{add mkgmap:label:1='${tname}'}							[0x10001 resolution 22 continue]
 
-mtb_from_relation=yes 		{add mkgmap:label:1='${mref|highway-symbol:hbox}'}							[0x0c resolution 20 continue]
-mtb_from_relation=yes 		{add mkgmap:label:1='${mname}'}										[0x10001 resolution 22 continue]
+mtb_from_relation=yes 		{add mkgmap:label:1='${mref|highway-symbol:hbox}'}				[0x0c road_class=1 road_speed=1 resolution 20 continue with_actions]
+mtb_from_relation=yes 		{add mkgmap:label:1='${mname}'}							[0x10001 resolution 22 continue]
 
 #####################################
 
 # route=ski
 
-piste:type=nordic & piste:grooming=classic 		[0x10111 resolution 22 continue]
-piste:type=nordic & piste:grooming=skating 		[0x10111 resolution 22 continue]
-piste:type=nordic & piste:grooming='classic+skating' 	[0x10111 resolution 22 continue]
-piste:type=nordic & piste:grooming='classic;skating' 	[0x10111 resolution 22 continue]
+piste:type=nordic & piste:grooming=classic 						[0x10111 resolution 22 continue]
+piste:type=nordic & piste:grooming=skating 						[0x10111 resolution 22 continue]
+piste:type=nordic & piste:grooming='classic+skating' 					[0x10111 resolution 22 continue]
+piste:type=nordic & piste:grooming='classic;skating' 					[0x10111 resolution 22 continue]
 
-piste:type=nordic & piste:grooming=scooter		[0x10112 resolution 22 continue]
-piste:type=nordic & piste:grooming=backcountry 		[0x10112 resolution 22 continue]
-piste:type=nordic & piste:grooming!=*			[0x10112 resolution 22 continue]
+piste:type=nordic & piste:grooming=scooter						[0x10112 resolution 22 continue]
+piste:type=nordic & piste:grooming=backcountry 						[0x10112 resolution 22 continue]
+piste:type=nordic & piste:grooming!=*							[0x10112 resolution 22 continue]
 
 piste:type=nordic & piste:grooming=* & piste:grooming!=classic & piste:grooming!=skating & piste:grooming!='classic+skating' & piste:grooming!='classic;skating'		[0x10112 resolution 22 continue]
 
 # route=snowmobile
 
-snowmobile=yes | snowmobile=designated			[0x10113 resolution 20 continue]
-snowmobile=permissive | snowmobile=private		[0x10114 resolution 20 continue]
+snowmobile=yes | snowmobile=designated							[0x10113 resolution 20 continue]
+snowmobile=permissive | snowmobile=private						[0x10114 resolution 20 continue]
 
 # route=horse
 
-highway=bridleway 					[0x10115  resolution 22 continue]
-highway=* & horse=designated 				[0x10115  resolution 22 continue]
-highway=* & horse=yes 					[0x10115  resolution 22 continue]
-highway=* & horse=permissive				[0x10115  resolution 22 continue]
+highway=bridleway 			{add access = no; add foot = yes}		[0x10115 road_class=0 road_speed=0 resolution 22 continue with_actions]
+highway=* & horse=designated 		{add access = no; add foot = yes}		[0x10115 road_class=0 road_speed=0 resolution 22 continue with_actions]
+highway=* & horse=yes 			{add access = no; add foot = yes}		[0x10115 road_class=0 road_speed=0 resolution 22 continue with_actions]
+highway=* & horse=permissive		{add access = no; add foot = yes}		[0x10115 road_class=0 road_speed=0 resolution 22 continue with_actions]
 
 #########################################################################################
 
 # Roundabouts
-junction=roundabout & highway=trunk 			[0x02 resolution 18]
-junction=roundabout & highway=primary 			[0x03 resolution 20]
-junction=roundabout & highway=secondary 		[0x04 resolution 20]
-junction=roundabout & highway=tertiary 			[0x05 resolution 22]
-junction=roundabout & highway=unclassified 		[0x06 resolution 22]
-junction=roundabout 					[0x06 resolution 22]
+junction=roundabout & highway=trunk 		{add bicycle = no; add foot = no }	[0x02 road_class=1 road_speed=5 resolution 18 continue with_actions]
+junction=roundabout & highway=primary 		{add bicycle = no; add foot = no }	[0x03 road_class=1 road_speed=4 resolution 20 continue with_actions]
+junction=roundabout & highway=secondary 	{add bicycle = yes; add foot = no }	[0x04 road_class=1 road_speed=3 resolution 20 continue with_actions]
+junction=roundabout & highway=tertiary 							[0x05 road_class=1 road_speed=2 resolution 22 continue with_actions]
+junction=roundabout & highway=unclassified 						[0x06 road_class=1 road_speed=1 resolution 22 continue with_actions]
+junction=roundabout 									[0x06 road_class=1 road_speed=1 resolution 22 continue with_actions]
 
 #################################
 
-highway=construction 						[0x07 resolution 22 continue]
+highway=construction 			{add access = no; add foot = yes}		[0x07 road_class=0 road_speed=0 resolution 22 continue with_actions]
 
-highway=motorway {add oneway = yes; add bicycle = no; add foot = no }
-highway=motorway_link {add oneway = yes; add bicycle = no; add foot = no }
-highway=path {add access = no; add bicycle = yes; add foot = yes}
-highway=cycleway {add access = no; add bicycle = yes; add foot = yes}
-highway=footway {add access = no; add foot = yes}
-highway=pedestrian & area!=yes {add access = no; add foot = yes}
-highway=steps {add access = no; add foot = yes}
-highway=bridleway {add access = no; add bicycle = yes; add foot = yes}
-
-
-highway=motorway      						[0x01 resolution 14 continue]
-
-highway=trunk         						[0x02 resolution 14 continue]
-
-highway=primary       						[0x03 resolution 16 continue]
-
-highway=secondary 						[0x04 resolution 18 continue]
-
-highway=tertiary 						[0x05 resolution 20 continue]
+highway=motorway 			{add oneway = yes; add bicycle = no; add foot = no }
+highway=motorway_link 			{add oneway = yes; add bicycle = no; add foot = no }
+highway=path 				{add access = no; add bicycle = yes; add foot = yes}
+highway=cycleway 			{add access = no; add bicycle = yes; add foot = yes}
+highway=footway 			{add access = no; add foot = yes}
+highway=pedestrian 	& area!=yes 	{add access = no; add foot = yes}
+highway=steps 				{add access = no; add foot = yes}
+highway=bridleway 			{add access = no; add bicycle = yes; add foot = yes}
 
 
-highway=unclassified  		[0x06 resolution 22 continue]
-highway=residential   		[0x06 resolution 22 continue]
-highway=living_street 		[0x07 resolution 22 continue]
-highway=service       		[0x07 resolution 22 continue]
-highway=unsurfaced		[0x07 resolution 22 continue]
+highway=motorway      						[0x01 road_class=4 road_speed=7 resolution 14 continue with_actions]
 
-highway=motorway_link 		[0x06 resolution 20 continue]
-highway=trunk_link    		[0x06 resolution 20 continue]
-highway=primary_link  		[0x06 resolution 20 continue]
+highway=trunk         						[0x02 road_class=4 road_speed=6 resolution 14 continue with_actions]
 
-highway=cycleway 		[0x09 resolution 22 continue]
-highway=footway 		[0x08 resolution 22 continue]
-highway=pedestrian & area!=yes 	[0x08 resolution 22 continue]
-highway=steps 			[0x1a resolution 22 continue]
-highway=bridleway 		[0x08 resolution 22 continue]
+highway=primary       						[0x03 road_class=3 road_speed=5 resolution 16 continue with_actions]
 
-highway=path 			[0x0a resolution 22 continue]
-highway=track 			[0x16 resolution 22 continue]
+highway=secondary 						[0x04 road_class=3 road_speed=4 resolution 18 continue with_actions]
+
+highway=tertiary 						[0x05 road_class=2 road_speed=3 resolution 20 continue with_actions]
+
+
+highway=unclassified  						[0x06 road_class=2 road_speed=2 resolution 22 continue with_actions]
+highway=residential   						[0x06 road_class=0 road_speed=1 resolution 22 continue with_actions]
+highway=living_street 						[0x07 road_class=0 road_speed=1 resolution 22 continue with_actions]
+highway=service       						[0x07 road_class=0 road_speed=1 resolution 22 continue with_actions]
+highway=unsurfaced						[0x07 road_class=0 road_speed=1 resolution 22 continue with_actions]
+
+highway=motorway_link 						[0x06 road_class=3 road_speed=5 resolution 20 continue with_actions]
+highway=trunk_link    						[0x06 road_class=3 road_speed=4 resolution 20 continue with_actions]
+highway=primary_link  						[0x06 road_class=2 road_speed=3 resolution 20 continue with_actions]
+
+highway=cycleway 						[0x09 road_class=0 road_speed=2 resolution 22 continue with_actions]
+highway=footway 						[0x08 road_class=0 road_speed=0 resolution 22 continue with_actions]
+highway=pedestrian 		& area!=yes 			[0x08 road_class=0 road_speed=0 resolution 22 continue with_actions]
+highway=steps 							[0x1a road_class=0 road_speed=0 resolution 22 continue with_actions]
+highway=bridleway 						[0x08 road_class=0 road_speed=0 resolution 22 continue with_actions]
+
+highway=path 							[0x0a road_class=0 road_speed=0 resolution 22 continue with_actions]
+highway=track 							[0x16 road_class=0 road_speed=1 resolution 22 continue with_actions]
 
 # Mop up any unrecognised highway types
-highway=* & highway!=proposed & area!=yes & highway!=motorway & highway!=trunk & highway!=primary & highway!=secondary & highway!=tertiary & highway!=unclassified & highway!=residential & highway!=motorway_link & highway!=trunk_link & highway!=primary_link & highway!=living_street & highway!=service & highway!=unsurfaced & highway!=steps & highway!=cycleway & highway!=footway & highway!=pedestrian & highway!=bridleway & highway!=path & highway!=track	[0x07 resolution 22 continue]
+highway=* & highway!=proposed & area!=yes & highway!=motorway & highway!=trunk & highway!=primary & highway!=secondary & highway!=tertiary & highway!=unclassified & highway!=residential & highway!=motorway_link & highway!=trunk_link & highway!=primary_link & highway!=living_street & highway!=service & highway!=unsurfaced & highway!=steps & highway!=cycleway & highway!=footway & highway!=pedestrian & highway!=bridleway & highway!=path & highway!=track	[0x07 road_class=0 road_speed=1 resolution 22 continue with_actions]
 
 #######################################################################################
 
@@ -222,17 +222,17 @@ man_made=cable|(man_made=* & man_made ~ '.*pipe.*') {add mkgmap:label:1='${name}
 
 #######################################################################################
 
-railway=abandoned 											[0x15 resolution 22 continue]
-railway=platform {add access = no; add foot = yes} 							[0x07 resolution 24 continue]
-railway=tram  												[0x13 resolution 22 continue]
+railway=abandoned 						{add access = no; add foot = yes}	[0x15 resolution 22 continue]
+railway=platform 						{add access = no; add foot = yes} 	[0x07 road_class=0 road_speed=0 resolution 24 continue with_actions]
+railway=tram  								{add access = no} 		[0x13 road_class=0 road_speed=0 resolution 22 continue with_actions]
 
 railway=rail 	& service=yard | service=siding | service=spur						[0x14 resolution 24 continue]
 
-railway=rail 	& service!=yard & service!=siding & service!=spur					[0x10 resolution 20 continue]
+railway=rail 	& service!=yard & service!=siding & service!=spur	{add access = no} 		[0x10 road_class=0 road_speed=0 resolution 20 continue with_actions]
 
-railway=subway  											[0x12 resolution 22 continue]
+railway=subway  							{add access = no} 		[0x12 road_class=0 road_speed=0 resolution 22 continue with_actions]
 
-railway=* & railway!=abandoned & railway!=platform & railway!=tram & railway!=rail & railway!=subway	[0x11 resolution 22 continue]
+railway=* & railway!=abandoned & railway!=platform & railway!=tram & railway!=rail & railway!=subway {add access = no} [0x11 road_class=0 road_speed=0 resolution 22 continue]
 
 #######################################################################################
 
@@ -248,47 +248,47 @@ boundary=administrative & admin_level<3 									{add mkgmap:label:1='${name}'}	
 
 #boundary=political 						{add mkgmap:label:1='${name}'}					[0x1c resolution 18]
 
-boundary=national_park 										[0x10217 resolution 16]
+boundary=national_park 													[0x10217 resolution 16]
 
-landuse=nature_reserve | boundary=nature_reserve | boundary=protected_area			{set leisure=nature_reserve}
+landuse=nature_reserve | boundary=nature_reserve | boundary=protected_area		{set leisure=nature_reserve}
 
-leisure=nature_reserve 										[0x10217 resolution 18]
+leisure=nature_reserve 													[0x10217 resolution 18]
 
-military=danger_area | military=range | landuse=military | military=airfield 			[0x10216 resolution 20 continue]
-amenity=prison 											[0x10216 resolution 22 continue]
-military=barracks 										[0x10216 resolution 24 continue]
-
-#####################################################################################
-
-natural=cliff | barrier=cliff 	 						{add mkgmap:label:1='${name}'}				[0x10205 resolution 22]
-
-barrier=wall | barrier=retaining_wall | barrier=city_wall 			{add mkgmap:label:1='${name}'}				[0x10201 resolution 22]
-barrier=fence | barrier=wood_fence | barrier=wire_fence | barrier=metal_fence 	{add mkgmap:label:1='${name}'}				[0x10202 resolution 24]
-
-barrier=hedge | natural=hedge 							{add mkgmap:label:1='${name}'}				[0x10200 resolution 24]
-
-aeroway=runway 									{add mkgmap:label:1='runway ${name}'}			[0x10011 resolution 20]
-
-aeroway=taxiway 															[0x10010 resolution 22]
-
-highway=pier | man_made=pier														[0x19 resolution 24 continue]
-
-bridge=*	& bridge!=no | historic=aqueduct | man_made=bridge									[0x26 resolution 22 continue]
-tunnel=* 	& tunnel!=no														[0x27 resolution 22 continue]
-
-route=ferry | waterway=ferry_way | line=ferry		{add mkgmap:label:1='${name} ${operator}' | '${name}' | '${operator}'}		[0x1b resolution 18]
+military=danger_area | military=range | landuse=military | military=airfield 						[0x10216 resolution 20 continue]
+amenity=prison 														[0x10216 resolution 22 continue]
+military=barracks 													[0x10216 resolution 24 continue]
 
 #####################################################################################
 
-waterway=weir 		& natural!=water	{add mkgmap:label:1='${name}'}								[0x10203 resolution 22]
+natural=cliff | barrier=cliff 	 						{add mkgmap:label:1='${name}'}		[0x10205 resolution 22]
 
-waterway=rapids 	& natural!=water												[0x1f resolution 22 continue]
-waterway=rapids 	& natural!=water	{add mkgmap:label:1='${name}'}								[0x10210 resolution 22]
+barrier=wall | barrier=retaining_wall | barrier=city_wall 			{add mkgmap:label:1='${name}'}		[0x10201 resolution 22]
+barrier=fence | barrier=wood_fence | barrier=wire_fence | barrier=metal_fence 	{add mkgmap:label:1='${name}'}		[0x10202 resolution 24]
 
-waterway=waterfall 	& natural!=water												[0x1f resolution 22 continue]
-waterway=waterfall 	& natural!=water	{add mkgmap:label:1='${name}'}								[0x10210 resolution 22]
+barrier=hedge | natural=hedge 							{add mkgmap:label:1='${name}'}		[0x10200 resolution 24]
 
-waterway=dam 		& natural!=water	{add mkgmap:label:1='${name}'}								[0x10204 resolution 22]
+aeroway=runway 									{add mkgmap:label:1='runway ${name}'}	[0x10011 resolution 20]
+
+aeroway=taxiway 													[0x10010 resolution 22]
+
+highway=pier | man_made=pier												[0x19 resolution 24 continue]
+
+bridge=*	& bridge!=no | historic=aqueduct | man_made=bridge							[0x26 resolution 22 continue]
+tunnel=* 	& tunnel!=no												[0x27 resolution 22 continue]
+
+route=ferry | waterway=ferry_way | line=ferry	{add mkgmap:label:1='${name} ${operator}' | '${name}' | '${operator}'}	[0x1b road_class=0 road_speed=0 resolution 18 continue]
+
+#####################################################################################
+
+waterway=weir 		& natural!=water	{add mkgmap:label:1='${name}'}						[0x10203 resolution 22]
+
+waterway=rapids 	& natural!=water										[0x1f resolution 22 continue]
+waterway=rapids 	& natural!=water	{add mkgmap:label:1='${name}'}						[0x10210 resolution 22]
+
+waterway=waterfall 	& natural!=water										[0x1f resolution 22 continue]
+waterway=waterfall 	& natural!=water	{add mkgmap:label:1='${name}'}						[0x10210 resolution 22]
+
+waterway=dam 		& natural!=water	{add mkgmap:label:1='${name}'}						[0x10204 resolution 22]
 
 
 waterway=river 		& natural!=water 	{add mkgmap:label:1='${name}                    '}			[0x1f resolution 18 continue]
