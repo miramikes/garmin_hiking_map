@@ -5,7 +5,7 @@ OSM hiking Garmin map
 
 This mkgmap style files were created to build map with
 as many as possible details useful for hiking and outdoor activities.
-This map is not routeable. Maybe in future.
+This map is finally routable! ;)
 
 This map is tuned to work well with my Garmin 78s
 

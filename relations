@@ -115,7 +115,7 @@ type=route & ( route=hiking | route=foot ) & network=lwn
 		set lname='${name}';
 		set lref='$(lref)/${ref}' | '${ref}';
 	}
-	} 	
+	}	
 
 type=route & ( route=hiking | route=foot ) & network!=*
 	{
@@ -124,7 +124,16 @@ type=route & ( route=hiking | route=foot ) & network!=*
 		set nnname='${name}';
 		set nnref='$(nnref)/${ref}' | '${ref}';
 	}
-	} 
+	}
+
+type=route & ( route=hiking | route=foot ) & network!=*
+	{
+		apply { 
+		set ah_from_relation=yes;
+		set ahname='${name}';
+		set ahref='$(ahref)/${ref}' | '${ref}';
+	}
+	}
 
 
 ####################################################################
@@ -176,8 +185,25 @@ type=route & route=bicycle & network=tcn
 		set tname='${name}';
 		set tref='$(tref)/${ref}' | '${ref}';
 	}
-	} 	
-	
+	} 
+
+type=route & route=bicycle & network!=*
+	{
+		apply { 
+		set non_from_relation=yes;
+		set nonname='${name}';
+		set nonref='$(nonref)/${ref}' | '${ref}';
+	}
+	}
+
+type=route & route=bicycle & network!=( icn | ncn | rcn | lcn | tcn )
+	{
+		apply { 
+		set ab_from_relation=yes;
+		set abname='${name}';
+		set abref='$(abref)/${ref}' | '${ref}';
+	}
+	}	
 
 type=route & route=mtb
 	{
