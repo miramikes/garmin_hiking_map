@@ -196,7 +196,7 @@ type=route & route=bicycle & network!=*
 	}
 	}
 
-type=route & route=bicycle & network!=( icn | ncn | rcn | lcn | tcn )
+type=route & route=bicycle & network!=icn & network!=ncn & network!=rcn & network!=lcn & network!=tcn
 	{
 		apply { 
 		set ab_from_relation=yes;

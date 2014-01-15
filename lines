@@ -47,11 +47,11 @@ sac_scale=* & sac_scale!=hiking & sac_scale!=mountain_hiking & sac_scale!=demand
 
 # set up bicycleroute=yes
 
-(ncn_from_relation=yes | rcn_from_relation=yes | icn_from_relation=yes | lcn_from_relation=yes | tcn_from_relation=yes | mtb_from_relation=yes | ncn=yes | rcn=yes | lcn=yes | tcn=yes | ncn_ref=* | rcn_ref=* | lcn_ref=* | tcn_ref=* ) 	{ add bicycleroute=yes;  add bicycle = yes;  } 
+(ncn_from_relation=yes | rcn_from_relation=yes | icn_from_relation=yes | lcn_from_relation=yes | tcn_from_relation=yes | mtb_from_relation=yes | ncn=yes | rcn=yes | lcn=yes | tcn=yes | ncn_ref=* | rcn_ref=* | lcn_ref=* | tcn_ref=* ) 	{add bicycleroute=yes; add bicycle = yes} 
 
 # set up hikingroute=yes
 
-( route=hiking | route=foot ) 	{ add hikingroute=yes;  add foot = yes;  } 
+( route=hiking | route=foot ) 	{add hikingroute=yes; add foot = yes} 
 
 
 # Add kind of way to name
@@ -140,14 +140,19 @@ mtb_from_relation=yes 		{add mkgmap:label:1='${mname}'}							[0x10001 resolutio
 
 # route=ski
 
-piste:type=nordic & piste:grooming=classic 						[0x10111 resolution 22 continue]
-piste:type=nordic & piste:grooming=skating 						[0x10111 resolution 22 continue]
-piste:type=nordic & piste:grooming='classic+skating' 					[0x10111 resolution 22 continue]
-piste:type=nordic & piste:grooming='classic;skating' 					[0x10111 resolution 22 continue]
+piste:type=nordic & piste:grooming=classic 											[0x10111 resolution 22 continue with_actions]
+piste:type=nordic & piste:grooming=skating 											[0x10111 resolution 22 continue with_actions]
+piste:type=nordic & piste:grooming='classic+skating' 										[0x10111 resolution 22 continue with_actions]
+piste:type=nordic & piste:grooming='classic;skating' 										[0x10111 resolution 22 continue with_actions]
 
-piste:type=nordic & piste:grooming=scooter						[0x10112 resolution 22 continue]
-piste:type=nordic & piste:grooming=backcountry 						[0x10112 resolution 22 continue]
-piste:type=nordic & piste:grooming!=*							[0x10112 resolution 22 continue]
+piste:grooming=classic | piste:grooming=skating | piste:grooming='classic+skating' | piste:grooming='classic;skating' 		[0x10111 resolution 22 continue with_actions]
+
+
+piste:type=nordic & piste:grooming=scooter											[0x10112 resolution 22 continue with_actions]
+piste:type=nordic & piste:grooming=backcountry 											[0x10112 resolution 22 continue with_actions]
+piste:type=nordic & piste:grooming!=*												[0x10112 resolution 22 continue with_actions]
+
+piste:grooming=scooter | piste:grooming=backcountry										[0x10112 resolution 22 continue with_actions]
 
 piste:type=nordic & piste:grooming=* & piste:grooming!=classic & piste:grooming!=skating & piste:grooming!='classic+skating' & piste:grooming!='classic;skating'		[0x10112 resolution 22 continue]
 
