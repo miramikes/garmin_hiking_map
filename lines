@@ -278,11 +278,11 @@ boundary=administrative & admin_level<3 									{add mkgmap:label:1='${name}'}	
 
 #boundary=political 						{add mkgmap:label:1='${name}'}					[0x1c resolution 18]
 
-boundary=national_park 													[0x10217 resolution 16]
+boundary=national_park 													[0x10217 resolution 16 continue]
 
 landuse=nature_reserve | boundary=nature_reserve | boundary=protected_area		{set leisure=nature_reserve}
 
-leisure=nature_reserve 													[0x10217 resolution 18]
+leisure=nature_reserve 													[0x10217 resolution 18 continue]
 
 military=danger_area | military=range | landuse=military | military=airfield 						[0x10216 resolution 20 continue]
 amenity=prison 														[0x10216 resolution 22 continue]
