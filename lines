@@ -96,10 +96,10 @@ nwn_from_relation=yes 		{add mkgmap:label:1='${color-ref|highway-symbol:oval}'} 
 nwn_from_relation=yes 		{add mkgmap:label:1='${nref} ${nname}' | '${nref}' | '${nname}'}    		[0x10000 resolution 22 continue with_actions]
 
 rwn_from_relation=yes  		{add mkgmap:label:1='${color-ref|highway-symbol:oval}'}   			[0x0b road_class=0 road_speed=0 resolution 20 continue with_actions]
-rwn_from_relation=yes  		{add mkgmap:label:1='${rref} ${rname}' | '${rref}' | '${rname}'}   		[0x10000 resolution continue with_actions]
+rwn_from_relation=yes  		{add mkgmap:label:1='${rref} ${rname}' | '${rref}' | '${rname}'}   		[0x10000 resolution 22 continue with_actions]
 
 lwn_from_relation=yes  		{add mkgmap:label:1='${color-ref|highway-symbol:oval}'}   			[0x0b road_class=0 road_speed=0 resolution 20 continue with_actions]
-lwn_from_relation=yes  		{add mkgmap:label:1='${lref} ${lname}' | '${lref}' | '${lname}'}   		[0x10000 resolution continue with_actions]
+lwn_from_relation=yes  		{add mkgmap:label:1='${lref} ${lname}' | '${lref}' | '${lname}'}   		[0x10000 resolution 22 continue with_actions]
 
 nonet_from_relation=yes 	{add mkgmap:label:1='${color-ref|highway-symbol:oval}'}   			[0x0b road_class=0 road_speed=0 resolution 20 continue with_actions]
 nonet_from_relation=yes 	{add mkgmap:label:1='${nnref} ${nnname}' | '${nnref}' | '${nnname}'}   		[0x10000 resolution 22 continue with_actions]
