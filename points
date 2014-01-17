@@ -165,6 +165,12 @@ leisure=marina 					{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}
 
 ##########################################################
 
+highway=traffic_signals														[0x6612 resolution 24]
+
+highway=speed_camera														[0x6613 resolution 24]
+
+##########################################################
+
 historic=museum 					{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'} 		[0x2c02 resolution 22]
 historic=archaeological_site | historic=ruins 		{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}  	[0x2c02 resolution 22]
 historic=memorial | historic=monument			{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'} 		[0x2c02 resolution 22]

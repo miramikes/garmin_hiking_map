@@ -1,4 +1,7 @@
-
+; smallpois.TYP
+; Longueur: 13525 octets
+; Fichier TYP compilé     17/01/2014     15:07:35
+; Décompilé le 1/17/2014 à 6:06:46 PM
 
 [_id]
 ProductCode=1
@@ -2636,6 +2639,20 @@ LineWidth=1
 Xpm="0 0 1 0"
 "1 c #7B95D5"
 String1=0x00,coast
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10219
+UseOrientation=N
+Xpm="32 2 2  1"
+"! c #FF65B4"
+"  c none"
+"!!!!!!!!!!!!!   !!!!!!!!!!!!!   "
+"!!!!!!!!!!!!!   !!!!!!!!!!!!!   "
+;12345678901234567890123456789012
+String1=0x00,Winter road
 ExtendedLabels=N
 [end]
 

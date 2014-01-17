@@ -233,6 +233,9 @@ highway=pedestrian 		& area!=yes 			[0x08 road_class=0 road_speed=0 resolution 2
 highway=steps 							[0x1a road_class=0 road_speed=0 resolution 22 continue with_actions]
 highway=bridleway 						[0x08 road_class=0 road_speed=0 resolution 22 continue with_actions]
 
+# Winter roads
+
+( ice_road=yes | winter_road=yes )				[0x10219 resolution 22 continue with_actions]
 
 # Costruction
 
