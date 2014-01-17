@@ -1,7 +1,4 @@
-; smallpois.TYP
-; Longueur: 13522 octets
-; Fichier TYP compilé     13/01/2014     13:38:45
-; Décompilé le 1/13/2014 à 1:38:56 PM
+
 
 [_id]
 ProductCode=1
@@ -287,24 +284,24 @@ Type=0x09
 String1=0x00,Marina
 ExtendedLabels=N
 Xpm="32 32 2 1"
-"! c #3930FF"
+"! c #0065FF"
 "  c none"
 "                                "
 "                                "
 "                                "
-"          !                     "
-"         !!                     "
-"        ! !                     "
-"       !  !                     "
-"      !   !                     "
-"     !    !                     "
-"    !     !                     "
-"   !!!!!!!!                     "
-"          !                     "
-"   !!!!!!!!!!!                  "
-"    !       !                   "
-"     !     !                    "
-"      !!!!!                     "
+"        !                       "
+"       !!                       "
+"      ! !                       "
+"     !  !                       "
+"    !   !                       "
+"   !    !                       "
+"  !     !                       "
+" !!!!!!!!                       "
+"        !                       "
+" !!!!!!!!!!!                    "
+"  !       !                     "
+"   !     !                      "
+"    !!!!!                       "
 "                                "
 "                                "
 "                                "
@@ -737,7 +734,7 @@ Type=0x3d
 String1=0x00,Bay
 ExtendedLabels=N
 Xpm="32 32 2 1"
-"! c #3930FF"
+"! c #0065FF"
 "  c none"
 "                                "
 "                                "
@@ -746,8 +743,10 @@ Xpm="32 32 2 1"
 "                                "
 "                                "
 "                                "
-"                    ! !         "
-"                   ! ! !        "
+"                                "
+"                   !   !        "
+"                  ! ! ! !       "
+"                 !   !   !      "
 "                                "
 "                                "
 "                                "
@@ -760,11 +759,9 @@ Xpm="32 32 2 1"
 "                                "
 "                                "
 "                                "
-"                                "
-"                                "
-"            ! !             ! ! "
-"           ! ! !           ! ! !"
-"                                "
+"         !   !           !   !  "
+"        ! ! ! !         ! ! ! ! "
+"       !   !   !       !   !   !"
 "                                "
 "                                "
 "                                "
@@ -1727,7 +1724,7 @@ UseOrientation=N
 LineWidth=2
 BorderWidth=1
 Xpm="0 0 2 0"
-"1 c #FFFF41"
+"1 c #FFFF6A"
 "2 c #B4B4B4"
 String1=0x00,Unclassified
 ExtendedLabels=N
@@ -1737,10 +1734,10 @@ ExtendedLabels=N
 [_line]
 Type=0x07
 UseOrientation=N
-LineWidth=1
+LineWidth=2
 BorderWidth=1
 Xpm="0 0 2 0"
-"1 c #FF95B4"
+"1 c #FFFFFF"
 "2 c #B4B4B4"
 String1=0x00,Service road
 ExtendedLabels=N
@@ -1752,7 +1749,7 @@ Type=0x08
 UseOrientation=N
 LineWidth=2
 Xpm="0 0 1 0"
-"1 c #A4A4A4"
+"1 c #B4B4B4"
 String1=0x00,Footway
 ExtendedLabels=N
 [end]
@@ -1804,7 +1801,7 @@ ExtendedLabels=N
 Type=0x0c
 UseOrientation=N
 Xpm="32 8 2  1"
-"! c #0000B4"
+"! c #0030FF"
 "  c none"
 "   !!       !!      !!      !!  "
 "   !!       !!      !!      !!  "
@@ -1972,7 +1969,7 @@ ExtendedLabels=N
 Type=0x1b
 UseOrientation=N
 Xpm="32 3 2  1"
-"! c #0000B4"
+"! c #3930FF"
 "  c none"
 "   !!!!!   !!!!!   !!!!!   !!!!!"
 "   !!!!!   !!!!!   !!!!!   !!!!!"
@@ -2343,7 +2340,7 @@ Xpm="32 16 2  1"
 "                                "
 "                                "
 ;12345678901234567890123456789012
-String1=0x00,Skiroute groomed
+String1=0x00,Skiroute CC
 ExtendedLabels=N
 [end]
 
@@ -2371,7 +2368,7 @@ Xpm="32 16 2  1"
 "                                "
 "                                "
 ;12345678901234567890123456789012
-String1=0x00,Skiroute backcountry
+String1=0x00,Skiroute BC
 ExtendedLabels=N
 [end]
 

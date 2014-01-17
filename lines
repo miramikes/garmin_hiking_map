@@ -220,10 +220,10 @@ highway=secondary 						[0x04 road_class=3 road_speed=4 resolution 18 continue w
 highway=tertiary 						[0x05 road_class=2 road_speed=3 resolution 20 continue with_actions]
 highway=unclassified  						[0x06 road_class=2 road_speed=2 resolution 22 continue with_actions]
 highway=track 							[0x16 road_class=0 road_speed=2 resolution 22 continue with_actions]
-highway=unsurfaced						[0x07 road_class=0 road_speed=1 resolution 22 continue with_actions]
+highway=unsurfaced						[0x16 road_class=0 road_speed=1 resolution 22 continue with_actions]
 highway=path 							[0x0a road_class=0 road_speed=0 resolution 22 continue with_actions]
 
-highway=residential   						[0x06 road_class=0 road_speed=1 resolution 22 continue with_actions]
+highway=residential   						[0x07 road_class=0 road_speed=1 resolution 22 continue with_actions]
 highway=service       						[0x07 road_class=0 road_speed=1 resolution 22 continue with_actions]
 highway=living_street 						[0x07 road_class=0 road_speed=1 resolution 22 continue with_actions]
 
