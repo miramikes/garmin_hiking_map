@@ -53,7 +53,9 @@ highway=pedestrian 	& area=yes 													[0x17 resolution 22]
 
 # other highways that have area=yes set must be parking lots
 
-highway=* 		& area=yes 													[0x05 resolution 22]
+highway=* 		& area=yes 													[0x05 resolution 22 continue]
+highway=rest_area															[0x05 resolution 22 continue]
+highway=services															[0x08 resolution 22 continue]
 
 landuse=allotments 															[0x1f resolution 22]
 landuse=cemetery | landuse=cemetary | amenity=grave_yard 			{add mkgmap:label:1='${name}'}				[0x1a resolution 22]
