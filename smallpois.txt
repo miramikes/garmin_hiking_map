@@ -1,7 +1,7 @@
 ; smallpois.TYP
-; Longueur: 13525 octets
-; Fichier TYP compilé     17/01/2014     19:46:55
-; Décompilé le 1/17/2014 à 7:47:04 PM
+; Longueur: 13709 octets
+; Fichier TYP compilé     18/01/2014     23:48:38
+; Décompilé le 1/18/2014 à 11:50:28 PM
 
 [_id]
 ProductCode=1
@@ -176,6 +176,21 @@ ExtendedLabels=N
 Xpm="32 32 2 1"
 "! c #FF006A"
 "  c none"
+"              !                 "
+"             !                  "
+"            !                   "
+"           !                    "
+"          !                     "
+"         !                      "
+"        !                       "
+"       !                        "
+"      !                         "
+"     !                          "
+"    !                           "
+"   !                            "
+"  !                             "
+" !                              "
+"!                               "
 "                               !"
 "                              ! "
 "                             !  "
@@ -193,21 +208,6 @@ Xpm="32 32 2 1"
 "                 !              "
 "                !               "
 "               !                "
-"              !                 "
-"             !                  "
-"            !                   "
-"           !                    "
-"          !                     "
-"         !                      "
-"        !                       "
-"       !                        "
-"      !                         "
-"     !                          "
-"    !                           "
-"   !                            "
-"  !                             "
-" !                              "
-"!                               "
 ;12345678901234567890123456789012
 [end]
 
@@ -1662,7 +1662,7 @@ UseOrientation=N
 LineWidth=4
 BorderWidth=1
 Xpm="0 0 2 0"
-"1 c #FF6541"
+"1 c #FF656A"
 "2 c #B4B4B4"
 String1=0x00,Highway
 ExtendedLabels=N
@@ -1676,7 +1676,7 @@ LineWidth=2
 BorderWidth=2
 Xpm="0 0 2 0"
 "1 c #FFFF41"
-"2 c #FF6541"
+"2 c #FF656A"
 String1=0x00,Trunk
 ExtendedLabels=N
 [end]
@@ -1688,7 +1688,7 @@ UseOrientation=N
 LineWidth=3
 BorderWidth=1
 Xpm="0 0 2 0"
-"1 c #FF656A"
+"1 c #FF9500"
 "2 c #B4B4B4"
 String1=0x00,Primary
 ExtendedLabels=N
@@ -1701,7 +1701,7 @@ UseOrientation=N
 LineWidth=3
 BorderWidth=1
 Xpm="0 0 2 0"
-"1 c #39CA8B"
+"1 c #39CA41"
 "2 c #B4B4B4"
 String1=0x00,Secondary
 ExtendedLabels=N
@@ -1724,7 +1724,7 @@ ExtendedLabels=N
 [_line]
 Type=0x06
 UseOrientation=N
-LineWidth=2
+LineWidth=3
 BorderWidth=1
 Xpm="0 0 2 0"
 "1 c #FFFF6A"
@@ -1737,10 +1737,10 @@ ExtendedLabels=N
 [_line]
 Type=0x07
 UseOrientation=N
-LineWidth=2
+LineWidth=3
 BorderWidth=1
 Xpm="0 0 2 0"
-"1 c #FFFFFF"
+"1 c #FFFFD5"
 "2 c #B4B4B4"
 String1=0x00,Service road
 ExtendedLabels=N
@@ -1783,11 +1783,13 @@ ExtendedLabels=N
 [_line]
 Type=0x0b
 UseOrientation=N
-Xpm="32 8 2  1"
+Xpm="32 10 2  1"
 "! c #FF0000"
 "  c none"
 "!!      !!      !!      !!      "
 "!!      !!      !!      !!      "
+"                                "
+"                                "
 "                                "
 "                                "
 "                                "
@@ -1803,17 +1805,19 @@ ExtendedLabels=N
 [_line]
 Type=0x0c
 UseOrientation=N
-Xpm="32 8 2  1"
+Xpm="32 10 2  1"
 "! c #0030FF"
 "  c none"
-"   !!       !!      !!      !!  "
-"   !!       !!      !!      !!  "
+"   !!      !!      !!      !!   "
+"   !!      !!      !!      !!   "
 "                                "
 "                                "
 "                                "
 "                                "
-"   !!       !!      !!      !!  "
-"   !!       !!      !!      !!  "
+"                                "
+"                                "
+"   !!      !!      !!      !!   "
+"   !!      !!      !!      !!   "
 ;12345678901234567890123456789012
 String1=0x00,Cycle_route
 ExtendedLabels=N
@@ -2323,12 +2327,15 @@ ExtendedLabels=N
 [_line]
 Type=0x10111
 UseOrientation=N
-Xpm="32 16 2  1"
+Xpm="32 19 2  1"
 "! c #009500"
 "  c none"
-"!!!!!!  !!!!!!  !!!!!!  !!!!!!  "
-"!!!!!!  !!!!!!  !!!!!!  !!!!!!  "
-"!!!!!!  !!!!!!  !!!!!!  !!!!!!  "
+" !!!!!!!!!!!!!   !!!!!!!!!!!!!  "
+"!!!!!!!!!!!!!   !!!!!!!!!!!!!   "
+"                                "
+"                                "
+"                                "
+"                                "
 "                                "
 "                                "
 "                                "
@@ -2351,12 +2358,15 @@ ExtendedLabels=N
 [_line]
 Type=0x10112
 UseOrientation=N
-Xpm="32 16 2  1"
+Xpm="32 19 2  1"
 "! c #009500"
 "  c none"
-"!!      !!      !!      !!      "
-"!!      !!      !!      !!      "
-"!!      !!      !!      !!      "
+" !!!!    !!!!    !!!!    !!!!   "
+"!!!!    !!!!    !!!!    !!!!    "
+"                                "
+"                                "
+"                                "
+"                                "
 "                                "
 "                                "
 "                                "
@@ -2379,9 +2389,11 @@ ExtendedLabels=N
 [_line]
 Type=0x10113
 UseOrientation=N
-Xpm="32 16 2  1"
+Xpm="32 18 2  1"
 "! c #000000"
 "  c none"
+"                                "
+"                                "
 "                                "
 "                                "
 "                                "
@@ -2407,9 +2419,11 @@ ExtendedLabels=N
 [_line]
 Type=0x10114
 UseOrientation=N
-Xpm="32 16 2  1"
+Xpm="32 18 2  1"
 "! c #BD006A"
 "  c none"
+"                                "
+"                                "
 "                                "
 "                                "
 "                                "
@@ -2435,7 +2449,7 @@ ExtendedLabels=N
 [_line]
 Type=0x10115
 UseOrientation=N
-Xpm="32 16 2  1"
+Xpm="32 18 2  1"
 "! c #7B6500"
 "  c none"
 "                                "
@@ -2450,10 +2464,12 @@ Xpm="32 16 2  1"
 "                                "
 "                                "
 "                                "
-"   !               !            "
-"  ! !             ! !           "
-" !   !           !   !          "
-"!     !         !     !         "
+"                                "
+"                                "
+"        !               !       "
+"       ! !             ! !      "
+"      !   !           !   !     "
+"     !     !         !     !    "
 ;12345678901234567890123456789012
 String1=0x00,Bridleway
 ExtendedLabels=N
@@ -2465,7 +2481,7 @@ Type=0x10200
 UseOrientation=N
 LineWidth=2
 Xpm="0 0 1 0"
-"1 c #006500"
+"1 c #396520"
 String1=0x00,Hedge
 ExtendedLabels=N
 [end]
