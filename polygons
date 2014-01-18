@@ -170,3 +170,6 @@ natural=background 															[0x10200 resolution 14]
 
 place=island 																[0x10101 resolution 20]
 place=islet	 															[0x10101 resolution 22]
+
+<finalize>
+# The finalizer section is executed for each element when a rule with an element type matches

@@ -387,3 +387,6 @@ contour=elevation & contour_ext=elevation_minor & (ele ~'.*20' | ele ~'.*40' | e
 contour=elevation & contour_ext=elevation_medium				{add mkgmap:label:1='${ele|conv:m=>ft}'}			[0x21 resolution 20]
 contour=elevation & contour_ext=elevation_major					{add mkgmap:label:1='${ele|conv:m=>ft}'}			[0x22 resolution 18]
 contour=elevation | contour_ext=elevation					{add mkgmap:label:1='${ele|conv:m=>ft}'}			[0x21 resolution 22]
+
+<finalize>
+# The finalizer section is executed for each element when a rule with an element type matches
