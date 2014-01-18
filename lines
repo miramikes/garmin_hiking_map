@@ -140,21 +140,21 @@ mtb_from_relation=yes 		{add mkgmap:label:1='${mname}'}							[0x10001 resolutio
 
 # route=ski
 
-piste:type=nordic & piste:grooming=classic 											[0x10111 resolution 22 continue with_actions]
-piste:type=nordic & piste:grooming=skating 											[0x10111 resolution 22 continue with_actions]
-piste:type=nordic & piste:grooming='classic+skating' 										[0x10111 resolution 22 continue with_actions]
-piste:type=nordic & piste:grooming='classic;skating' 										[0x10111 resolution 22 continue with_actions]
+piste:type=nordic & piste:grooming=classic 											[0x10111 resolution 20 continue with_actions]
+piste:type=nordic & piste:grooming=skating 											[0x10111 resolution 20 continue with_actions]
+piste:type=nordic & piste:grooming='classic+skating' 										[0x10111 resolution 20 continue with_actions]
+piste:type=nordic & piste:grooming='classic;skating' 										[0x10111 resolution 20 continue with_actions]
 
-( piste:grooming=classic | piste:grooming=skating | piste:grooming='classic+skating' | piste:grooming='classic;skating' )	[0x10111 resolution 22 continue with_actions]
+( piste:grooming=classic | piste:grooming=skating | piste:grooming='classic+skating' | piste:grooming='classic;skating' )	[0x10111 resolution 20 continue with_actions]
 
 
-piste:type=nordic & piste:grooming=scooter											[0x10112 resolution 22 continue with_actions]
-piste:type=nordic & piste:grooming=backcountry 											[0x10112 resolution 22 continue with_actions]
-piste:type=nordic & piste:grooming!=*												[0x10112 resolution 22 continue with_actions]
+piste:type=nordic & piste:grooming=scooter											[0x10112 resolution 20 continue with_actions]
+piste:type=nordic & piste:grooming=backcountry 											[0x10112 resolution 20 continue with_actions]
+piste:type=nordic & piste:grooming!=*												[0x10112 resolution 20 continue with_actions]
 
-( piste:grooming=scooter | piste:grooming=backcountry )										[0x10112 resolution 22 continue with_actions]
+( piste:grooming=scooter | piste:grooming=backcountry )										[0x10112 resolution 20 continue with_actions]
 
-piste:type=nordic & piste:grooming=* & piste:grooming!=classic & piste:grooming!=skating & piste:grooming!='classic+skating' & piste:grooming!='classic;skating'		[0x10112 resolution 22 continue]
+piste:type=nordic & piste:grooming=* & piste:grooming!=classic & piste:grooming!=skating & piste:grooming!='classic+skating' & piste:grooming!='classic;skating'		[0x10112 resolution 20 continue]
 
 # route=snowmobile
 
@@ -281,11 +281,11 @@ boundary=administrative & admin_level<3 									{add mkgmap:label:1='${name}'}	
 
 #boundary=political 						{add mkgmap:label:1='${name}'}					[0x1c resolution 18]
 
-boundary=national_park 													[0x10217 resolution 16 continue]
+boundary=national_park 													[0x10217 resolution 16-22 continue]
 
 landuse=nature_reserve | boundary=nature_reserve | boundary=protected_area		{set leisure=nature_reserve}
 
-leisure=nature_reserve 													[0x10217 resolution 18 continue]
+leisure=nature_reserve 													[0x10217 resolution 18-22 continue]
 
 military=danger_area | military=range | landuse=military | military=airfield 						[0x10216 resolution 20 continue]
 amenity=prison 														[0x10216 resolution 22 continue]
