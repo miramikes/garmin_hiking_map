@@ -245,7 +245,7 @@ natural=spring									 					[0x6511 resolution 22]
 
 #  Sights
 tourism=viewpoint & man_made=tower 	{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'}			[0x5201 resolution 22]
-tourism=viewpoint 			{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'} 			[0x5200 resolution 22]
+tourism=viewpoint			{add mkgmap:label:1='${name} (${ref})' | '${ref}' | '${name}'} 			[0x5200 resolution 22]
 
 man_made=mast | power=tower												[0x660f resolution 22]
 
