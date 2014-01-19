@@ -1,7 +1,7 @@
 ; smallpois.TYP
-; Longueur: 13709 octets
-; Fichier TYP compilé     18/01/2014     23:48:38
-; Décompilé le 1/18/2014 à 11:50:28 PM
+; Longueur: 13886 octets
+; Fichier TYP compilé     19/01/2014     23:38:24
+; Décompilé le 1/19/2014 à 11:38:29 PM
 
 [_id]
 ProductCode=1
@@ -1742,13 +1742,76 @@ BorderWidth=1
 Xpm="0 0 2 0"
 "1 c #FFFFD5"
 "2 c #B4B4B4"
-String1=0x00,Service road
+String1=0x00,Street_road
 ExtendedLabels=N
 [end]
 
 
 [_line]
 Type=0x08
+UseOrientation=N
+LineWidth=2
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #39CA41"
+"2 c #B4B4B4"
+String1=0x00,Secondary_link
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x09
+UseOrientation=N
+LineWidth=2
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FF9500"
+"2 c #B4B4B4"
+String1=0x00,Primary_link
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x0a
+UseOrientation=N
+LineWidth=4
+Xpm="0 0 1 0"
+"1 c #A4A4A4"
+String1=0x00,Unpaved
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x0b
+UseOrientation=N
+LineWidth=3
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FF656A"
+"2 c #B4B4B4"
+String1=0x00,Highway_link
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x0c
+UseOrientation=N
+LineWidth=3
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFFFD5"
+"2 c #B4B4B4"
+String1=0x00,Roundabout
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x0d
 UseOrientation=N
 LineWidth=2
 Xpm="0 0 1 0"
@@ -1759,18 +1822,22 @@ ExtendedLabels=N
 
 
 [_line]
-Type=0x09
+Type=0x0e
 UseOrientation=N
-LineWidth=2
-Xpm="0 0 1 0"
-"1 c #FF65D5"
-String1=0x00,Cycleway
+Xpm="32 3 2  1"
+"! c #FF3000"
+"# c #FFFFFF"
+"!!##!!##!!##!!##!!##!!##!!##!!##"
+"!!##!!##!!##!!##!!##!!##!!##!!##"
+"!!##!!##!!##!!##!!##!!##!!##!!##"
+;12345678901234567890123456789012
+String1=0x00,Steps
 ExtendedLabels=N
 [end]
 
 
 [_line]
-Type=0x0a
+Type=0x0f
 UseOrientation=N
 LineWidth=2
 Xpm="0 0 1 0"
@@ -1781,7 +1848,18 @@ ExtendedLabels=N
 
 
 [_line]
-Type=0x0b
+Type=0x10
+UseOrientation=N
+LineWidth=2
+Xpm="0 0 1 0"
+"1 c #FF65D5"
+String1=0x00,Cycleway
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x11
 UseOrientation=N
 Xpm="32 10 2  1"
 "! c #FF0000"
@@ -1797,13 +1875,13 @@ Xpm="32 10 2  1"
 "!!      !!      !!      !!      "
 "!!      !!      !!      !!      "
 ;12345678901234567890123456789012
-String1=0x00,Hiking_route
+String1=0x00,Hike_route
 ExtendedLabels=N
 [end]
 
 
 [_line]
-Type=0x0c
+Type=0x12
 UseOrientation=N
 Xpm="32 10 2  1"
 "! c #0030FF"
@@ -1819,55 +1897,7 @@ Xpm="32 10 2  1"
 "   !!      !!      !!      !!   "
 "   !!      !!      !!      !!   "
 ;12345678901234567890123456789012
-String1=0x00,Cycle_route
-ExtendedLabels=N
-[end]
-
-
-[_line]
-Type=0x10
-UseOrientation=N
-Xpm="32 4 2  1"
-"! c #000000"
-"# c #FFFFFF"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"!!!!!!!!########!!!!!!!!########"
-"!!!!!!!!########!!!!!!!!########"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-;12345678901234567890123456789012
-String1=0x00,Railway
-ExtendedLabels=N
-[end]
-
-
-[_line]
-Type=0x11
-UseOrientation=N
-Xpm="32 4 2  1"
-"! c #006500"
-"# c #FFFFFF"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"!!!!!!!!########!!!!!!!!########"
-"!!!!!!!!########!!!!!!!!########"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-;12345678901234567890123456789012
-String1=0x00,Other_rail
-ExtendedLabels=N
-[end]
-
-
-[_line]
-Type=0x12
-UseOrientation=N
-Xpm="32 4 2  1"
-"! c #BD30FF"
-"# c #FFFFFF"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"!!!!!!!!########!!!!!!!!########"
-"!!!!!!!!########!!!!!!!!########"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-;12345678901234567890123456789012
-String1=0x00,Metro
+String1=0x00,Bike_route
 ExtendedLabels=N
 [end]
 
@@ -1875,15 +1905,13 @@ ExtendedLabels=N
 [_line]
 Type=0x13
 UseOrientation=N
-Xpm="32 4 2  1"
-"! c #0065FF"
-"# c #FFFFFF"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"!!!!!!!!########!!!!!!!!########"
-"!!!!!!!!########!!!!!!!!########"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+Xpm="32 2 2  1"
+"! c #000000"
+"  c none"
+"                                "
+"                                "
 ;12345678901234567890123456789012
-String1=0x00,Tram
+String1=0x00,Ski_routing
 ExtendedLabels=N
 [end]
 
@@ -1907,15 +1935,10 @@ ExtendedLabels=N
 [_line]
 Type=0x15
 UseOrientation=N
-Xpm="32 4 2  1"
-"! c #FF306A"
-"# c #FFFFFF"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"!!!!!!!!########!!!!!!!!########"
-"!!!!!!!!########!!!!!!!!########"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-;12345678901234567890123456789012
-String1=0x00,Abadoned railway
+LineWidth=1
+Xpm="0 0 1 0"
+"1 c #7B95D5"
+String1=0x00,coast
 ExtendedLabels=N
 [end]
 
@@ -1961,13 +1984,13 @@ ExtendedLabels=N
 Type=0x1a
 UseOrientation=N
 Xpm="32 3 2  1"
-"! c #FF3000"
-"# c #FFFFFF"
-"!!##!!##!!##!!##!!##!!##!!##!!##"
-"!!##!!##!!##!!##!!##!!##!!##!!##"
-"!!##!!##!!##!!##!!##!!##!!##!!##"
+"! c #0065FF"
+"  c none"
+"!!!!!!!!!!      !!!!!!!!!!      "
+"!!!!!!!!!!      !!!!!!!!!!      "
+"!!!!!!!!!!      !!!!!!!!!!      "
 ;12345678901234567890123456789012
-String1=0x00,Steps
+String1=0x00,Ferry-car
 ExtendedLabels=N
 [end]
 
@@ -1976,13 +1999,13 @@ ExtendedLabels=N
 Type=0x1b
 UseOrientation=N
 Xpm="32 3 2  1"
-"! c #3930FF"
+"! c #0065FF"
 "  c none"
 "   !!!!!   !!!!!   !!!!!   !!!!!"
 "   !!!!!   !!!!!   !!!!!   !!!!!"
 "   !!!!!   !!!!!   !!!!!   !!!!!"
 ;12345678901234567890123456789012
-String1=0x00,Ferry
+String1=0x04,Ferry-foot
 ExtendedLabels=N
 [end]
 
@@ -2192,13 +2215,21 @@ ExtendedLabels=N
 [_line]
 Type=0x10000
 UseOrientation=N
-Xpm="32 2 2  1"
+Xpm="32 10 2  1"
 "! c #000000"
 "  c none"
 "                                "
 "                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
 ;12345678901234567890123456789012
-String1=0x00,Hiking_route
+String1=0x00,Hike_name
 ExtendedLabels=N
 [end]
 
@@ -2206,13 +2237,21 @@ ExtendedLabels=N
 [_line]
 Type=0x10001
 UseOrientation=N
-Xpm="32 2 2  1"
+Xpm="32 10 2  1"
 "! c #000000"
 "  c none"
 "                                "
 "                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
 ;12345678901234567890123456789012
-String1=0x00,Cycle_route
+String1=0x00,Bike_name
 ExtendedLabels=N
 [end]
 
@@ -2308,6 +2347,86 @@ ExtendedLabels=N
 
 
 [_line]
+Type=0x10100
+UseOrientation=N
+Xpm="32 4 2  1"
+"! c #000000"
+"# c #FFFFFF"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!!!!!########!!!!!!!!########"
+"!!!!!!!!########!!!!!!!!########"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x00,Railway
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10101
+UseOrientation=N
+Xpm="32 4 2  1"
+"! c #006500"
+"# c #FFFFFF"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!!!!!########!!!!!!!!########"
+"!!!!!!!!########!!!!!!!!########"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x00,Other_rail
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10102
+UseOrientation=N
+Xpm="32 4 2  1"
+"! c #BD30FF"
+"# c #FFFFFF"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!!!!!########!!!!!!!!########"
+"!!!!!!!!########!!!!!!!!########"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x00,Metro
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10103
+UseOrientation=N
+Xpm="32 4 2  1"
+"! c #0065FF"
+"# c #FFFFFF"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!!!!!########!!!!!!!!########"
+"!!!!!!!!########!!!!!!!!########"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x00,Tram
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10104
+UseOrientation=N
+Xpm="32 4 2  1"
+"! c #FF306A"
+"# c #FFFFFF"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!!!!!########!!!!!!!!########"
+"!!!!!!!!########!!!!!!!!########"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x00,Abadoned railway
+ExtendedLabels=N
+[end]
+
+
+[_line]
 Type=0x10110
 UseOrientation=N
 Xpm="32 5 2  1"
@@ -2330,8 +2449,8 @@ UseOrientation=N
 Xpm="32 19 2  1"
 "! c #009500"
 "  c none"
-" !!!!!!!!!!!!!   !!!!!!!!!!!!!  "
-"!!!!!!!!!!!!!   !!!!!!!!!!!!!   "
+" !!!!!!!!!!      !!!!!!!!!!     "
+"!!!!!!!!!!      !!!!!!!!!!      "
 "                                "
 "                                "
 "                                "
@@ -2448,6 +2567,20 @@ ExtendedLabels=N
 
 [_line]
 Type=0x10115
+UseOrientation=N
+Xpm="32 2 2  1"
+"! c #FF65B4"
+"  c none"
+"!!!!!!!!!!!!!   !!!!!!!!!!!!!   "
+"!!!!!!!!!!!!!   !!!!!!!!!!!!!   "
+;12345678901234567890123456789012
+String1=0x00,Seasonal road
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10118
 UseOrientation=N
 Xpm="32 18 2  1"
 "! c #7B6500"
@@ -2644,31 +2777,6 @@ Xpm="32 2 2  1"
 "!!!!!!!!!!!!    !!!!!!!!!!!!    "
 ;12345678901234567890123456789012
 String1=0x00,National Park
-ExtendedLabels=N
-[end]
-
-
-[_line]
-Type=0x10218
-UseOrientation=N
-LineWidth=1
-Xpm="0 0 1 0"
-"1 c #7B95D5"
-String1=0x00,coast
-ExtendedLabels=N
-[end]
-
-
-[_line]
-Type=0x10219
-UseOrientation=N
-Xpm="32 2 2  1"
-"! c #FF65B4"
-"  c none"
-"!!!!!!!!!!!!!   !!!!!!!!!!!!!   "
-"!!!!!!!!!!!!!   !!!!!!!!!!!!!   "
-;12345678901234567890123456789012
-String1=0x00,Winter road
 ExtendedLabels=N
 [end]
 
