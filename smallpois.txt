@@ -1,7 +1,4 @@
-; smallpois.TYP
-; Longueur: 13886 octets
-; Fichier TYP compilé     19/01/2014     23:38:24
-; Décompilé le 1/19/2014 à 11:38:29 PM
+
 
 [_id]
 ProductCode=1
@@ -2634,11 +2631,12 @@ ExtendedLabels=N
 [_line]
 Type=0x10202
 UseOrientation=N
-Xpm="32 2 2  1"
+Xpm="32 3 2  1"
 "! c #BD3041"
 "  c none"
-" !!! !!! !!! !!! !!! !!! !!! !!!"
-"!   !   !   !   !   !   !   !   "
+" !!!!!!! !!!!!!! !!!!!!! !!!!!!!"
+"!       !       !       !       "
+"!       !       !       !       "
 ;12345678901234567890123456789012
 String1=0x00,Fence
 ExtendedLabels=N
