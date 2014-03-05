@@ -41,6 +41,8 @@ leisure=track & area=yes 							{add mkgmap:label:1='${name} (${sport})' | '${na
 leisure=water_park 								{add mkgmap:label:1='${name}'}				[0x09 resolution 22]
 leisure=marina 									{add mkgmap:label:1='${name}'}				[0x09 resolution 22]
 
+#####################################################
+
 # Shopping
 
 amenity=supermarket | shop=supermarket | landuse=retail											[0x08 resolution 22]
@@ -74,16 +76,21 @@ landuse=village_green 															[0x17 resolution 22]
 man_made=pier  			& area=yes												[0x0a resolution 22 continue]
 
 (building=* | amenity=*) 	& area!=no 												[0x13 resolution 24]
-tourism=* 			& area!=no & waterway!=* 										[0x06 resolution 22]
-man_made=* 			& area=yes 												[0x06 resolution 22]
+tourism=* 			& area!=no & waterway!=* & man_made!=bridge								[0x06 resolution 22 continue]
+man_made=* 			& area=yes & man_made!=bridge										[0x06 resolution 22 continue]
+man_made=bridge			& area!=no												[0x10300 resolution 22 continue]
 
 # man_made can be used on areas or lines
 man_made=* & area!=no & (man_made!=door & man_made!=embankment & man_made!=breakwater & man_made!=cable_line & man_made!=cutline & man_made!=cutting & man_made!=levee & man_made!=trench) 		[0x06 resolution 22]
+
+#####################################################
 
 # Historic
 
 historic=museum | historic=memorial 						{add mkgmap:label:1='${name}'}				[0x1e resolution 22]
 historic=archaeological_site | historic=ruins 					{add mkgmap:label:1='${name}'}				[0x1e resolution 20]
+
+#####################################################
 
 # Agriculture
 
@@ -91,6 +98,8 @@ landuse=farm 									{add mkgmap:label:1='${name}'}				[0x49 resolution 20]
 landuse=farmyard 								{add mkgmap:label:1='${name}'}				[0x49 resolution 22]
 landuse=vineyard 								{add mkgmap:label:1='${name}'}				[0x48 resolution 20]
 natural=orchard | landuse=orchard | landuse=orchards | natural=orchards		{add mkgmap:label:1='${name}'}				[0x4e resolution 22]
+
+#####################################################
 
 # Danger
 
@@ -105,7 +114,7 @@ amenity=prison 									{add mkgmap:label:1='${name}'}				[0x04 resolution 22]
 
 #  Nature
 
-##############################
+#####################################################
 
 boundary = national_park & protect_class > 2 					{set leisure=nature_reserve}
 boundary = national_park 							{add mkgmap:label:1='${name}' | 'National park'}	[0x16 resolution 16-22 continue] 
@@ -113,6 +122,8 @@ boundary = national_park 							{add mkgmap:label:1='${name}' | 'National park'}
 landuse=nature_reserve | boundary=nature_reserve | boundary=protected_area	{set leisure=nature_reserve}
 
 leisure=nature_reserve								{add mkgmap:label:1='${name}' | 'Natural reserve'}	[0x16 resolution 18-22 continue]
+
+#####################################################
 
 # Sand
 
@@ -122,25 +133,35 @@ surface=sand 					& area=yes & highway!=*									[0x53 resolution 22]
 water=tidal																[0x52 resolution 20]
 natural=shelf | tidal=yes | tidal=true													[0x52 resolution 20]
 
+#####################################################
+
 # Water
 
 natural=bay 									{add mkgmap:label:1='${name}'}				[0x3d resolution 18]
-waterway=riverbank | waterway=canal						{add mkgmap:label:1='${name}'}				[0x3e resolution 20]
+waterway=riverbank | waterway=canal			& intermittent!=yes	{add mkgmap:label:1='${name}'}				[0x3e resolution 20]
 
-natural=water 					& salt!=*			{add mkgmap:label:1='${name}'}				[0x3c resolution 18]
-natural=water 					& salt=yes			{add mkgmap:label:1='${name}' | 'Salt water'}		[0x3f resolution 18]
+natural=water 				& salt!=*	& intermittent!=yes	{add mkgmap:label:1='${name}'}				[0x3c resolution 18]
+natural=water 				& salt=yes	& intermittent!=yes	{add mkgmap:label:1='${name}' | 'Salt water'}		[0x3f resolution 18]
 
-landuse=basin | landuse=pond			& salt!=*			{add mkgmap:label:1='${name}'}				[0x3c resolution 20]
-landuse=basin | landuse=pond			& salt=yes			{add mkgmap:label:1='${name}' | 'Salt water'}		[0x3f resolution 20]
+landuse=basin | landuse=pond		& salt!=*	& intermittent!=yes	{add mkgmap:label:1='${name}'}				[0x3c resolution 20]
+landuse=basin | landuse=pond		& salt=yes	& intermittent!=yes	{add mkgmap:label:1='${name}' | 'Salt water'}		[0x3f resolution 20]
 
-landuse=reservoir 				& salt!=*			{add mkgmap:label:1='${name}'}				[0x3c resolution 18]
-landuse=reservoir 				& salt=yes			{add mkgmap:label:1='${name}' | 'Salt water'}		[0x3f resolution 18]
+landuse=reservoir 			& salt!=*	& intermittent!=yes	{add mkgmap:label:1='${name}'}				[0x3c resolution 18]
+landuse=reservoir 			& salt=yes	& intermittent!=yes	{add mkgmap:label:1='${name}' | 'Salt water'}		[0x3f resolution 18]
+
+#####################################################
+
+# Intermittent water
+
+(waterway=riverbank | waterway=canal | landuse=reservoir | natural=water | landuse=basin | landuse=pond) & intermittent=yes {add mkgmap:label:1='${name}'} [0x4c resolution 20]
+
+#####################################################
 
 # Vegetation
 
-wood=mixed									{add mkgmap:label:1='${name}'}				[0x44 resolution 20]
-wood=deciduos | wood=deciduous							{add mkgmap:label:1='${name}'}				[0x43 resolution 20]
-wood=coniferous 								{add mkgmap:label:1='${name}'}				[0x42 resolution 20]
+wood=mixed										{add mkgmap:label:1='${name}'}			[0x44 resolution 20]
+wood=deciduos | wood=deciduous								{add mkgmap:label:1='${name}'}			[0x43 resolution 20]
+wood=coniferous 									{add mkgmap:label:1='${name}'}			[0x42 resolution 20]
 
 ( landuse=forest | natural=wood | landuse=wood | natural=forest | natural=woodland ) & wood!=* {add mkgmap:label:1='${name}'}		[0x50 resolution 20]
 
@@ -154,18 +175,18 @@ surface=grass			& area=yes						{add mkgmap:label:1='${name}'}			[0x3b resolutio
 
 ##########
 
-natural=bare_rock 								{add mkgmap:label:1='${name}'}				[0x40 resolution 20]
-natural=cliff & area=yes							{add mkgmap:label:1='${name}'} 				[0x40 resolution 20]
-natural=scree									{add mkgmap:label:1='${name}'}				[0x45 resolution 20]
-natural=bedrock 								{add mkgmap:label:1='${name}'}				[0x40 resolution 22]
-natural=lava 									{add mkgmap:label:1='${name}'}				[0x40 resolution 22]
+natural=bare_rock 									{add mkgmap:label:1='${name}'}			[0x40 resolution 20]
+natural=cliff & area=yes								{add mkgmap:label:1='${name}'} 			[0x40 resolution 20]
+natural=scree										{add mkgmap:label:1='${name}'}			[0x45 resolution 20]
+natural=bedrock 									{add mkgmap:label:1='${name}'}			[0x40 resolution 22]
+natural=lava 										{add mkgmap:label:1='${name}'}			[0x40 resolution 22]
 
-natural=glacier 								{add mkgmap:label:1='${name}'}				[0x4d resolution 18]
+natural=glacier 									{add mkgmap:label:1='${name}'}			[0x4d resolution 18]
 
 ##########
 
-natural=sea 									{add mkgmap:label:1='${name}'}				[0x32 resolution 14]
-natural=land 									{add mkgmap:label:1='${name}'}				[0x10100 resolution 14]
+natural=sea 										{add mkgmap:label:1='${name}'}			[0x32 resolution 14]
+natural=land 										{add mkgmap:label:1='${name}'}			[0x10100 resolution 14]
 natural=background 															[0x10200 resolution 14]
 
 place=island 																[0x10101 resolution 20]

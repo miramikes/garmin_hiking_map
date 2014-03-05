@@ -321,14 +321,14 @@ barrier=fence | barrier=wood_fence | barrier=wire_fence | barrier=metal_fence 	{
 
 barrier=hedge | natural=hedge 							{add mkgmap:label:1='${name}'}		[0x10200 resolution 24]
 
-aeroway=runway 									{add mkgmap:label:1='runway ${name}'}	[0x10011 resolution 20]
+aeroway=runway 									{add mkgmap:label:1='runway ${name}'}	[0x27 resolution 20]
 
 aeroway=taxiway 													[0x10010 resolution 22]
 
 highway=pier | man_made=pier												[0x19 resolution 24 continue]
 
-bridge=*	& bridge!=no | historic=aqueduct | man_made=bridge							[0x26 resolution 22 continue]
-tunnel=* 	& tunnel!=no												[0x27 resolution 22 continue]
+bridge=*	& bridge!=no & historic!=aqueduct & man_made!=bridge & area!=yes					[0x10300 resolution 22 continue]
+tunnel=* 	& tunnel!=no												[0x10301 resolution 22 continue]
 
 ( waterway=ferry_way | line=ferry )   		{set route=ferry}
 route=ferry		& motor_vehicle=yes 	{add mkgmap:label:1='${name} ${operator}' | '${name}' | '${operator}'}	[0x1a road_class=0 road_speed=0 resolution 18 continue]
@@ -336,23 +336,30 @@ route=ferry		& motor_vehicle=yes 	{add mkgmap:label:1='${name} ${operator}' | '$
 
 #####################################################################################
 
-waterway=weir 		& natural!=water	{add mkgmap:label:1='${name}'}						[0x10203 resolution 22]
+waterway=weir 		& natural!=water	{add mkgmap:label:1='${name}'}							[0x10203 resolution 22]
 
-waterway=rapids 	& natural!=water										[0x1f resolution 22 continue]
-waterway=rapids 	& natural!=water	{add mkgmap:label:1='${name}'}						[0x10210 resolution 22]
+waterway=rapids 	& natural!=water											[0x1f resolution 22 continue]
+waterway=rapids 	& natural!=water	{add mkgmap:label:1='${name}'}							[0x10210 resolution 22]
 
-waterway=waterfall 	& natural!=water										[0x1f resolution 22 continue]
-waterway=waterfall 	& natural!=water	{add mkgmap:label:1='${name}'}						[0x10210 resolution 22]
+waterway=waterfall 	& natural!=water											[0x1f resolution 22 continue]
+waterway=waterfall 	& natural!=water	{add mkgmap:label:1='${name}'}							[0x10210 resolution 22]
 
-waterway=dam 		& natural!=water	{add mkgmap:label:1='${name}'}						[0x10204 resolution 22]
+waterway=dam 		& natural!=water	{add mkgmap:label:1='${name}'}							[0x10204 resolution 22]
 
 
-waterway=river 		& natural!=water 	{add mkgmap:label:1='${name}                    '}			[0x1f resolution 18 continue]
-waterway=stream 	& natural!=water 	{add mkgmap:label:1='${name}                    '}			[0x18 resolution 22 continue]
-waterway=drain 		& natural!=water 	{add mkgmap:label:1='${name}                    '}			[0x18 resolution 24 continue]
-waterway=ditch 		& natural!=water 	{add mkgmap:label:1='${name}                    '}			[0x18 resolution 24 continue]
+waterway=river 		& natural!=water 	& intermittent!=yes 	{add mkgmap:label:1='${name}                    '} 	[0x1f resolution 18 continue]
+waterway=stream 	& natural!=water 	& intermittent!=yes 	{add mkgmap:label:1='${name}                    '} 	[0x18 resolution 22 continue]
+waterway=drain 		& natural!=water 	& intermittent!=yes 	{add mkgmap:label:1='${name}                    '} 	[0x18 resolution 24 continue]
+waterway=ditch 		& natural!=water 	& intermittent!=yes 	{add mkgmap:label:1='${name}                    '} 	[0x18 resolution 24 continue]
 
-waterway=canal 		& natural!=water 	{add mkgmap:label:1='${name}'}						[0x10206 resolution 18 continue]
+waterway=canal 		& natural!=water 	& intermittent!=yes	{add mkgmap:label:1='${name}'}	  		   	[0x10206 resolution 18 continue]
+
+#######################################################################################
+
+# Intermittent streams
+
+(waterway=river | waterway=stream | waterway=drain | waterway=ditch | waterway=canal) & natural!=water  & intermittent=yes	[0x26 resolution 22 continue]
+
 
 #######################################################################################
 
